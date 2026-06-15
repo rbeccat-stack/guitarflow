@@ -603,7 +603,7 @@ function FinalCTA({ bg = "dark" }) {
     <section className={"cta cta--" + bg} id="cta">
       <div className="container cta__inner">
         <h2 className="cta__title">Tire une carte.<br />Kiffe.</h2>
-        <p className="cta__sub">Tu as déjà tout ce qu'il faut en toi. Guitar Flow est là pour t'apporter cadre et créativité.</p>
+        <p className="cta__sub">La panne d'inspiration n'est plus qu'un mythe désormais.</p>
         <div className="cta__form">
           <EmailField variant={bg} />
         </div>
