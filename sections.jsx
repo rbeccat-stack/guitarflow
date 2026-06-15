@@ -55,7 +55,7 @@ function Nav() {
           <a href="#solution">Le deck</a>
           <a href="#comment">Comment jouer</a>
           <a href="#categories">Catégories</a>
-          <a href="Blog.html" className="nav__blog">Blog</a>
+          {/* <a href="Blog.html" className="nav__blog">Blog</a> */}
         </div>
         <a href="#cta" className="btn btn--primary" style={{ backgroundColor: "rgb(18, 17, 16)" }}>Rejoindre la liste</a>
       </div>
@@ -624,14 +624,13 @@ function Footer() {
       <div className="container footer__inner">
         <div className="footer__left">
           <a href="#top" className="logo">Guitar Flow<span className="logo__sq" aria-hidden="true"></span>Cards</a>
-          <span className="footer__line">// Tire une carte. Commence.</span>
         </div>
         <div className="footer__right">
-          <a href="Blog.html">Blog</a>
-          <span>·</span>
+          {/* <a href="Blog.html">Blog</a>
+          <span>·</span> */}
           <a href="mailto:salut@guitarflowcards.com">Contact</a>
           <span>·</span>
-          <span>Fait à Lyon, France</span>
+          <span>Fait à Lyon avec passion 🎸❤️</span>
         </div>
       </div>
     </footer>);
