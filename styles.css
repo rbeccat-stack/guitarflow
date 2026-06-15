@@ -1141,6 +1141,10 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   .footer__left  { flex-direction: column; align-items: center; gap: 10px; }
   .footer__right { flex-direction: column; align-items: center; gap: 10px; }
 
+  /* Centrage des titres de section */
+  .section__head,
+  .section__head--right { text-align: center !important; }
+
   /* QA block */
   .qa__q { font-size: 15px; }
   .qa__a  { font-size: 14px; }
