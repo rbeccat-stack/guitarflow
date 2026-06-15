@@ -1111,24 +1111,8 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   .hero__form-wrap { max-width: 100%; }
   .hero__meta { flex-wrap: wrap; gap: 8px; font-size: 10px; }
 
-  /* Herodeck : sur mobile, une seule carte visible centrée, sans overflow */
-  .herodeck {
-    height: 260px;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  .herocard-img { width: 160px; }
-  /* Cacher les cartes latérales qui débordent */
-  .herodeck__slot--back  { display: none; }
-  .herodeck__slot--front { display: none; }
-  /* Carte centrale : centrée, légèrement inclinée */
-  .herodeck__slot--mid {
-    transform: rotate(2deg) translate(0, 0);
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
+  /* Herodeck : masqué sur mobile */
+  .herodeck { display: none; }
 
   /* Grilles → 1 colonne */
   .problem-grid    { grid-template-columns: 1fr; gap: 16px; }
