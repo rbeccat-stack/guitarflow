@@ -174,7 +174,7 @@ function Showcase_contraintes() {
   return (
     <section className="section" id="solution">
       <div className="container">
-        <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
+        <div className="section__head" style={{ textAlign: "center", maxWidth: "none" }}>
           <h2 className="h-section">Une contrainte. Un défi.</h2>
         </div>
         <div className="solution-grid">
@@ -218,7 +218,7 @@ function Showcase_CAGED() {
   return (
     <section className="section" id="solution-caged">
       <div className="container">
-        <div className="section__head section__head--right" style={{ maxWidth: "none" }}>
+        <div className="section__head" style={{ textAlign: "center", maxWidth: "none" }}>
           <h2 className="h-section">Une carte. Tout le manche.</h2>
         </div>
         <div className="solution-grid solution-grid--mirror">
@@ -277,7 +277,7 @@ function HowTo() {
   return (
     <section className="section section--alt" id="comment">
       <div className="container">
-        <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
+        <div className="section__head" style={{ textAlign: "center", maxWidth: "none" }}>
           <h2 className="h-section" style={{ marginTop: 14 }}>Comment jouer ?</h2>
           <p className="lead section-sub">Deux catégories, deux manières de jouer.</p>
         </div>
@@ -493,7 +493,7 @@ function Categories() {
   return (
     <section className="section" id="categories">
       <div className="container">
-        <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
+        <div className="section__head" style={{ textAlign: "center", maxWidth: "none" }}>
           <h2 className="h-section" style={{ marginTop: 14 }}>2 types de cartes.</h2>
           <p className="lead section-sub">Contrainte pour penser différemment. CAGED pour explorer le manche sous un nouvel angle.</p>
         </div>
@@ -580,7 +580,7 @@ function Recap() {
   return (
     <section className="section section--alt" id="resume">
       <div className="container">
-        <div className="section__head" style={{ textAlign: "left", maxWidth: "none", marginBottom: 0 }}>
+        <div className="section__head" style={{ textAlign: "center", maxWidth: "none", marginBottom: 0 }}>
           <h2 className="h-section">Un deck pensé pour une chose :<br />te débloquer.</h2>
         </div>
         <div className="recap-args">
