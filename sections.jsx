@@ -592,7 +592,6 @@ function Recap() {
             </article>
           )}
         </div>
-        <p className="recap-kicker">Et tout ça, en tirant de <span className="recap-kicker__hl">simples cartes</span>.</p>
       </div>
     </section>);
 
