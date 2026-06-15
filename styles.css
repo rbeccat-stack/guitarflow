@@ -1141,6 +1141,18 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   .footer__left  { flex-direction: column; align-items: center; gap: 10px; }
   .footer__right { flex-direction: column; align-items: center; gap: 10px; }
 
+  /* Centrage du texte des sections */
+  .section__head { text-align: center; }
+  .section__head .eyebrow { display: inline-block; }
+  .section__head .section-sub { margin-left: auto; margin-right: auto; }
+  .hero__copy { text-align: center; align-items: center; }
+  .hero__eyebrow { justify-content: center; }
+  .hero__form-wrap { width: 100%; }
+  .hero__meta { justify-content: center; }
+  .recap-arg { text-align: center; }
+  .cta__inner { text-align: center; }
+  .recap-kicker { text-align: center; }
+
   /* QA block */
   .qa__q { font-size: 15px; }
   .qa__a  { font-size: 14px; }
