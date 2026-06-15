@@ -1,0 +1,38 @@
+<svg width="550" height="825" viewBox="0 0 550 825" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8332_5632)">
+<path d="M533.5 0H16.5C7.3873 0 0 7.80349 0 17.4296V807.57C0 817.197 7.3873 825 16.5 825H533.5C542.613 825 550 817.197 550 807.57V17.4296C550 7.80349 542.613 0 533.5 0Z" fill="white"></path>
+<path d="M550 0H0V130H550V0Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="50.2188" y="83.2734">CAGED - DO</tspan></text>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="80" font-weight="bold" letter-spacing="0em"><tspan x="195.078" y="239.344">Cm7</tspan></text>
+<path opacity="0.8" d="M85.9375 367.829V745.47" stroke="#475569"></path>
+<path opacity="0.8" d="M161.562 367.829V745.47" stroke="#475569"></path>
+<path opacity="0.8" d="M237.187 367.829V745.47" stroke="#475569"></path>
+<path opacity="0.8" d="M312.812 367.829V745.47" stroke="#475569"></path>
+<path opacity="0.8" d="M388.437 367.829V745.47" stroke="#475569"></path>
+<path opacity="0.8" d="M464.062 367.829V745.47" stroke="#475569"></path>
+<path d="M465.437 364.922H84.5624V370.732H465.437V364.922Z" fill="#475569"></path>
+<path opacity="0.6" d="M85.9375 443.355H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 518.883H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 594.411H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 669.939H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 745.468H464.062" stroke="#475569"></path>
+<path d="M237.371 433.99C251.799 433.99 263.496 421.634 263.496 406.393C263.496 391.151 251.799 378.796 237.371 378.796C222.942 378.796 211.246 391.151 211.246 406.393C211.246 421.634 222.942 433.99 237.371 433.99Z" fill="#E42E41"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="220.079" y="416.599">b3</tspan></text>
+<path d="M388.668 433.99C403.097 433.99 414.793 421.634 414.793 406.393C414.793 391.151 403.097 378.796 388.668 378.796C374.24 378.796 362.543 391.151 362.543 406.393C362.543 421.634 374.24 433.99 388.668 433.99Z" fill="#33ABE6"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="371.376" y="416.599">b7</tspan></text>
+<path d="M313.495 584.72C327.924 584.72 339.62 572.365 339.62 557.123C339.62 541.882 327.924 529.526 313.495 529.526C299.067 529.526 287.37 541.882 287.37 557.123C287.37 572.365 299.067 584.72 313.495 584.72Z" fill="#2BE471"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="295.429" y="567.329">P5</tspan></text>
+<path d="M162.198 584.72C176.626 584.72 188.323 572.365 188.323 557.123C188.323 541.882 176.626 529.526 162.198 529.526C147.769 529.526 136.073 541.882 136.073 557.123C136.073 572.365 147.769 584.72 162.198 584.72Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="152.997" y="567.329">R</tspan></text>
+<path d="M79.0624 322.802L92.8124 337.326" stroke="#475569" stroke-width="2"></path>
+<path d="M457.699 322.523L471.449 337.048" stroke="#475569" stroke-width="2"></path>
+<path d="M92.8124 322.802L79.0624 337.326" stroke="#475569" stroke-width="2"></path>
+<path d="M471.449 322.523L457.699 337.048" stroke="#475569" stroke-width="2"></path>
+</g>
+<rect x="1" y="1" width="548" height="823" rx="32" stroke="#475569" stroke-width="2"></rect>
+<defs>
+<clipPath id="clip0_8332_5632">
+<rect width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

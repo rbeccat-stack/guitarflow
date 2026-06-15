@@ -1,0 +1,27 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8334_3)">
+<path d="M528 2H26C12.7452 2 2 12.7452 2 26V803C2 816.255 12.7452 827 26 827H528C541.255 827 552 816.255 552 803V26C552 12.7452 541.255 2 528 2Z" fill="#FAFAFA"></path>
+<path d="M7.5 72H2V154.5H7.5V72Z" fill="#0F172A"></path>
+<text fill="#0F172A" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="53.25">MINDSET • (DÉ)BLOCAGE</tspan></text>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="52" letter-spacing="0em"><tspan x="35" y="131.2">Le droit d&#39;être </tspan><tspan x="35" y="199.2">mauvais</tspan></text>
+<path d="M131 232H65V237.5H131V232Z" fill="#0F172A"></path>
+<path d="M277 433C321.183 433 357 397.183 357 353C357 308.817 321.183 273 277 273C232.817 273 197 308.817 197 353C197 397.183 232.817 433 277 433Z" stroke="#0F172A" stroke-width="8"></path>
+<path opacity="0.5" d="M277 433C321.183 433 357 397.183 357 353C357 308.817 321.183 273 277 273C232.817 273 197 308.817 197 353C197 397.183 232.817 433 277 433Z" stroke="#0F172A" stroke-width="2"></path>
+<path d="M242 358L267 383L317 328" stroke="#0F172A" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></path>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="538.25">Extraire le diamant de la boue. </tspan></text>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="24" letter-spacing="0em"><tspan x="35" y="589.344">Autorise-toi à produire des choses médiocres. </tspan><tspan x="35" y="617.344">La quantité est le seul chemin vers la qualité. </tspan><tspan x="35" y="645.344">Échoue vite pour apprendre plus tôt.</tspan></text>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="20" letter-spacing="0em"><tspan x="35.0586" y="791">Et si ta meilleure idée était la prochaine ? </tspan></text>
+<path d="M519 738.25H35V739.75H519V738.25Z" fill="#E2E8F0"></path>
+<path d="M530 -41H24C11.8497 -41 2 -31.1503 2 -19V762C2 774.15 11.8497 784 24 784H530C542.15 784 552 774.15 552 762V-19C552 -31.1503 542.15 -41 530 -41Z" fill="url(#paint0_radial_8334_3)"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#0F172A" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_8334_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(277 344) rotate(90) scale(165 165)">
+<stop stop-color="#0F172A" stop-opacity="0.15"></stop>
+<stop offset="1" stop-color="#0F172A" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8334_3">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

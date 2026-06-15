@@ -1,0 +1,29 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6489_1881)">
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#DC2626"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">HARMONIE</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="35" y="159.1">Accord d&#39;emprunt</tspan></text>
+<path d="M85 181H35V187H85V181Z" fill="#DC2626"></path>
+<path d="M277.001 539.723C350.887 539.723 410.784 480.361 410.784 407.134C410.784 333.907 350.887 274.544 277.001 274.544C203.114 274.544 143.217 333.907 143.217 407.134C143.217 480.361 203.114 539.723 277.001 539.723Z" fill="url(#paint0_radial_6489_1881)"></path>
+<path d="M167.378 344.732H104.946C101.662 344.732 99 347.37 99 350.625V427.232C99 430.486 101.662 433.125 104.946 433.125H167.378C170.662 433.125 173.324 430.486 173.324 427.232V350.625C173.324 347.37 170.662 344.732 167.378 344.732Z" fill="#DC2626" fill-opacity="0.2"></path>
+<path d="M490.82 260H63.1801C57.0055 260 52 264.62 52 270.32V507.68C52 513.38 57.0055 518 63.1801 518H490.82C496.995 518 502 513.38 502 507.68V270.32C502 264.62 496.995 260 490.82 260Z" fill="#DC2626" fill-opacity="0.1"></path>
+<path d="M256.568 344.732H194.135C190.852 344.732 188.189 347.37 188.189 350.625V427.232C188.189 430.486 190.852 433.125 194.135 433.125H256.568C259.852 433.125 262.514 430.486 262.514 427.232V350.625C262.514 347.37 259.852 344.732 256.568 344.732Z" fill="#DC2626" fill-opacity="0.2"></path>
+<path d="M360.243 330H282.946C279.662 330 277 332.638 277 335.893V441.964C277 445.219 279.662 447.857 282.946 447.857H360.243C363.527 447.857 366.189 445.219 366.189 441.964V335.893C366.189 332.638 363.527 330 360.243 330Z" fill="#DC2626"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="303.201" y="397.25">bVI</tspan></text>
+<text fill="#DC2626" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="23" font-weight="bold" letter-spacing="0em"><tspan x="209.913" y="488.263">MODE</tspan><tspan x="291.289" y="488.263">PARALLÈLE</tspan></text>
+<text fill="#DC2626" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="23" letter-spacing="0em"><tspan x="285.427" y="488.263"> </tspan></text>
+<path d="M449.81 344.732H387.378C384.094 344.732 381.432 347.37 381.432 350.625V427.232C381.432 430.486 384.094 433.125 387.378 433.125H449.81C453.094 433.125 455.756 430.486 455.756 427.232V350.625C455.756 347.37 453.094 344.732 449.81 344.732Z" fill="#DC2626" fill-opacity="0.2"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">Insère un accord hors-tonalité pour </tspan><tspan x="35" y="672.582">surprendre l&#39;oreille et changer de </tspan><tspan x="35" y="705.582">couleur. Par exemple, sur un </tspan><tspan x="35" y="738.582">enchaînement Am - C - Am, ajoute le </tspan><tspan x="35" y="771.582">Bbm avant de revenir au Am.</tspan></text>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#DC2626" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_6489_1881" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13533.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_6489_1881">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

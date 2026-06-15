@@ -1,0 +1,44 @@
+<svg width="550" height="825" viewBox="0 0 550 825" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8332_4182)">
+<path d="M533.5 0H16.5C7.3873 0 0 7.80349 0 17.4296V807.57C0 817.197 7.3873 825 16.5 825H533.5C542.613 825 550 817.197 550 807.57V17.4296C550 7.80349 542.613 0 533.5 0Z" fill="white"></path>
+<mask id="mask0_8332_4182" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="550" height="825">
+<path d="M533.5 0H16.5C7.3873 0 0 7.80349 0 17.4296V807.57C0 817.197 7.3873 825 16.5 825H533.5C542.613 825 550 817.197 550 807.57V17.4296C550 7.80349 542.613 0 533.5 0Z" fill="white"></path>
+</mask>
+<g mask="url(#mask0_8332_4182)">
+<path d="M550 0H0V130H550V0Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="50.4629" y="83.2734">CAGED - SOL</tspan></text>
+</g>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="80" font-weight="bold" letter-spacing="0em"><tspan x="250.179" y="239.344">G</tspan></text>
+<path opacity="0.8" d="M85.9375 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M161.562 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M237.188 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M312.812 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M388.438 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M464.062 370.885V748.526" stroke="#475569"></path>
+<path d="M465.438 367.979H84.5625V373.788H465.438V367.979Z" fill="#475569"></path>
+<path opacity="0.6" d="M85.9375 446.41H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 521.939H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 597.467H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 672.996H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 748.523H464.062" stroke="#475569"></path>
+<path d="M237.371 357.66C251.799 357.66 263.496 345.305 263.496 330.064C263.496 314.822 251.799 302.467 237.371 302.467C222.942 302.467 211.246 314.822 211.246 330.064C211.246 345.305 222.942 357.66 237.371 357.66Z" fill="#2BE471"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="219.305" y="340.27">P5</tspan></text>
+<path d="M464.793 587.776C479.221 587.776 490.918 575.42 490.918 560.179C490.918 544.938 479.221 532.582 464.793 532.582C450.364 532.582 438.668 544.938 438.668 560.179C438.668 575.42 450.364 587.776 464.793 587.776Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="455.593" y="570.385">R</tspan></text>
+<path d="M388.668 587.776C403.097 587.776 414.793 575.42 414.793 560.179C414.793 544.938 403.097 532.582 388.668 532.582C374.24 532.582 362.543 544.938 362.543 560.179C362.543 575.42 374.24 587.776 388.668 587.776Z" fill="#2BE471"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="370.603" y="570.385">P5</tspan></text>
+<path d="M312.544 357.66C326.972 357.66 338.669 345.305 338.669 330.064C338.669 314.822 326.972 302.467 312.544 302.467C298.115 302.467 286.419 314.822 286.419 330.064C286.419 345.305 298.115 357.66 312.544 357.66Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="303.343" y="340.27">R</tspan></text>
+<path d="M162.198 512.41C176.626 512.41 188.323 500.055 188.323 484.814C188.323 469.572 176.626 457.217 162.198 457.217C147.769 457.217 136.073 469.572 136.073 484.814C136.073 500.055 147.769 512.41 162.198 512.41Z" fill="#E42E41"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="138.96" y="495.02">M3</tspan></text>
+<path d="M86.0731 587.776C100.502 587.776 112.198 575.42 112.198 560.179C112.198 544.938 100.502 532.582 86.0731 532.582C71.6447 532.582 59.9481 544.938 59.9481 560.179C59.9481 575.42 71.6447 587.776 86.0731 587.776Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="76.8728" y="570.385">R</tspan></text>
+<path d="M532.125 1.45215H17.875C8.7623 1.45215 1.375 9.25564 1.375 18.8817V806.118C1.375 815.744 8.7623 823.547 17.875 823.547H532.125C541.238 823.547 548.625 815.744 548.625 806.118V18.8817C548.625 9.25564 541.238 1.45215 532.125 1.45215Z" stroke="#E5E7EB" stroke-width="2"></path>
+</g>
+<rect x="1" y="1" width="548" height="823" rx="32" stroke="#475569" stroke-width="2"></rect>
+<defs>
+<clipPath id="clip0_8332_4182">
+<rect width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

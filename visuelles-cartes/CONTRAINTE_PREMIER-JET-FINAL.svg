@@ -1,0 +1,26 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6488_146)">
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#10B981"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">CONTRAINTE</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="35" y="159.1">Premier jet final</tspan></text>
+<path d="M85 181H35V187H85V181Z" fill="#10B981"></path>
+<path d="M277.001 539.723C350.887 539.723 410.784 480.361 410.784 407.134C410.784 333.907 350.887 274.545 277.001 274.545C203.114 274.545 143.217 333.907 143.217 407.134C143.217 480.361 203.114 539.723 277.001 539.723Z" fill="url(#paint0_radial_6488_146)"></path>
+<path d="M490.82 260H63.1801C57.0055 260 52 264.62 52 270.32V507.68C52 513.38 57.0055 518 63.1801 518H490.82C496.995 518 502 513.38 502 507.68V270.32C502 264.62 496.995 260 490.82 260Z" fill="#10B981" fill-opacity="0.1"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">Interdiction de revenir en arrière. </tspan><tspan x="35" y="672.582">Enregistre ou joue comme si c&#39;était le </tspan><tspan x="35" y="705.582">live de ta vie. Ici l&#39;imperfection est de </tspan><tspan x="35" y="738.582">mise.</tspan></text>
+<path d="M277.25 379.5C300.032 379.5 318.5 361.032 318.5 338.25C318.5 315.468 300.032 297 277.25 297C254.468 297 236 315.468 236 338.25C236 361.032 254.468 379.5 277.25 379.5Z" fill="#10B981"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="40" letter-spacing="0em"><tspan x="257.43" y="352">v1</tspan></text>
+<text fill="#10B981" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="23" font-weight="bold" letter-spacing="0em"><tspan x="226.148" y="471.469">NO EDIT</tspan></text>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M255.562 393.854V387.12C255.562 374.904 265.384 365 277.5 365C289.616 365 299.438 374.904 299.438 387.12V393.854C303.061 394.127 305.42 394.815 307.144 396.554C310 399.434 310 404.068 310 413.337C310 422.606 310 427.241 307.144 430.12C304.288 433 299.692 433 290.5 433H264.5C255.308 433 250.711 433 247.856 430.12C245 427.241 245 422.606 245 413.337C245 404.068 245 399.434 247.856 396.554C249.58 394.815 251.94 394.127 255.562 393.854ZM260.438 387.12C260.438 377.619 268.077 369.916 277.5 369.916C286.923 369.916 294.562 377.619 294.562 387.12V393.686C293.318 393.675 291.967 393.675 290.5 393.675H264.5C263.033 393.675 261.682 393.675 260.438 393.686V387.12ZM284 413.337C284 416.957 281.09 419.892 277.5 419.892C273.91 419.892 271 416.957 271 413.337C271 409.717 273.91 406.783 277.5 406.783C281.09 406.783 284 409.717 284 413.337Z" fill="#10B981"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#10B981" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_6488_146" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13533.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_6488_146">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

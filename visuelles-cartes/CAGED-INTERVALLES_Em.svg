@@ -1,0 +1,38 @@
+<svg width="550" height="825" viewBox="0 0 550 825" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8332_3689)">
+<path d="M533.5 0H16.5C7.3873 0 0 7.80349 0 17.4296V807.57C0 817.197 7.3873 825 16.5 825H533.5C542.613 825 550 817.197 550 807.57V17.4296C550 7.80349 542.613 0 533.5 0Z" fill="white"></path>
+<path d="M550 0H0V130H550V0Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="50.0273" y="83.2734">CAGED - MI</tspan></text>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="80" font-weight="bold" letter-spacing="0em"><tspan x="220.047" y="239.344">Em</tspan></text>
+<path opacity="0.8" d="M85.9375 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M161.562 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M237.188 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M312.812 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M388.438 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M464.062 370.885V748.526" stroke="#475569"></path>
+<path d="M465.438 367.978H84.5625V373.787H465.438V367.978Z" fill="#475569"></path>
+<path opacity="0.6" d="M85.9375 446.411H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 521.939H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 597.468H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 672.996H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 748.524H464.062" stroke="#475569"></path>
+<path d="M161.246 511.406C175.675 511.406 187.371 499.05 187.371 483.809C187.371 468.567 175.675 456.212 161.246 456.212C146.818 456.212 135.121 468.567 135.121 483.809C135.121 499.05 146.818 511.406 161.246 511.406Z" fill="#2BE471"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="143.18" y="494.015">P5</tspan></text>
+<path d="M388.668 357.66C403.097 357.66 414.793 345.305 414.793 330.064C414.793 314.822 403.097 302.467 388.668 302.467C374.24 302.467 362.543 314.822 362.543 330.064C362.543 345.305 374.24 357.66 388.668 357.66Z" fill="#2BE471"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="370.603" y="340.27">P5</tspan></text>
+<path d="M463.841 357.66C478.27 357.66 489.966 345.305 489.966 330.064C489.966 314.822 478.27 302.467 463.841 302.467C449.413 302.467 437.716 314.822 437.716 330.064C437.716 345.305 449.413 357.66 463.841 357.66Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="454.641" y="340.27">R</tspan></text>
+<path d="M313.495 357.66C327.924 357.66 339.62 345.305 339.62 330.064C339.62 314.822 327.924 302.467 313.495 302.467C299.067 302.467 287.37 314.822 287.37 330.064C287.37 345.305 299.067 357.66 313.495 357.66Z" fill="#E42E41"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="296.203" y="340.27">b3</tspan></text>
+<path d="M236.419 511.406C250.847 511.406 262.544 499.05 262.544 483.809C262.544 468.567 250.847 456.212 236.419 456.212C221.991 456.212 210.294 468.567 210.294 483.809C210.294 499.05 221.991 511.406 236.419 511.406Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="227.219" y="494.015">R</tspan></text>
+<path d="M86.0732 357.66C100.502 357.66 112.198 345.305 112.198 330.064C112.198 314.822 100.502 302.467 86.0732 302.467C71.6448 302.467 59.9482 314.822 59.9482 330.064C59.9482 345.305 71.6448 357.66 86.0732 357.66Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="76.8728" y="340.27">R</tspan></text>
+</g>
+<rect x="1" y="1" width="548" height="823" rx="32" stroke="#475569" stroke-width="2"></rect>
+<defs>
+<clipPath id="clip0_8332_3689">
+<rect width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

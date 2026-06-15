@@ -1,0 +1,34 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8334_318)">
+<path d="M530 2H24C11.8497 2 2 11.8497 2 24V805C2 817.15 11.8497 827 24 827H530C542.15 827 552 817.15 552 805V24C552 11.8497 542.15 2 530 2Z" fill="#FAFAFA"></path>
+<path d="M7.5 72H2V154.5H7.5V72Z" fill="#0D9488"></path>
+<text fill="#0D9488" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="53.25">PROCESSUS • COMPO / IMPRO</tspan></text>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="52" letter-spacing="0em"><tspan x="35" y="131.2">Le cycle en 4 étapes</tspan></text>
+<path d="M101 180H35V185.5H101V180Z" fill="#0D9488"></path>
+<path opacity="0.3" d="M71 372.875C139.75 327.042 208.5 317.875 277.25 345.375C346 372.875 414.75 363.708 483.5 317.875" stroke="#0D9488" stroke-width="2" stroke-dasharray="4 4"></path>
+<path d="M119.75 339.125H81.25C76.6937 339.125 73 342.819 73 347.375V385.875C73 390.431 76.6937 394.125 81.25 394.125H119.75C124.306 394.125 128 390.431 128 385.875V347.375C128 342.819 124.306 339.125 119.75 339.125Z" fill="#0D9488" fill-opacity="0.1" stroke="#0D9488" stroke-width="1.5"></path>
+<text fill="#0D9488" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="12" letter-spacing="0em"><tspan x="68" y="416.325">IMPROVISE</tspan></text>
+<path d="M234.75 304.75H196.25C191.694 304.75 188 308.444 188 313V351.5C188 356.056 191.694 359.75 196.25 359.75H234.75C239.306 359.75 243 356.056 243 351.5V313C243 308.444 239.306 304.75 234.75 304.75Z" fill="#0D9488" fill-opacity="0.1" stroke="#0D9488" stroke-width="1.5"></path>
+<text fill="#0D9488" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="12" letter-spacing="0em"><tspan x="199" y="381.575">ISOLE</tspan></text>
+<path d="M352.75 332.25H314.25C309.694 332.25 306 335.944 306 340.5V379C306 383.556 309.694 387.25 314.25 387.25H352.75C357.306 387.25 361 383.556 361 379V340.5C361 335.944 357.306 332.25 352.75 332.25Z" fill="#0D9488" fill-opacity="0.1" stroke="#0D9488" stroke-width="1.5"></path>
+<text fill="#0D9488" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="12" letter-spacing="0em"><tspan x="300" y="409.075">DÉVELOPPE</tspan></text>
+<path d="M469.75 291H431.25C426.694 291 423 294.694 423 299.25V337.75C423 342.306 426.694 346 431.25 346H469.75C474.306 346 478 342.306 478 337.75V299.25C478 294.694 474.306 291 469.75 291Z" fill="#0D9488"></path>
+<path d="M442.25 318.5L449.125 325.375L456 311.625" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+<text fill="#0D9488" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="12" letter-spacing="0em"><tspan x="419" y="367.2">ASSEMBLE</tspan></text>
+<text fill="#0D9488" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="538.25">Le secret des compositeurs pros.</tspan></text>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="24" letter-spacing="0em"><tspan x="35" y="600.344">Improvise librement, isole un motif, fais-le </tspan><tspan x="35" y="628.344">varier et seulement après, assemble l&#39;ensemble.</tspan></text>
+<text fill="#0D9488" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="20" letter-spacing="0em"><tspan x="35" y="791">Ce n’est pas le manque d&#39;idées, mais leur traitement. </tspan></text>
+<path d="M519 738.25H35V739.75H519V738.25Z" fill="#E2E8F0"></path>
+<path d="M530 -41H24C11.8497 -41 2 -31.1503 2 -19V762C2 774.15 11.8497 784 24 784H530C542.15 784 552 774.15 552 762V-19C552 -31.1503 542.15 -41 530 -41Z" fill="url(#paint0_radial_8334_318)"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#0D9488" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_8334_318" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(277 344) rotate(90) scale(165 165)">
+<stop stop-color="#0D9488" stop-opacity="0.15"></stop>
+<stop offset="1" stop-color="#0D9488" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8334_318">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

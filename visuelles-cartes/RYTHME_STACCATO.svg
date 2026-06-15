@@ -1,0 +1,32 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6492_3943)">
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#8B5CF6"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">RYTHME</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="35" y="159.1">Staccato</tspan></text>
+<path d="M85 181H35V187H85V181Z" fill="#8B5CF6"></path>
+<path d="M277.001 539.723C350.887 539.723 410.784 480.361 410.784 407.134C410.784 333.907 350.887 274.544 277.001 274.544C203.114 274.544 143.217 333.907 143.217 407.134C143.217 480.361 203.114 539.723 277.001 539.723Z" fill="url(#paint0_radial_6492_3943)"></path>
+<path d="M490.82 260H63.1801C57.0055 260 52 264.62 52 270.32V507.68C52 513.38 57.0055 518 63.1801 518H490.82C496.995 518 502 513.38 502 507.68V270.32C502 264.62 496.995 260 490.82 260Z" fill="#8B5CF6" fill-opacity="0.1"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">Joue tes notes très brièvement, comme </tspan><tspan x="35" y="672.582">si ton manche était brûlant.</tspan></text>
+<path d="M98 394H455.5" stroke="#8B5CF6" stroke-opacity="0.3" stroke-width="2"></path>
+<path d="M155.625 414.25C167.016 414.25 176.25 405.016 176.25 393.625C176.25 382.234 167.016 373 155.625 373C144.234 373 135 382.234 135 393.625C135 405.016 144.234 414.25 155.625 414.25Z" fill="#8B5CF6"></path>
+<path d="M155.75 369.5C157.269 369.5 158.5 368.269 158.5 366.75C158.5 365.231 157.269 364 155.75 364C154.231 364 153 365.231 153 366.75C153 368.269 154.231 369.5 155.75 369.5Z" fill="#8B5CF6"></path>
+<path d="M238.125 414.25C249.516 414.25 258.75 405.016 258.75 393.625C258.75 382.234 249.516 373 238.125 373C226.734 373 217.5 382.234 217.5 393.625C217.5 405.016 226.734 414.25 238.125 414.25Z" fill="#8B5CF6"></path>
+<path d="M237.75 369.5C239.269 369.5 240.5 368.269 240.5 366.75C240.5 365.231 239.269 364 237.75 364C236.231 364 235 365.231 235 366.75C235 368.269 236.231 369.5 237.75 369.5Z" fill="#8B5CF6"></path>
+<path d="M320.625 414.25C332.016 414.25 341.25 405.016 341.25 393.625C341.25 382.234 332.016 373 320.625 373C309.234 373 300 382.234 300 393.625C300 405.016 309.234 414.25 320.625 414.25Z" fill="#8B5CF6"></path>
+<path d="M320.75 369.5C322.269 369.5 323.5 368.269 323.5 366.75C323.5 365.231 322.269 364 320.75 364C319.231 364 318 365.231 318 366.75C318 368.269 319.231 369.5 320.75 369.5Z" fill="#8B5CF6"></path>
+<path d="M403.125 414.25C414.516 414.25 423.75 405.016 423.75 393.625C423.75 382.234 414.516 373 403.125 373C391.734 373 382.5 382.234 382.5 393.625C382.5 405.016 391.734 414.25 403.125 414.25Z" fill="#8B5CF6"></path>
+<path d="M402.75 369.5C404.269 369.5 405.5 368.269 405.5 366.75C405.5 365.231 404.269 364 402.75 364C401.231 364 400 365.231 400 366.75C400 368.269 401.231 369.5 402.75 369.5Z" fill="#8B5CF6"></path>
+<text transform="translate(211 439)" fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="23" font-weight="bold" letter-spacing="0em"><tspan x="0.239746" y="18.4695">STACCATO</tspan></text>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#8B5CF6" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_6492_3943" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13533.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_6492_3943">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

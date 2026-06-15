@@ -1,0 +1,35 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8334_222)">
+<path d="M528 2H26C12.7452 2 2 12.7452 2 26V803C2 816.255 12.7452 827 26 827H528C541.255 827 552 816.255 552 803V26C552 12.7452 541.255 2 528 2Z" fill="#FAFAFA"></path>
+<path d="M7.5 72H2V154.5H7.5V72Z" fill="#8B5CF6"></path>
+<text fill="#8B5CF6" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="53.25">THÉORIE • INTENTION NARRATIVE</tspan></text>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="52" letter-spacing="0em"><tspan x="35" y="131.2">Le &#34;Story Circle&#34; </tspan><tspan x="35" y="199.2">musical</tspan></text>
+<path d="M101 232H35V237.5H101V232Z" fill="#8B5CF6"></path>
+<path d="M157 352H397" stroke="#CBD5E1" stroke-width="2"></path>
+<text fill="#9BA1A9" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="12" letter-spacing="0em"><tspan x="224.523" y="254.2">ZONE DE CONFORT</tspan></text>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="12" letter-spacing="0em"><tspan x="214.996" y="462.2">L&#39;INCONNU (TENSION)</tspan></text>
+<path d="M277 417C312.899 417 342 387.899 342 352C342 316.101 312.899 287 277 287C241.101 287 212 316.101 212 352C212 387.899 241.101 417 277 417Z" stroke="#9BA1A9" stroke-opacity="0.25" stroke-width="8"></path>
+<path d="M342 352C342 387.898 312.898 417 277 417C241.102 417 212 387.898 212 352" stroke="url(#paint0_linear_8334_222)" stroke-width="8" stroke-linecap="round"></path>
+<path d="M342 357C344.761 357 347 354.761 347 352C347 349.239 344.761 347 342 347C339.239 347 337 349.239 337 352C337 354.761 339.239 357 342 357Z" fill="#0F172A"></path>
+<path d="M277 425C281.418 425 285 421.418 285 417C285 412.582 281.418 409 277 409C272.582 409 269 412.582 269 417C269 421.418 272.582 425 277 425Z" fill="#8B5CF6"></path>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="538.25">La structure narrative classique.</tspan></text>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="24" letter-spacing="0em"><tspan x="35" y="600.344">Fais descendre ton thème dans l&#39;inconnu </tspan><tspan x="35" y="628.344">(modulation/rythme). Fais-lui affronter une </tspan><tspan x="35" y="656.344">épreuve, puis ramène-le chez lui.</tspan></text>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="20" letter-spacing="0em"><tspan x="35" y="791">Raconte une histoire sans un mot.</tspan></text>
+<path d="M530 -41H24C11.8497 -41 2 -31.1503 2 -19V762C2 774.15 11.8497 784 24 784H530C542.15 784 552 774.15 552 762V-19C552 -31.1503 542.15 -41 530 -41Z" fill="url(#paint1_radial_8334_222)"></path>
+<path d="M519 738.25H35V739.75H519V738.25Z" fill="#E2E8F0"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#8B5CF6" stroke-width="2"></rect>
+<defs>
+<linearGradient id="paint0_linear_8334_222" x1="212" y1="352" x2="212" y2="417" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8B5CF6"></stop>
+<stop offset="1" stop-color="#8B5CF6"></stop>
+</linearGradient>
+<radialGradient id="paint1_radial_8334_222" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(277 344) rotate(90) scale(165 165)">
+<stop stop-color="#8B5CF6" stop-opacity="0.15"></stop>
+<stop offset="1" stop-color="#8B5CF6" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8334_222">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

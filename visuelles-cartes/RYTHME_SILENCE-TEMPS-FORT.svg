@@ -1,0 +1,31 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6492_3876)">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#8B5CF6"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">RYTHME</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="35" y="159.1">Silence temps fort</tspan></text>
+<path d="M85 181H35V187H85V181Z" fill="#8B5CF6"></path>
+<path d="M277.001 539.723C350.887 539.723 410.784 480.361 410.784 407.134C410.784 333.907 350.887 274.544 277.001 274.544C203.114 274.544 143.217 333.907 143.217 407.134C143.217 480.361 203.114 539.723 277.001 539.723Z" fill="url(#paint0_radial_6492_3876)"></path>
+<path d="M490.82 260H63.1801C57.0055 260 52 264.62 52 270.32V507.68C52 513.38 57.0055 518 63.1801 518H490.82C496.995 518 502 513.38 502 507.68V270.32C502 264.62 496.995 260 490.82 260Z" fill="#8B5CF6" fill-opacity="0.1"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">N</tspan></text>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="58.5908" y="639.582">e joue jamais sur le “1”. Laisse </tspan><tspan x="35" y="672.582">passer le premier temps, respire, et </tspan><tspan x="35" y="705.582">attaque ensuite.</tspan></text>
+<path d="M98 388.625H455.5" stroke="#DDD6FE" stroke-width="2"></path>
+<path d="M139.25 409.25C150.641 409.25 159.875 400.016 159.875 388.625C159.875 377.234 150.641 368 139.25 368C127.859 368 118.625 377.234 118.625 388.625C118.625 400.016 127.859 409.25 139.25 409.25Z" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="4 4"></path>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="23" font-weight="bold" letter-spacing="0em"><tspan x="133.138" y="396.469">1</tspan></text>
+<path d="M235.5 409.25C246.891 409.25 256.125 400.016 256.125 388.625C256.125 377.234 246.891 368 235.5 368C224.109 368 214.875 377.234 214.875 388.625C214.875 400.016 224.109 409.25 235.5 409.25Z" fill="#8B5CF6"></path>
+<path d="M331.75 409.25C343.141 409.25 352.375 400.016 352.375 388.625C352.375 377.234 343.141 368 331.75 368C320.359 368 311.125 377.234 311.125 388.625C311.125 400.016 320.359 409.25 331.75 409.25Z" fill="#8B5CF6"></path>
+<path d="M428 409.25C439.391 409.25 448.625 400.016 448.625 388.625C448.625 377.234 439.391 368 428 368C416.609 368 407.375 377.234 407.375 388.625C407.375 400.016 416.609 409.25 428 409.25Z" fill="#8B5CF6"></path>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="23" font-weight="bold" letter-spacing="0em"><tspan x="87.2612" y="449.469">SILENCE</tspan></text>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#8B5CF6" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_6492_3876" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13533.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_6492_3876">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

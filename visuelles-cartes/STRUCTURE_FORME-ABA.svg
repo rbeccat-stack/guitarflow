@@ -1,0 +1,30 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8308_495)">
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">STRUCTURE</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="34.9999" y="159.1">Forme A - B - A</tspan></text>
+<path d="M84.9999 181H34.9999V187H84.9999V181Z" fill="#475569"></path>
+<path d="M277.001 538.723C350.887 538.723 410.784 479.361 410.784 406.134C410.784 332.907 350.887 273.545 277.001 273.545C203.114 273.545 143.217 332.907 143.217 406.134C143.217 479.361 203.114 538.723 277.001 538.723Z" fill="url(#paint0_radial_8308_495)"></path>
+<path d="M490.82 259H63.1801C57.0055 259 52 263.62 52 269.32V506.68C52 512.38 57.0055 517 63.1801 517H490.82C496.995 517 502 512.38 502 506.68V269.32C502 263.62 496.995 259 490.82 259Z" fill="#F1F5F9"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">Pense ton morceau en section pour </tspan><tspan x="35" y="672.582">donner de la cohérence. Fais simple.</tspan></text>
+<path d="M189 348H117.5C114.462 348 112 350.462 112 353.5V425C112 428.038 114.462 430.5 117.5 430.5H189C192.038 430.5 194.5 428.038 194.5 425V353.5C194.5 350.462 192.038 348 189 348Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="30" letter-spacing="0em"><tspan x="142.349" y="399">A</tspan></text>
+<path d="M313 348H241.5C238.462 348 236 350.462 236 353.5V425C236 428.038 238.462 430.5 241.5 430.5H313C316.038 430.5 318.5 428.038 318.5 425V353.5C318.5 350.462 316.038 348 313 348Z" fill="#94A3B8"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="30" letter-spacing="0em"><tspan x="267.008" y="399">B</tspan></text>
+<path d="M437 348H365.5C362.462 348 360 350.462 360 353.5V425C360 428.038 362.462 430.5 365.5 430.5H437C440.038 430.5 442.5 428.038 442.5 425V353.5C442.5 350.462 440.038 348 437 348Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="30" letter-spacing="0em"><tspan x="390.349" y="399">A</tspan></text>
+<path d="M332 389H345.75" stroke="#475569" stroke-width="3"></path>
+<path d="M208.5 389.25H222.25" stroke="#475569" stroke-width="3"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#475569" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_8308_495" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13532.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8308_495">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

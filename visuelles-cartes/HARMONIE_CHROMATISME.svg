@@ -1,0 +1,28 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6489_2086)">
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#DC2626"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">HARMONIE</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="35" y="159.1">Chromatisme</tspan></text>
+<path d="M85 181H35V187H85V181Z" fill="#DC2626"></path>
+<path d="M277.001 539.723C350.887 539.723 410.784 480.361 410.784 407.134C410.784 333.907 350.887 274.544 277.001 274.544C203.114 274.544 143.217 333.907 143.217 407.134C143.217 480.361 203.114 539.723 277.001 539.723Z" fill="url(#paint0_radial_6489_2086)"></path>
+<path d="M490.82 260H63.1801C57.0055 260 52 264.62 52 270.32V507.68C52 513.38 57.0055 518 63.1801 518H490.82C496.995 518 502 513.38 502 507.68V270.32C502 264.62 496.995 260 490.82 260Z" fill="#DC2626" fill-opacity="0.1"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">Ne saute pas de cases. Relie tes notes </tspan><tspan x="35" y="672.582">cibles en jouant les cases </tspan><tspan x="35" y="705.582">intermédiaires pour fluidifier tes </tspan><tspan x="35" y="738.582">phrases.</tspan></text>
+<path d="M226 429H205C199.477 429 195 433.477 195 439V460C195 465.523 199.477 470 205 470H226C231.523 470 236 465.523 236 460V439C236 433.477 231.523 429 226 429Z" fill="#DC2626"></path>
+<path d="M267 389H246C240.477 389 236 393.477 236 399V420C236 425.523 240.477 430 246 430H267C272.523 430 277 425.523 277 420V399C277 393.477 272.523 389 267 389Z" fill="#DC2626"></path>
+<path d="M308 348H287C281.477 348 277 352.477 277 358V379C277 384.523 281.477 389 287 389H308C313.523 389 318 384.523 318 379V358C318 352.477 313.523 348 308 348Z" fill="#DC2626"></path>
+<path d="M349 307H328C322.477 307 318 311.477 318 317V338C318 343.523 322.477 348 328 348H349C354.523 348 359 343.523 359 338V317C359 311.477 354.523 307 349 307Z" fill="#DC2626"></path>
+<path d="M195 471L359 307" stroke="#DC2626"></path>
+<text fill="#DC2626" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="23" font-weight="bold" letter-spacing="0em"><tspan x="264" y="469.469">1/2 TON</tspan></text>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#DC2626" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_6489_2086" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13533.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_6489_2086">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,34 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6488_417)">
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#10B981"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">CONTRAINTE</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="35" y="159.1">Zone aveugle</tspan></text>
+<path d="M85 181H35V187H85V181Z" fill="#10B981"></path>
+<path d="M277.001 539.723C350.887 539.723 410.784 480.361 410.784 407.134C410.784 333.907 350.887 274.544 277.001 274.544C203.114 274.544 143.217 333.907 143.217 407.134C143.217 480.361 203.114 539.723 277.001 539.723Z" fill="url(#paint0_radial_6488_417)"></path>
+<path d="M490.82 260H63.1801C57.0055 260 52 264.62 52 270.32V507.68C52 513.38 57.0055 518 63.1801 518H490.82C496.995 518 502 513.38 502 507.68V270.32C502 264.62 496.995 260 490.82 260Z" fill="#10B981" fill-opacity="0.1"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">Identifie l&#39;endroit du manche qui te fait </tspan><tspan x="35" y="672.582">peur (ta zone d&#39;ombre). Force-toi à y </tspan><tspan x="35" y="705.582">rester jusqu&#39;à ce qu&#39;il devienne </tspan><tspan x="35" y="738.582">familier.</tspan></text>
+<rect x="181.5" y="471.5" width="164" height="191" transform="rotate(-90 181.5 471.5)" stroke="#10B981" stroke-opacity="0.4" stroke-width="5"></rect>
+<line x1="182" y1="402.407" x2="372" y2="402.407" stroke="#10B981" stroke-opacity="0.4" stroke-width="5"></line>
+<line x1="182" y1="370.407" x2="372" y2="370.407" stroke="#10B981" stroke-opacity="0.4" stroke-width="5"></line>
+<line x1="219.705" y1="469.816" x2="219.705" y2="309" stroke="#10B981" stroke-opacity="0.4" stroke-width="5"></line>
+<line x1="257.994" y1="469.816" x2="257.994" y2="309" stroke="#10B981" stroke-opacity="0.4" stroke-width="5"></line>
+<line x1="296.285" y1="469.816" x2="296.285" y2="309" stroke="#10B981" stroke-opacity="0.4" stroke-width="5"></line>
+<line x1="334.572" y1="469.816" x2="334.572" y2="309" stroke="#10B981" stroke-opacity="0.4" stroke-width="5"></line>
+<line x1="182" y1="434.407" x2="372" y2="434.407" stroke="#10B981" stroke-opacity="0.4" stroke-width="5"></line>
+<line x1="182" y1="339.407" x2="372" y2="339.407" stroke="#10B981" stroke-opacity="0.4" stroke-width="5"></line>
+<path d="M341.823 384.707C337.107 376.421 331.085 369.139 324.101 363.134C323.664 362.76 322.999 362.788 322.59 363.196L304.709 381.05C304.459 381.299 304.357 381.645 304.419 381.991C305.129 385.785 305.073 389.852 304.044 394.031C301.629 403.814 293.732 411.697 283.931 414.108C279.743 415.14 275.669 415.191 271.868 414.482C271.522 414.419 271.175 414.522 270.925 414.771L260.453 425.223C259.845 425.83 260.135 426.891 260.97 427.089C266.141 428.308 271.499 428.966 277.004 428.966C304.367 428.966 328.316 413.189 341.821 389.528C342.668 388.048 342.668 386.194 341.827 384.713L341.823 384.707Z" fill="#10B981"></path>
+<path d="M231.409 411.028L249.295 393.174C249.545 392.925 249.647 392.579 249.585 392.233C248.869 388.405 248.931 384.31 249.988 380.096C252.437 370.33 260.335 362.481 270.131 360.1C274.301 359.085 278.352 359.033 282.142 359.737C282.489 359.799 282.835 359.697 283.085 359.447L293.557 348.995C294.165 348.388 293.875 347.328 293.04 347.129C287.869 345.916 282.511 345.258 277.011 345.258C249.648 345.258 225.699 361.035 212.193 384.696C211.347 386.176 211.347 388.031 212.188 389.511C216.904 397.797 222.926 405.079 229.91 411.084C230.347 411.458 231.012 411.43 231.421 411.022L231.409 411.028Z" fill="#10B981"></path>
+<path d="M322.267 341.928C319.704 339.37 315.556 339.37 312.994 341.928L231.733 423.039C229.17 425.596 229.17 429.737 231.733 432.294C233.011 433.57 234.693 434.211 236.369 434.211C238.045 434.211 239.722 433.57 241.006 432.294L322.267 351.184C324.829 348.632 324.829 344.486 322.267 341.928Z" fill="#10B981"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#10B981" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_6488_417" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13533.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_6488_417">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

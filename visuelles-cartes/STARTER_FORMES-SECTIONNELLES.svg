@@ -1,0 +1,32 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8334_126)">
+<path d="M528 2H26C12.7452 2 2 12.7452 2 26V803C2 816.255 12.7452 827 26 827H528C541.255 827 552 816.255 552 803V26C552 12.7452 541.255 2 528 2Z" fill="#FAFAFA"></path>
+<path d="M519 738.25H35V739.75H519V738.25Z" fill="#E2E8F0"></path>
+<path d="M7.5 72H2V154.5H7.5V72Z" fill="#8B5CF6"></path>
+<text fill="#8B5CF6" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="53.25">THÉORIE • STRUCTURE</tspan></text>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="52" letter-spacing="0em"><tspan x="35" y="131.2">Les formes</tspan></text>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="52" letter-spacing="0em"><tspan x="35" y="196.2">sectionnelles</tspan></text>
+<path d="M101 232H35V237.5H101V232Z" fill="#8B5CF6"></path>
+<path d="M185 313H129C122.373 313 117 318.373 117 325V381C117 387.627 122.373 393 129 393H185C191.627 393 197 387.627 197 381V325C197 318.373 191.627 313 185 313Z" fill="#8B5CF6"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="32" font-weight="bold" letter-spacing="0em"><tspan x="145.031" y="364.136">A</tspan></text>
+<path d="M310 313H244C237.373 313 232 318.373 232 325V381C232 387.627 237.373 393 244 393H310C316.627 393 322 387.627 322 381V325C322 318.373 316.627 313 310 313Z" fill="white" stroke="#8B5CF6" stroke-width="3"></path>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="32" font-weight="bold" letter-spacing="0em"><tspan x="266.422" y="364.136">B</tspan></text>
+<path d="M425 313H369C362.373 313 357 318.373 357 325V381C357 387.627 362.373 393 369 393H425C431.627 393 437 387.627 437 381V325C437 318.373 431.627 313 425 313Z" fill="#8B5CF6"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="32" font-weight="bold" letter-spacing="0em"><tspan x="385.031" y="364.136">A</tspan></text>
+<path d="M212 353H222M332 353H342" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 4"></path>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="24" letter-spacing="0em"><tspan x="35" y="589.344">Découpe ton morceau. Écris une section A très </tspan><tspan x="35" y="617.344">forte, une section B contrastante, puis reviens à </tspan><tspan x="35" y="645.344">A pour la résolution.</tspan></text>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="20" letter-spacing="0em"><tspan x="35" y="791">Ne réinvente pas la roue.</tspan></text>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="538.25">Utiliser des structures éprouvées.</tspan></text>
+<path d="M530 -41H24C11.8497 -41 2 -31.1503 2 -19V762C2 774.15 11.8497 784 24 784H530C542.15 784 552 774.15 552 762V-19C552 -31.1503 542.15 -41 530 -41Z" fill="url(#paint0_radial_8334_126)"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#8B5CF6" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_8334_126" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(277 344) rotate(90) scale(165 165)">
+<stop stop-color="#8B5CF6" stop-opacity="0.15"></stop>
+<stop offset="1" stop-color="#8B5CF6" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8334_126">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

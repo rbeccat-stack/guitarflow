@@ -1,0 +1,27 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6488_61)">
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#10B981"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">CONTRAINTE</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="35" y="159.1">L’opposé</tspan></text>
+<path d="M85 181H35V187H85V181Z" fill="#10B981"></path>
+<path d="M277.001 539.723C350.887 539.723 410.784 480.361 410.784 407.134C410.784 333.907 350.887 274.544 277.001 274.544C203.114 274.544 143.217 333.907 143.217 407.134C143.217 480.361 203.114 539.723 277.001 539.723Z" fill="url(#paint0_radial_6488_61)"></path>
+<path d="M490.82 260H63.1801C57.0055 260 52 264.62 52 270.32V507.68C52 513.38 57.0055 518 63.1801 518H490.82C496.995 518 502 513.38 502 507.68V270.32C502 264.62 496.995 260 490.82 260Z" fill="#10B981" fill-opacity="0.1"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">Arrête-toi. Imagine ce que tu jouerais </tspan><tspan x="35" y="672.582">naturellement, et fais le stricte opposé. </tspan><tspan x="35" y="705.582">Change de technique, de hauteur de </tspan><tspan x="35" y="738.582">note, de position d’accord, etc.</tspan></text>
+<path d="M194 412.25L207.75 426L221.5 412.25" stroke="#10B981" stroke-opacity="0.4" stroke-width="4"></path>
+<path d="M207.75 316V426" stroke="#10B981" stroke-opacity="0.4" stroke-width="4"></path>
+<path d="M345.25 426V316" stroke="#10B981" stroke-width="6"></path>
+<path d="M331.5 329.75L345.25 316L359 329.75" stroke="#10B981" stroke-width="6"></path>
+<text fill="#10B981" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="23" font-weight="bold" letter-spacing="0em"><tspan x="216.445" y="467.219">REFRAME</tspan></text>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#10B981" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_6488_61" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13533.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_6488_61">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

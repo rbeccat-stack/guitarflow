@@ -1,0 +1,47 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6488_259)">
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#10B981"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">CONTRAINTE</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="35" y="159.1">Octave</tspan></text>
+<path d="M85 181H35V187H85V181Z" fill="#10B981"></path>
+<path d="M277.001 539.723C350.887 539.723 410.784 480.361 410.784 407.134C410.784 333.907 350.887 274.545 277.001 274.545C203.114 274.545 143.217 333.907 143.217 407.134C143.217 480.361 203.114 539.723 277.001 539.723Z" fill="url(#paint0_radial_6488_259)"></path>
+<path d="M490.82 260H63.1801C57.0055 260 52 264.62 52 270.32V507.68C52 513.38 57.0055 518 63.1801 518H490.82C496.995 518 502 513.38 502 507.68V270.32C502 264.62 496.995 260 490.82 260Z" fill="#10B981" fill-opacity="0.1"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">Joue une phrase dans les graves, puis </tspan><tspan x="35" y="672.582">répète-la à l&#39;octave supérieure. Créer </tspan><tspan x="35" y="705.582">un motif qui se répète.</tspan></text>
+<rect x="80.5" y="329.499" width="394" height="122" stroke="black" stroke-width="5"></rect>
+<line x1="117.756" y1="327.999" x2="117.756" y2="448.999" stroke="black" stroke-width="5"></line>
+<line x1="150.756" y1="327.999" x2="150.756" y2="449.999" stroke="black" stroke-width="5"></line>
+<line x1="82" y1="368.299" x2="472" y2="368.299" stroke="black" stroke-width="5"></line>
+<line x1="82" y1="407.192" x2="472" y2="407.192" stroke="black" stroke-width="5"></line>
+<line x1="442.5" y1="327.999" x2="442.5" y2="448.999" stroke="black" stroke-width="5"></line>
+<line x1="182.756" y1="328.999" x2="182.756" y2="448.999" stroke="black" stroke-width="5"></line>
+<line x1="215.756" y1="328.999" x2="215.756" y2="448.999" stroke="black" stroke-width="5"></line>
+<line x1="247.756" y1="328.999" x2="247.756" y2="448.999" stroke="black" stroke-width="5"></line>
+<line x1="279.756" y1="328.999" x2="279.756" y2="448.999" stroke="black" stroke-width="5"></line>
+<line x1="312.756" y1="328.999" x2="312.756" y2="448.999" stroke="black" stroke-width="5"></line>
+<line x1="344.756" y1="328.999" x2="344.756" y2="448.999" stroke="black" stroke-width="5"></line>
+<line x1="377.5" y1="327.999" x2="377.5" y2="448.999" stroke="black" stroke-width="5"></line>
+<line x1="409.5" y1="327.999" x2="409.5" y2="448.999" stroke="black" stroke-width="5"></line>
+<path d="M165.904 345C168.613 345 170.809 347.195 170.809 349.904C170.809 352.613 168.613 354.809 165.904 354.809C163.196 354.809 161 352.613 161 349.904C161 347.195 163.196 345 165.904 345Z" fill="#10B981" fill-opacity="0.35"></path>
+<path d="M457.904 383.001C460.613 383.001 462.809 385.196 462.809 387.905C462.809 390.614 460.613 392.81 457.904 392.81C455.196 392.81 453 390.614 453 387.905C453 385.196 455.196 383.001 457.904 383.001Z" fill="#10B981" fill-opacity="0.35"></path>
+<path d="M231.905 345C234.614 345 236.81 347.195 236.81 349.904C236.81 352.613 234.614 354.809 231.905 354.809C229.197 354.809 227.001 352.613 227.001 349.904C227.001 347.195 229.197 345 231.905 345Z" fill="#10B981" fill-opacity="0.35"></path>
+<path d="M232 463C238.075 463 243 458.075 243 452C243 445.925 238.075 441 232 441C225.925 441 221 445.925 221 452C221 458.075 225.925 463 232 463Z" fill="#10B981"></path>
+<path d="M329 463C335.075 463 340 458.075 340 452C340 445.925 335.075 441 329 441C322.925 441 318 445.925 318 452C318 458.075 322.925 463 329 463Z" fill="#10B981"></path>
+<path d="M232 418C238.075 418 243 413.075 243 407C243 400.925 238.075 396 232 396C225.925 396 221 400.925 221 407C221 413.075 225.925 418 232 418Z" fill="#10B981"></path>
+<path d="M296 418C302.075 418 307 413.075 307 407C307 400.925 302.075 396 296 396C289.925 396 285 400.925 285 407C285 413.075 289.925 418 296 418Z" fill="#10B981"></path>
+<path d="M394 418C400.075 418 405 413.075 405 407C405 400.925 400.075 396 394 396C387.925 396 383 400.925 383 407C383 413.075 387.925 418 394 418Z" fill="#10B981"></path>
+<path d="M329 380C335.075 380 340 375.075 340 369C340 362.925 335.075 358 329 358C322.925 358 318 362.925 318 369C318 375.075 322.925 380 329 380Z" fill="#10B981"></path>
+<path d="M361.904 345.001C364.613 345.001 366.809 347.196 366.809 349.905C366.809 352.614 364.613 354.81 361.904 354.81C359.196 354.81 357 352.614 357 349.905C357 347.196 359.196 345.001 361.904 345.001Z" fill="#10B981" fill-opacity="0.35"></path>
+<path d="M295.904 345C298.613 345 300.808 347.195 300.808 349.904C300.808 352.613 298.613 354.809 295.904 354.809C293.195 354.809 291 352.613 291 349.904C291 347.195 293.195 345 295.904 345Z" fill="#10B981" fill-opacity="0.35"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#10B981" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_6488_259" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13533.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_6488_259">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

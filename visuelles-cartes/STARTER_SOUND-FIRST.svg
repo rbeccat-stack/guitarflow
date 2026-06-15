@@ -1,0 +1,32 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8334_77)">
+<path d="M530 2H24C11.8497 2 2 11.8497 2 24V805C2 817.15 11.8497 827 24 827H530C542.15 827 552 817.15 552 805V24C552 11.8497 542.15 2 530 2Z" fill="#FAFAFA"></path>
+<path d="M531 -58H25C12.8497 -58 3 -48.1503 3 -36V745C3 757.15 12.8497 767 25 767H531C543.15 767 553 757.15 553 745V-36C553 -48.1503 543.15 -58 531 -58Z" fill="url(#paint0_radial_8334_77)"></path>
+<text fill="#F59E0B" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="53.25">INSPIRATION • TEXTURE</tspan></text>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="52" letter-spacing="0em"><tspan x="35" y="131.2">Le &#34;Sound-first&#34;</tspan></text>
+<path d="M101 180H35V185.5H101V180Z" fill="#F59E0B"></path>
+<path d="M7.5 72H2V154.5H7.5V72Z" fill="#F59E0B"></path>
+<path d="M276.75 412.25C320.795 412.25 356.5 376.545 356.5 332.5C356.5 288.455 320.795 252.75 276.75 252.75C232.705 252.75 197 288.455 197 332.5C197 376.545 232.705 412.25 276.75 412.25Z" stroke="#E2E8F0"></path>
+<path d="M276.75 401.25C314.72 401.25 345.5 370.47 345.5 332.5C345.5 294.53 314.72 263.75 276.75 263.75C238.78 263.75 208 294.53 208 332.5C208 370.47 238.78 401.25 276.75 401.25Z" fill="white" stroke="#CBD5E1" stroke-width="0.5"></path>
+<path d="M278.125 251.375C278.125 250.616 277.509 250 276.75 250C275.991 250 275.375 250.616 275.375 251.375V259.625C275.375 260.384 275.991 261 276.75 261C277.509 261 278.125 260.384 278.125 259.625V251.375Z" fill="#F59E0B"></path>
+<path d="M278.125 405.375C278.125 404.616 277.509 404 276.75 404C275.991 404 275.375 404.616 275.375 405.375V413.625C275.375 414.384 275.991 415 276.75 415C277.509 415 278.125 414.384 278.125 413.625V405.375Z" fill="#CBD5E1"></path>
+<path d="M276.75 387.5C307.126 387.5 331.75 362.876 331.75 332.5C331.75 302.124 307.126 277.5 276.75 277.5C246.374 277.5 221.75 302.124 221.75 332.5C221.75 362.876 246.374 387.5 276.75 387.5Z" fill="#F1F5F9"></path>
+<path d="M276.75 387.5C307.126 387.5 331.75 362.876 331.75 332.5C331.75 302.124 307.126 277.5 276.75 277.5C246.374 277.5 221.75 302.124 221.75 332.5C221.75 362.876 246.374 387.5 276.75 387.5Z" stroke="#0F172A" stroke-opacity="0.05" stroke-width="4"></path>
+<path d="M310.561 302.279C311.635 301.205 311.635 299.464 310.561 298.39C309.487 297.316 307.746 297.316 306.672 298.39L295.977 309.085C294.903 310.159 294.903 311.9 295.977 312.974C297.051 314.048 298.792 314.048 299.866 312.974L310.561 302.279Z" fill="#F59E0B"></path>
+<path opacity="0.2" d="M272.641 336.308C274.789 338.456 278.271 338.456 280.419 336.308C282.567 334.16 282.567 330.678 280.419 328.53C278.271 326.382 274.789 326.382 272.641 328.53C270.493 330.678 270.493 334.16 272.641 336.308Z" fill="#F59E0B"></path>
+<text fill="#F59E0B" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="538.25">La texture précède la mélodie.</tspan></text>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="24" letter-spacing="0em"><tspan x="35" y="600.344">Ne cherche pas de notes et prête attention où tu </tspan><tspan x="35" y="628.344">à l’attaque de tes cordes. Cherche un grain, un </tspan><tspan x="35" y="656.344">timbre et laisse la texture guider ce morceau.</tspan></text>
+<path d="M519 738.25H35V739.75H519V738.25Z" fill="#E2E8F0"></path>
+<text fill="#F59E0B" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="20" letter-spacing="0em"><tspan x="35" y="791">Le timbre est un instrument en soi. </tspan></text>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#F59E0B" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_8334_77" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(278 327) rotate(90) scale(165 165)">
+<stop stop-color="#F59E0B" stop-opacity="0.15"></stop>
+<stop offset="1" stop-color="#F59E0B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8334_77">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

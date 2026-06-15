@@ -1,0 +1,38 @@
+<svg width="550" height="825" viewBox="0 0 550 825" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8332_2716)">
+<path d="M533.5 0H16.5C7.3873 0 0 7.80349 0 17.4296V807.57C0 817.197 7.3873 825 16.5 825H533.5C542.613 825 550 817.197 550 807.57V17.4296C550 7.80349 542.613 0 533.5 0Z" fill="white"></path>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="80" font-weight="bold" letter-spacing="0em"><tspan x="162.485" y="239.344">Csus2</tspan></text>
+<path opacity="0.8" d="M85.9375 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M161.562 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M237.188 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M312.812 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M388.438 370.885V748.526" stroke="#475569"></path>
+<path opacity="0.8" d="M464.062 370.885V748.526" stroke="#475569"></path>
+<path d="M465.438 367.978H84.5625V373.787H465.438V367.978Z" fill="#475569"></path>
+<path opacity="0.6" d="M85.9375 446.411H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 521.939H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 597.468H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 672.996H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 748.524H464.062" stroke="#475569"></path>
+<path d="M237.371 357.66C251.8 357.66 263.496 345.305 263.496 330.064C263.496 314.822 251.8 302.467 237.371 302.467C222.943 302.467 211.246 314.822 211.246 330.064C211.246 345.305 222.943 357.66 237.371 357.66Z" fill="#E4CE35"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="226.947" y="340.27">D</tspan></text>
+<path d="M388.668 436.04C403.096 436.04 414.793 423.685 414.793 408.444C414.793 393.202 403.096 380.847 388.668 380.847C374.24 380.847 362.543 393.202 362.543 408.444C362.543 423.685 374.24 436.04 388.668 436.04Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="378.421" y="418.649">C</tspan></text>
+<path d="M313.495 357.66C327.924 357.66 339.62 345.305 339.62 330.064C339.62 314.822 327.924 302.467 313.495 302.467C299.067 302.467 287.37 314.822 287.37 330.064C287.37 345.305 299.067 357.66 313.495 357.66Z" fill="#2BE471"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="303.533" y="340.27">G</tspan></text>
+<path d="M162.197 587.776C176.626 587.776 188.322 575.42 188.322 560.179C188.322 544.938 176.626 532.582 162.197 532.582C147.769 532.582 136.072 544.938 136.072 560.179C136.072 575.42 147.769 587.776 162.197 587.776Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="151.95" y="570.385">C</tspan></text>
+<path d="M79.0625 325.857L92.8125 340.382" stroke="#475569" stroke-width="2"></path>
+<path d="M457.699 325.579L471.449 340.104" stroke="#475569" stroke-width="2"></path>
+<path d="M92.8125 325.857L79.0625 340.382" stroke="#475569" stroke-width="2"></path>
+<path d="M471.449 325.579L457.699 340.104" stroke="#475569" stroke-width="2"></path>
+<path d="M550 0H0V130H550V0Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="50.2188" y="83.2734">CAGED - DO</tspan></text>
+</g>
+<rect x="1" y="1" width="548" height="823" rx="32" stroke="#475569" stroke-width="2"></rect>
+<defs>
+<clipPath id="clip0_8332_2716">
+<rect width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

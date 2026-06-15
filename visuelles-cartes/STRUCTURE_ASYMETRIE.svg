@@ -1,0 +1,27 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8308_427)">
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">STRUCTURE</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="34.9999" y="159.1">Asymétrie</tspan></text>
+<path d="M84.9999 181H34.9999V187H84.9999V181Z" fill="#475569"></path>
+<path d="M277.001 539.723C350.887 539.723 410.784 480.361 410.784 407.134C410.784 333.907 350.887 274.544 277.001 274.544C203.114 274.544 143.217 333.907 143.217 407.134C143.217 480.361 203.114 539.723 277.001 539.723Z" fill="url(#paint0_radial_8308_427)"></path>
+<path d="M490.82 260H63.1801C57.0055 260 52 264.62 52 270.32V507.68C52 513.38 57.0055 518 63.1801 518H490.82C496.995 518 502 513.38 502 507.68V270.32C502 264.62 496.995 260 490.82 260Z" fill="#F1F5F9"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">Casse le rythme. Joue en 4/4 puis </tspan><tspan x="35" y="672.582">passe en 3/4 ou en 5/8 pour briser la </tspan><tspan x="35" y="705.582">monotonie.</tspan></text>
+<path d="M250.5 361H151.5C148.462 361 146 363.462 146 366.5V410.5C146 413.538 148.462 416 151.5 416H250.5C253.538 416 256 413.538 256 410.5V366.5C256 363.462 253.538 361 250.5 361Z" fill="#475569"></path>
+<path d="M401.75 361H275.25C272.212 361 269.75 363.462 269.75 366.5V410.5C269.75 413.538 272.212 416 275.25 416H401.75C404.788 416 407.25 413.538 407.25 410.5V366.5C407.25 363.462 404.788 361 401.75 361Z" fill="#475569"></path>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="23" letter-spacing="0em"><tspan x="181.229" y="341.05">3/4</tspan></text>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="23" letter-spacing="0em"><tspan x="320.256" y="341.05">5/8</tspan></text>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="23" letter-spacing="0em"><tspan x="237.042" y="452.05">IMPAIR</tspan></text>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#475569" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_8308_427" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13533.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8308_427">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

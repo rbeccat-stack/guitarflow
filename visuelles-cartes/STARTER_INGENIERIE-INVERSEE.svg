@@ -1,0 +1,31 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8334_293)">
+<path d="M530 2H24C11.8497 2 2 11.8497 2 24V805C2 817.15 11.8497 827 24 827H530C542.15 827 552 817.15 552 805V24C552 11.8497 542.15 2 530 2Z" fill="#FAFAFA"></path>
+<path d="M7.5 72H2V154.5H7.5V72Z" fill="#0D9488"></path>
+<text fill="#0D9488" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="53.25">PROCESSUS • ANALYSE</tspan></text>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="52" letter-spacing="0em"><tspan x="35" y="131.2">L&#39;ingénierie inversée</tspan></text>
+<path d="M101 180H35V185.5H101V180Z" fill="#0D9488"></path>
+<path d="M136 375.25L273.5 334L411 375.25L273.5 416.5L136 375.25Z" fill="#0D9488" fill-opacity="0.1" stroke="#0D9488" stroke-width="1.5"></path>
+<text fill="#0D9488" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="12" letter-spacing="0em"><tspan x="337" y="429.2">ESSENCE</tspan></text>
+<path d="M136 347.75L273.5 306.5L411 347.75L273.5 389L136 347.75Z" fill="white" stroke="#0D9488" stroke-opacity="0.4"></path>
+<path d="M136 320.25L273.5 279L411 320.25L273.5 361.5L136 320.25Z" fill="white" stroke="#0D9488" stroke-opacity="0.4"></path>
+<path d="M273.5 416.5V279" stroke="#0D9488" stroke-width="2" stroke-dasharray="4 2"></path>
+<path d="M273.5 422C276.538 422 279 419.538 279 416.5C279 413.462 276.538 411 273.5 411C270.462 411 268 413.462 268 416.5C268 419.538 270.462 422 273.5 422Z" fill="#0D9488"></path>
+<text fill="#0D9488" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="538.25">Apprendre par le démontage.</tspan></text>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="24" letter-spacing="0em"><tspan x="35" y="600.344">Prends un morceau de référence. Isole chaque </tspan><tspan x="35" y="628.344">élément pour comprendre son rôle dans </tspan><tspan x="35" y="656.344">l&#39;équilibre final.</tspan></text>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="11" font-weight="bold" letter-spacing="0em"><tspan x="57" y="716.5">VOIR SOUS LA SURFACE</tspan></text>
+<text fill="#0D9488" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="20" letter-spacing="0em"><tspan x="35" y="791">Ne sois pas seulement auditeur, sois architecte.</tspan></text>
+<path d="M519 738.25H35V739.75H519V738.25Z" fill="#E2E8F0"></path>
+<path d="M530 -41H24C11.8497 -41 2 -31.1503 2 -19V762C2 774.15 11.8497 784 24 784H530C542.15 784 552 774.15 552 762V-19C552 -31.1503 542.15 -41 530 -41Z" fill="url(#paint0_radial_8334_293)"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#0D9488" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_8334_293" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(277 344) rotate(90) scale(165 165)">
+<stop stop-color="#0D9488" stop-opacity="0.15"></stop>
+<stop offset="1" stop-color="#0D9488" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8334_293">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

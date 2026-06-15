@@ -1,0 +1,34 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8334_102)">
+<path d="M528 2H26C12.7452 2 2 12.7452 2 26V803C2 816.255 12.7452 827 26 827H528C541.255 827 552 816.255 552 803V26C552 12.7452 541.255 2 528 2Z" fill="#FAFAFA"></path>
+<path d="M277 632C415.071 632 527 520.071 527 382C527 243.929 415.071 132 277 132C138.929 132 27 243.929 27 382C27 520.071 138.929 632 277 632Z" fill="url(#paint0_radial_8334_102)"></path>
+<path d="M7.5 72H2V154.5H7.5V72Z" fill="#F59E0B"></path>
+<text fill="#F59E0B" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="28" y="60.25">DÉCLENCHEURS • INSPIRATION</tspan></text>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="52" letter-spacing="0em"><tspan x="35" y="131.2">Le Noodling</tspan></text>
+<path d="M101 180H35V185.5H101V180Z" fill="#F59E0B"></path>
+<path opacity="0.9" d="M156.931 321C176.931 281 246.931 261 306.931 261C346.931 261 376.931 277.667 396.931 311C403.598 331 400.265 354.333 386.931 381C373.598 407.667 350.265 427.667 316.931 441C283.598 447.667 250.265 444.333 216.931 431C196.931 411 176.931 387.667 156.931 361C146.931 331 156.931 321 276.931 371" stroke="#0F172A" stroke-width="5" stroke-linecap="round"></path>
+<path opacity="0.7" d="M196.932 331C216.932 301 256.932 281 316.932 281C356.932 281 383.598 297.667 396.932 331C403.598 351 400.265 371 386.932 391C366.932 411 340.265 427.667 306.932 441" stroke="#F59E0B" stroke-width="4" stroke-linecap="round"></path>
+<path opacity="0.6" d="M216.932 371C236.932 341 296.932 311 346.932 311C373.598 311 386.932 327.667 386.932 361C386.932 394.333 370.265 421 336.932 441" stroke="#0F172A" stroke-width="3" stroke-linecap="round"></path>
+<path opacity="0.5" d="M276.932 411C299.023 411 316.932 393.091 316.932 371C316.932 348.909 299.023 331 276.932 331C254.84 331 236.932 348.909 236.932 371C236.932 393.091 254.84 411 276.932 411Z" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4 8"></path>
+<path opacity="0.3" d="M276.932 441C315.592 441 346.932 409.66 346.932 371C346.932 332.34 315.592 301 276.932 301C238.272 301 206.932 332.34 206.932 371C206.932 409.66 238.272 441 276.932 441Z" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="6 12"></path>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="24" letter-spacing="0em"><tspan x="35" y="589.344">Jouer de manière aléatoire jusqu’à trouver un </tspan><tspan x="35" y="617.344">motif accrocheur, puis utiliser la théorie pour </tspan><tspan x="35" y="645.344">l’extrapoler.</tspan></text>
+<path d="M519 738.25H35V739.75H519V738.25Z" fill="#E2E8F0"></path>
+<text fill="#F59E0B" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="20" letter-spacing="0em"><tspan x="35" y="791">Et si la meilleure mélodie d’une erreur ?</tspan></text>
+<text fill="#F59E0B" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="538.25">L&#39;accident devient le sujet principal.</tspan></text>
+<path d="M530 -41H24C11.8497 -41 2 -31.1503 2 -19V762C2 774.15 11.8497 784 24 784H530C542.15 784 552 774.15 552 762V-19C552 -31.1503 542.15 -41 530 -41Z" fill="url(#paint1_radial_8334_102)"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#F59E0B" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_8334_102" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(277 382) rotate(90) scale(150)">
+<stop stop-color="#0052FF" stop-opacity="0.08"></stop>
+<stop offset="1" stop-color="#0052FF" stop-opacity="0"></stop>
+</radialGradient>
+<radialGradient id="paint1_radial_8334_102" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(277 344) rotate(90) scale(165 165)">
+<stop stop-color="#F59E0B" stop-opacity="0.15"></stop>
+<stop offset="1" stop-color="#F59E0B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8334_102">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,37 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8308_1049)">
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#F59E0B"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">GIMMICK</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="35" y="159.1">Line cliché</tspan></text>
+<path d="M85 181H35V187H85V181Z" fill="#F59E0B"></path>
+<path d="M277.001 539.723C350.887 539.723 410.784 480.361 410.784 407.134C410.784 333.907 350.887 274.545 277.001 274.545C203.114 274.545 143.217 333.907 143.217 407.134C143.217 480.361 203.114 539.723 277.001 539.723Z" fill="url(#paint0_radial_8308_1049)"></path>
+<path d="M490.82 260H63.1801C57.0055 260 52 264.62 52 270.32V507.68C52 513.38 57.0055 518 63.1801 518H490.82C496.995 518 502 513.38 502 507.68V270.32C502 264.62 496.995 260 490.82 260Z" fill="#F59E0B" fill-opacity="0.1"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">Sur une progression d’accords, assure </tspan><tspan x="35" y="672.582">toi que seule la basse soit en </tspan><tspan x="35" y="705.582">mouvement. Exemple : C, C/B, Am. </tspan><tspan x="35" y="738.582">Tu peux même ajouter un Bbm avant </tspan><tspan x="35" y="771.582">le Am.</tspan></text>
+<rect x="171.893" y="283.5" width="226.47" height="211.148" stroke="black" stroke-width="5"></rect>
+<line x1="264.5" y1="291.214" x2="264.5" y2="492.214" stroke="black" stroke-width="5"></line>
+<line x1="309.5" y1="291.214" x2="309.5" y2="492.214" stroke="black" stroke-width="5"></line>
+<line x1="173" y1="336.713" x2="396.999" y2="336.713" stroke="black" stroke-width="5"></line>
+<line x1="173" y1="287.048" x2="396.999" y2="287.048" stroke="black" stroke-width="8"></line>
+<line x1="173" y1="390.045" x2="396.999" y2="390.045" stroke="black" stroke-width="5"></line>
+<line x1="173" y1="443.377" x2="396.999" y2="443.377" stroke="black" stroke-width="5"></line>
+<line x1="221.5" y1="291.214" x2="221.5" y2="492.214" stroke="black" stroke-width="5"></line>
+<line x1="353.5" y1="291.214" x2="353.5" y2="492.214" stroke="black" stroke-width="5"></line>
+<path d="M221 274C228.732 274 235 267.732 235 260C235 252.268 228.732 246 221 246C213.268 246 207 252.268 207 260C207 267.732 213.268 274 221 274Z" fill="#F59E0B"></path>
+<path d="M221 432C228.732 432 235 425.732 235 418C235 410.268 228.732 404 221 404C213.268 404 207 410.268 207 418C207 425.732 213.268 432 221 432Z" fill="#F59E0B"></path>
+<path d="M221 378C228.732 378 235 371.732 235 364C235 356.268 228.732 350 221 350C213.268 350 207 356.268 207 364C207 371.732 213.268 378 221 378Z" fill="#F59E0B"></path>
+<path d="M310 378C317.732 378 324 371.732 324 364C324 356.268 317.732 350 310 350C302.268 350 296 356.268 296 364C296 371.732 302.268 378 310 378Z" fill="#FCD34D"></path>
+<path d="M354 327C361.732 327 368 320.732 368 313C368 305.268 361.732 299 354 299C346.268 299 340 305.268 340 313C340 320.732 346.268 327 354 327Z" fill="#FCD34D"></path>
+<path d="M265 378C272.732 378 279 371.732 279 364C279 356.268 272.732 350 265 350C257.268 350 251 356.268 251 364C251 371.732 257.268 378 265 378Z" fill="#FCD34D"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#F59E0B" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_8308_1049" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13533.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8308_1049">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

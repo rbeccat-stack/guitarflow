@@ -1,0 +1,28 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6489_1856)">
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#DC2626"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">HARMONIE</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="35" y="159.1">Pentatonique stricte</tspan></text>
+<path d="M85 181H35V187H85V181Z" fill="#DC2626"></path>
+<path d="M277.001 539.723C350.887 539.723 410.784 480.361 410.784 407.134C410.784 333.907 350.887 274.544 277.001 274.544C203.114 274.544 143.217 333.907 143.217 407.134C143.217 480.361 203.114 539.723 277.001 539.723Z" fill="url(#paint0_radial_6489_1856)"></path>
+<path d="M490.82 260H63.1801C57.0055 260 52 264.62 52 270.32V507.68C52 513.38 57.0055 518 63.1801 518H490.82C496.995 518 502 513.38 502 507.68V270.32C502 264.62 496.995 260 490.82 260Z" fill="#DC2626" fill-opacity="0.1"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">Tu la connais par coeur, mais sais-tu </tspan><tspan x="35" y="672.582">vraiment la faire sonner ?</tspan></text>
+<path d="M277.5 335C286.613 335 294 327.613 294 318.5C294 309.387 286.613 302 277.5 302C268.387 302 261 309.387 261 318.5C261 327.613 268.387 335 277.5 335Z" fill="#DC2626"></path>
+<path d="M359.5 379C368.613 379 376 371.613 376 362.5C376 353.387 368.613 346 359.5 346C350.387 346 343 353.387 343 362.5C343 371.613 350.387 379 359.5 379Z" fill="#DC2626"></path>
+<path d="M332 475C341.113 475 348.5 467.613 348.5 458.5C348.5 449.387 341.113 442 332 442C322.887 442 315.5 449.387 315.5 458.5C315.5 467.613 322.887 475 332 475Z" fill="#DC2626"></path>
+<path d="M222 475C231.113 475 238.5 467.613 238.5 458.5C238.5 449.387 231.113 442 222 442C212.887 442 205.5 449.387 205.5 458.5C205.5 467.613 212.887 475 222 475Z" fill="#DC2626"></path>
+<path d="M194.5 379.375C203.613 379.375 211 371.988 211 362.875C211 353.762 203.613 346.375 194.5 346.375C185.387 346.375 178 353.762 178 362.875C178 371.988 185.387 379.375 194.5 379.375Z" fill="#DC2626"></path>
+<path opacity="0.3" d="M277.5 319L360 362.437L332.5 458H222.5L195 362.437L277.5 319Z" stroke="#DC2626" stroke-width="2"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#DC2626" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_6489_1856" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13533.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_6489_1856">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

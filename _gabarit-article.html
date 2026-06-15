@@ -1,0 +1,141 @@
+<!doctype html>
+<!-- =====================================================================
+     GABARIT ARTICLE — Guitar Flow
+     ---------------------------------------------------------------------
+     POUR PUBLIER UN NOUVEL ARTICLE :
+     1. Duplique ce fichier et renomme-le (ex. "article-mon-sujet.html").
+        ⚠️ Pas d'espaces ni d'accents dans le nom de fichier.
+     2. Remplace tout ce qui est entre【...】ci-dessous.
+     3. Écris ton contenu dans la zone <div class="article__body"> :
+        utilise les briques prêtes à l'emploi listées tout en bas en commentaire.
+     4. Ajoute une carte vers ton article dans Blog.html
+        (copie le bloc <article class="post-feat"> ou un bloc <a class="post">).
+     ===================================================================== -->
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>【Titre de l'article】 — Guitar Flow</title>
+<meta name="description" content="【Résumé de l'article en une phrase pour Google.】"/>
+<link rel="stylesheet" href="colors_and_type.css"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="blog.css"/>
+</head>
+<body data-palette="base">
+
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="logo">
+      Guitar Flow<span class="logo__sq" aria-hidden="true"></span>Cards
+    </a>
+    <div class="nav__links">
+      <a href="index.html#solution">Le deck</a>
+      <a href="index.html#comment">Comment jouer</a>
+      <a href="index.html#categories">Catégories</a>
+      <a href="Blog.html" class="nav-current">Blog</a>
+    </div>
+    <a href="index.html#cta" class="btn btn--primary">Rejoindre la liste</a>
+  </div>
+</nav>
+
+<article class="article">
+  <div class="container">
+
+    <header class="article__head">
+      <a href="Blog.html" class="article__back"><span class="a" aria-hidden="true">←</span> Le Journal</a>
+      <div class="post-meta article__meta">
+        <span class="post-meta__cat">【Catégorie】</span>
+        <span class="post-meta__dot" aria-hidden="true"></span>
+        <span>【1 janvier 2026】</span>
+        <span class="post-meta__dot" aria-hidden="true"></span>
+        <span>【5】 min de lecture</span>
+      </div>
+      <h1 class="article__title">【Titre de l'article】</h1>
+      <p class="article__intro">【Phrase d'accroche : 1 à 2 phrases qui résument la promesse de l'article.】</p>
+    </header>
+
+    <hr class="article__rule"/>
+
+    <div class="article__body">
+
+      <!-- ⬇️ ÉCRIS TON ARTICLE ICI. Garde un paragraphe par balise <p>. -->
+
+      <p>【Ton premier paragraphe.】</p>
+
+      <p>【Un autre paragraphe. Mets un mot important en <strong>gras</strong> si besoin.】</p>
+
+      <!-- =================================================================
+           BRIQUES PRÊTES À L'EMPLOI — copie-colle puis remplace le texte.
+           Supprime celles que tu n'utilises pas.
+           ================================================================= -->
+
+      <!-- (A) ENCADRÉ / mise en garde ----------------------------------
+      <div class="callout">
+        <span class="callout__label">// Le piège</span>
+        <p>【Le texte de l'encadré.】</p>
+      </div>
+      -->
+
+      <!-- (B) LISTE D'ÉTAPES NUMÉROTÉES ---------------------------------
+      <div class="steps-list">
+        <section class="step-block">
+          <div class="step-block__num">01</div>
+          <div class="step-block__content">
+            <h2 class="step-block__title">【Titre de l'étape】</h2>
+            <div class="step-block__body">
+              <p>【Texte de l'étape.】</p>
+            </div>
+          </div>
+        </section>
+        【… duplique <section class="step-block"> pour 02, 03, etc. …】
+      </div>
+      -->
+
+      <!-- (C) PETIT LABEL EN LIGNE (L'action / L'objectif / L'impact) ----
+      <p class="note"><span class="note__k">L'action</span>【Le texte.】</p>
+      -->
+
+      <!-- (D) LISTE DE QUESTIONS ----------------------------------------
+      <ul class="q-list">
+        <li>【Première question ?】</li>
+        <li>【Deuxième question ?】</li>
+      </ul>
+      -->
+
+      <!-- (E) LISTE "TERME → DÉFINITION" --------------------------------
+      <ul class="var-list">
+        <li><span class="var-k">【Terme】</span><span>【Définition.】</span></li>
+        <li><span class="var-k">【Terme】</span><span>【Définition.】</span></li>
+      </ul>
+      -->
+
+      <!-- ⬆️ FIN DE TON ARTICLE -->
+
+    </div>
+  </div>
+</article>
+
+<footer class="footer article-foot">
+  <div class="container footer__inner">
+    <div class="footer__left">
+      <a href="index.html" class="logo">Guitar Flow<span class="logo__sq" aria-hidden="true"></span></a>
+      <span class="footer__line">// Le journal</span>
+    </div>
+    <div class="footer__right">
+      <a href="Blog.html">← Tous les articles</a>
+      <span>·</span>
+      <a href="mailto:salut@guitarflowcards.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var nav = document.getElementById("nav");
+    var onScroll = function () { nav.classList.toggle("is-scrolled", window.scrollY > 12); };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8334_177)">
+<path d="M528 2H26C12.7452 2 2 12.7452 2 26V803C2 816.255 12.7452 827 26 827H528C541.255 827 552 816.255 552 803V26C552 12.7452 541.255 2 528 2Z" fill="#FAFAFA"></path>
+<path d="M7.5 72H2V154.5H7.5V72Z" fill="#0D9488"></path>
+<text fill="#0D9488" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="53.25">PROCESSUS • MÉTHODE</tspan></text>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="52" letter-spacing="0em"><tspan x="35" y="131.2">L&#39;imposition de </tspan><tspan x="35" y="199.2">contraintes</tspan></text>
+<path d="M101 232H35V237.5H101V232Z" fill="#0D9488"></path>
+<path opacity="0.6" d="M375 284H179C172.373 284 167 289.373 167 296V412C167 418.627 172.373 424 179 424H375C381.627 424 387 418.627 387 412V296C387 289.373 381.627 284 375 284Z" stroke="#0D9488" stroke-width="3" stroke-dasharray="8 8"></path>
+<text fill="#0D9488" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="12" letter-spacing="0em"><tspan x="225.477" y="255.2">RÈGLES STRICTES</tspan></text>
+<path d="M217 379C230.807 379 242 367.807 242 354C242 340.193 230.807 329 217 329C203.193 329 192 340.193 192 354C192 367.807 203.193 379 217 379Z" fill="#0D9488"></path>
+<path d="M303 329H266C263.791 329 262 330.791 262 333V370C262 372.209 263.791 374 266 374H303C305.209 374 307 372.209 307 370V333C307 330.791 305.209 329 303 329Z" fill="#0D9488"></path>
+<path d="M337 329L362 374H312L337 329Z" fill="#0D9488"></path>
+<text fill="#0D9488" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="538.25">La contrainte est un moteur.</tspan></text>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="24" letter-spacing="0em"><tspan x="35" y="600.344">Limite-toi à 3 cordes. Interdis-toi la tonique. </tspan><tspan x="35" y="628.344">Pose une règle arbitraire maintenant et refuse </tspan><tspan x="35" y="656.344">de la briser jusqu&#39;à la fin.</tspan></text>
+<text fill="#0D9488" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="20" letter-spacing="0em"><tspan x="35" y="791">Le cadre nourrit la créativité.</tspan></text>
+<path d="M530 -41H24C11.8497 -41 2 -31.1503 2 -19V762C2 774.15 11.8497 784 24 784H530C542.15 784 552 774.15 552 762V-19C552 -31.1503 542.15 -41 530 -41Z" fill="url(#paint0_radial_8334_177)"></path>
+<path d="M519 738.25H35V739.75H519V738.25Z" fill="#E2E8F0"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#0D9488" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_8334_177" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(277 344) rotate(90) scale(165 165)">
+<stop stop-color="#0D9488" stop-opacity="0.15"></stop>
+<stop offset="1" stop-color="#0D9488" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8334_177">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

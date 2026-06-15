@@ -1,0 +1,39 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8308_1300)">
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#F59E0B"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">GIMMICK</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="35" y="159.1">Accord suspendu</tspan></text>
+<path d="M85 181H35V187H85V181Z" fill="#F59E0B"></path>
+<path d="M277.001 539.723C350.887 539.723 410.784 480.361 410.784 407.134C410.784 333.907 350.887 274.545 277.001 274.545C203.114 274.545 143.217 333.907 143.217 407.134C143.217 480.361 203.114 539.723 277.001 539.723Z" fill="url(#paint0_radial_8308_1300)"></path>
+<path d="M490.82 255H63.1801C57.0055 255 52 259.62 52 265.32V502.68C52 508.38 57.0055 513 63.1801 513H490.82C496.995 513 502 508.38 502 502.68V265.32C502 259.62 496.995 255 490.82 255Z" fill="#F59E0B" fill-opacity="0.1"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">Remplace la tierce par une quarte juste </tspan><tspan x="35" y="672.582">(sus4) ou une seconde majeure (sus2). </tspan><tspan x="35" y="705.582">Garde le son en suspension, et résous </tspan><tspan x="35" y="738.582">quand tu le sens.</tspan></text>
+<rect x="163.893" y="278.5" width="226.47" height="211.148" stroke="black" stroke-width="5"></rect>
+<line x1="256.5" y1="286.214" x2="256.5" y2="487.214" stroke="black" stroke-width="5"></line>
+<line x1="301.5" y1="286.214" x2="301.5" y2="487.214" stroke="black" stroke-width="5"></line>
+<line x1="165" y1="331.713" x2="388.999" y2="331.713" stroke="black" stroke-width="5"></line>
+<line x1="165" y1="282.048" x2="388.999" y2="282.048" stroke="black" stroke-width="8"></line>
+<line x1="165" y1="385.045" x2="388.999" y2="385.045" stroke="black" stroke-width="5"></line>
+<line x1="165" y1="438.377" x2="388.999" y2="438.377" stroke="black" stroke-width="5"></line>
+<line x1="213.5" y1="286.214" x2="213.5" y2="487.214" stroke="black" stroke-width="5"></line>
+<line x1="345.5" y1="286.214" x2="345.5" y2="487.214" stroke="black" stroke-width="5"></line>
+<path d="M390 274C397.732 274 404 267.732 404 260C404 252.268 397.732 246 390 246C382.268 246 376 252.268 376 260C376 267.732 382.268 274 390 274Z" fill="#FCD34D"></path>
+<path d="M214 274C221.732 274 228 267.732 228 260C228 252.268 221.732 246 214 246C206.268 246 200 252.268 200 260C200 267.732 206.268 274 214 274Z" fill="#FCD34D"></path>
+<path d="M302 372C309.732 372 316 365.732 316 358C316 350.268 309.732 344 302 344C294.268 344 288 350.268 288 358C288 365.732 294.268 372 302 372Z" fill="#FCD34D"></path>
+<path d="M345 274C352.732 274 359 267.732 359 260C359 252.268 352.732 246 345 246C337.268 246 331 252.268 331 260C331 267.732 337.268 274 345 274Z" fill="#F59E0B"></path>
+<text transform="translate(334 250)" fill="white" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="15" letter-spacing="0em"><tspan x="0.315918" y="15.25">M2</tspan></text>
+<path d="M345 427C352.732 427 359 420.732 359 413C359 405.268 352.732 399 345 399C337.268 399 331 405.268 331 413C331 420.732 337.268 427 345 427Z" fill="#F59E0B"></path>
+<text transform="translate(336 403)" fill="white" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="15" letter-spacing="0em"><tspan x="0.234863" y="15.25">P4</tspan></text>
+<path d="M257 372C264.732 372 271 365.732 271 358C271 350.268 264.732 344 257 344C249.268 344 243 350.268 243 358C243 365.732 249.268 372 257 372Z" fill="#FCD34D"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#F59E0B" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_8308_1300" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13533.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8308_1300">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

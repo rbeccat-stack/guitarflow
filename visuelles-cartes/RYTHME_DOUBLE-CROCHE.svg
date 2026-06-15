@@ -1,0 +1,23 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6492_3970)">
+<path d="M534.162 2H19.8378C9.98627 2 2 9.91497 2 19.6786V809.321C2 819.085 9.98627 827 19.8378 827H534.162C544.014 827 552 819.085 552 809.321V19.6786C552 9.91497 544.014 2 534.162 2Z" fill="white"></path>
+<path d="M552 2H2V105.125H552V2Z" fill="#8B5CF6"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="35" y="72.2734">RYTHME</tspan></text>
+<text fill="#1A1A1A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="36" letter-spacing="0em"><tspan x="35" y="159.1">Double-croche</tspan></text>
+<path d="M85 181H35V187H85V181Z" fill="#8B5CF6"></path>
+<path d="M277.001 539.723C350.887 539.723 410.784 480.361 410.784 407.134C410.784 333.907 350.887 274.545 277.001 274.545C203.114 274.545 143.217 333.907 143.217 407.134C143.217 480.361 203.114 539.723 277.001 539.723Z" fill="url(#paint0_radial_6492_3970)"></path>
+<path d="M490.82 260H63.1801C57.0055 260 52 264.62 52 270.32V507.68C52 513.38 57.0055 518 63.1801 518H490.82C496.995 518 502 513.38 502 507.68V270.32C502 264.62 496.995 260 490.82 260Z" fill="#8B5CF6" fill-opacity="0.1"></path>
+<path d="M387.993 333.049H387.963V333H198.936V343.168H198.95V354.7H198.936V360.648H198.95V417.473C194.181 413.764 185.525 413.825 177.504 418.112C167.734 423.331 162.621 432.834 166.083 439.345C169.544 445.857 180.283 446.897 190.053 441.671C197.609 437.638 202.362 431.049 202.535 425.252H202.558V360.648H260.763V417.478C255.997 413.764 247.343 413.825 239.32 418.112C229.545 423.331 224.429 432.834 227.894 439.345C231.364 445.857 242.091 446.897 251.869 441.671C259.425 437.638 264.166 431.049 264.348 425.252H264.374V360.648H322.579V417.473C317.81 413.764 309.149 413.825 301.133 418.112C291.362 423.331 286.242 432.834 289.712 439.345C293.177 445.857 303.911 446.897 313.682 441.671C321.236 437.638 325.983 431.049 326.161 425.252H326.187V360.648H384.385V417.473C379.621 413.764 370.965 413.825 362.944 418.112C353.173 423.331 348.056 432.834 351.523 439.345C354.983 445.857 365.718 446.897 375.49 441.671C383.044 437.638 387.799 431.049 387.975 425.252H388V333.049H387.993ZM202.558 354.698V343.166H260.763V354.698H202.558ZM264.371 354.698V343.166H322.576V354.698H264.371ZM326.182 354.698V343.166H384.38V354.698H326.182Z" fill="#8B5CF6"></path>
+<text fill="#1F2937" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="29" letter-spacing="0em"><tspan x="35" y="639.582">Densifie ton jeu : place 4 notes rapides </tspan><tspan x="35" y="672.582">et régulières par temps. (Ta-ca-ta-ca).</tspan></text>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#8B5CF6" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_6492_3970" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13521.6 13533.5) scale(13378.4 13258.9)">
+<stop stop-color="#CC1B1B" stop-opacity="0.06"></stop>
+<stop offset="1" stop-color="#CC1B1B" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_6492_3970">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

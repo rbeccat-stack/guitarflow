@@ -1,0 +1,43 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8334_269)">
+<path d="M528 2H26C12.7452 2 2 12.7452 2 26V803C2 816.255 12.7452 827 26 827H528C541.255 827 552 816.255 552 803V26C552 12.7452 541.255 2 528 2Z" fill="#FAFAFA"></path>
+<path d="M7.5 72H2V154.5H7.5V72Z" fill="#8B5CF6"></path>
+<text fill="#8B5CF6" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="53.25">THÉORIE • SYSTÈME HARMONIQUE</tspan></text>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="52" letter-spacing="0em"><tspan x="35" y="131.2">Le &#34;Pitch class set&#34;</tspan></text>
+<path d="M101 180H35V185.5H101V180Z" fill="#8B5CF6"></path>
+<path d="M149 276.2H405M149 353H405M149 429.8H405M200.2 225V481M277 225V481M353.8 225V481" stroke="#E2E8F0" stroke-dasharray="2 4"></path>
+<path d="M187.4 289L366.6 327.4L315.4 417L225.8 378.6L187.4 289Z" fill="url(#paint0_linear_8334_269)" fill-opacity="0.1" stroke="url(#paint1_linear_8334_269)" stroke-width="3" stroke-linejoin="round"></path>
+<path data-figma-bg-blur-radius="0" d="M187.4 299.24C193.056 299.24 197.64 294.655 197.64 289C197.64 283.344 193.056 278.76 187.4 278.76C181.745 278.76 177.16 283.344 177.16 289C177.16 294.655 181.745 299.24 187.4 299.24Z" fill="#8B5CF6"></path>
+<path data-figma-bg-blur-radius="0" d="M366.6 337.64C372.256 337.64 376.84 333.056 376.84 327.4C376.84 321.745 372.256 317.16 366.6 317.16C360.945 317.16 356.36 321.745 356.36 327.4C356.36 333.056 360.945 337.64 366.6 337.64Z" fill="#8B5CF6"></path>
+<path data-figma-bg-blur-radius="0" d="M315.4 427.24C321.056 427.24 325.64 422.655 325.64 417C325.64 411.344 321.056 406.76 315.4 406.76C309.745 406.76 305.16 411.344 305.16 417C305.16 422.655 309.745 427.24 315.4 427.24Z" fill="#8B5CF6"></path>
+<path data-figma-bg-blur-radius="0" d="M225.8 388.839C231.455 388.839 236.04 384.255 236.04 378.599C236.04 372.944 231.455 368.359 225.8 368.359C220.144 368.359 215.56 372.944 215.56 378.599C215.56 384.255 220.144 388.839 225.8 388.839Z" fill="#8B5CF6"></path>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="12" letter-spacing="0em"><tspan x="213.168" y="466.319">MATRICE RESTREINTE</tspan></text>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="538.25">Exploiter un micro-système.</tspan></text>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="24" letter-spacing="0em"><tspan x="35" y="600.344">Choisis au hasard 4 notes sur ton manche. </tspan><tspan x="35" y="628.344">Utilise exclusivement ces 4 notes pour </tspan><tspan x="35" y="656.344">construire ton riff et toute l&#39;harmonie.</tspan></text>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="20" letter-spacing="0em"><tspan x="35" y="791">Épuise tout le potentiel du groupe.</tspan></text>
+<path d="M530 -41H24C11.8497 -41 2 -31.1503 2 -19V762C2 774.15 11.8497 784 24 784H530C542.15 784 552 774.15 552 762V-19C552 -31.1503 542.15 -41 530 -41Z" fill="url(#paint2_radial_8334_269)"></path>
+<path d="M519 738.25H35V739.75H519V738.25Z" fill="#E2E8F0"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#8B5CF6" stroke-width="2"></rect>
+<defs>
+<clipPath id="bgblur_1_8334_269_clip_path" transform="translate(0 0)"><path d="M187.4 299.24C193.056 299.24 197.64 294.655 197.64 289C197.64 283.344 193.056 278.76 187.4 278.76C181.745 278.76 177.16 283.344 177.16 289C177.16 294.655 181.745 299.24 187.4 299.24Z"></path>
+</clipPath><clipPath id="bgblur_2_8334_269_clip_path" transform="translate(0 0)"><path d="M366.6 337.64C372.256 337.64 376.84 333.056 376.84 327.4C376.84 321.745 372.256 317.16 366.6 317.16C360.945 317.16 356.36 321.745 356.36 327.4C356.36 333.056 360.945 337.64 366.6 337.64Z"></path>
+</clipPath><clipPath id="bgblur_3_8334_269_clip_path" transform="translate(0 0)"><path d="M315.4 427.24C321.056 427.24 325.64 422.655 325.64 417C325.64 411.344 321.056 406.76 315.4 406.76C309.745 406.76 305.16 411.344 305.16 417C305.16 422.655 309.745 427.24 315.4 427.24Z"></path>
+</clipPath><clipPath id="bgblur_4_8334_269_clip_path" transform="translate(0 0)"><path d="M225.8 388.839C231.455 388.839 236.04 384.255 236.04 378.599C236.04 372.944 231.455 368.359 225.8 368.359C220.144 368.359 215.56 372.944 215.56 378.599C215.56 384.255 220.144 388.839 225.8 388.839Z"></path>
+</clipPath><linearGradient id="paint0_linear_8334_269" x1="187.4" y1="289" x2="308.481" y2="458.514" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8B5CF6"></stop>
+<stop offset="1" stop-color="#8B5CF6"></stop>
+</linearGradient>
+<linearGradient id="paint1_linear_8334_269" x1="187.4" y1="289" x2="308.481" y2="458.514" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8B5CF6"></stop>
+<stop offset="1" stop-color="#8B5CF6"></stop>
+</linearGradient>
+<radialGradient id="paint2_radial_8334_269" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(277 344) rotate(90) scale(165 165)">
+<stop stop-color="#8B5CF6" stop-opacity="0.15"></stop>
+<stop offset="1" stop-color="#8B5CF6" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8334_269">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

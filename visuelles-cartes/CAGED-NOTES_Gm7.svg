@@ -1,0 +1,38 @@
+<svg width="550" height="825" viewBox="0 0 550 825" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8332_1750)">
+<path d="M533.5 0H16.5C7.3873 0 0 7.80349 0 17.4296V807.57C0 817.197 7.3873 825 16.5 825H533.5C542.613 825 550 817.197 550 807.57V17.4296C550 7.80349 542.613 0 533.5 0Z" fill="white"></path>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="80" font-weight="bold" letter-spacing="0em"><tspan x="194.266" y="239.344">Gm7</tspan></text>
+<path opacity="0.8" d="M85.9375 367.828V745.469" stroke="#475569"></path>
+<path opacity="0.8" d="M161.562 367.828V745.469" stroke="#475569"></path>
+<path opacity="0.8" d="M237.188 367.828V745.469" stroke="#475569"></path>
+<path opacity="0.8" d="M312.812 367.828V745.469" stroke="#475569"></path>
+<path opacity="0.8" d="M388.438 367.828V745.469" stroke="#475569"></path>
+<path opacity="0.8" d="M464.062 367.828V745.469" stroke="#475569"></path>
+<path d="M465.438 364.922H84.5625V370.732H465.438V364.922Z" fill="#475569"></path>
+<path opacity="0.6" d="M85.9375 443.355H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 518.883H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 594.412H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 669.939H464.062" stroke="#475569"></path>
+<path opacity="0.6" d="M85.9375 745.469H464.062" stroke="#475569"></path>
+<path d="M464.793 434.994C479.221 434.994 490.918 422.639 490.918 407.398C490.918 392.156 479.221 379.801 464.793 379.801C450.364 379.801 438.668 392.156 438.668 407.398C438.668 422.639 450.364 434.994 464.793 434.994Z" fill="#33ABE6"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="456.808" y="417.604">F</tspan></text>
+<path d="M388.668 584.721C403.097 584.721 414.793 572.365 414.793 557.124C414.793 541.883 403.097 529.527 388.668 529.527C374.24 529.527 362.543 541.883 362.543 557.124C362.543 572.365 374.24 584.721 388.668 584.721Z" fill="#2BE471"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="378.245" y="567.33">D</tspan></text>
+<path d="M312.544 584.721C326.972 584.721 338.669 572.365 338.669 557.124C338.669 541.883 326.972 529.527 312.544 529.527C298.115 529.527 286.419 541.883 286.419 557.124C286.419 572.365 298.115 584.721 312.544 584.721Z" fill="#E42E41"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="294.245" y="567.33">Bb</tspan></text>
+<path d="M86.073 584.721C100.501 584.721 112.198 572.365 112.198 557.124C112.198 541.883 100.501 529.527 86.073 529.527C71.6446 529.527 59.948 541.883 59.948 557.124C59.948 572.365 71.6446 584.721 86.073 584.721Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="76.111" y="567.33">G</tspan></text>
+<path d="M155.104 323.422L168.854 337.947" stroke="#475569" stroke-width="2"></path>
+<path d="M168.854 323.422L155.104 337.947" stroke="#475569" stroke-width="2"></path>
+<path d="M237.125 350.194C251.553 350.194 263.25 337.838 263.25 322.597C263.25 307.356 251.553 295 237.125 295C222.696 295 211 307.356 211 322.597C211 337.838 222.696 350.194 237.125 350.194Z" fill="#2BE471"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="30" font-weight="bold" letter-spacing="0em"><tspan x="226.701" y="332.803">D</tspan></text>
+<path d="M550 0H0V130H550V0Z" fill="#475569"></path>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Roboto Flex" font-size="52" font-weight="bold" letter-spacing="0em"><tspan x="50.4629" y="83.2734">CAGED - SOL</tspan></text>
+</g>
+<rect x="1" y="1" width="548" height="823" rx="32" stroke="#475569" stroke-width="2"></rect>
+<defs>
+<clipPath id="clip0_8332_1750">
+<rect width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

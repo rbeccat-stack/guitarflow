@@ -1,0 +1,30 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8334_349)">
+<path d="M530 2H24C11.8497 2 2 11.8497 2 24V805C2 817.15 11.8497 827 24 827H530C542.15 827 552 817.15 552 805V24C552 11.8497 542.15 2 530 2Z" fill="#FAFAFA"></path>
+<path d="M530 2H24C11.8497 2 2 11.8497 2 24V805C2 817.15 11.8497 827 24 827H530C542.15 827 552 817.15 552 805V24C552 11.8497 542.15 2 530 2Z" fill="url(#paint0_radial_8334_349)"></path>
+<path d="M7.5 72H2V154.5H7.5V72Z" fill="#8B5CF6"></path>
+<text fill="#8B5CF6" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="53.25">THÉORIE</tspan></text>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="52" letter-spacing="0em"><tspan x="35" y="131.2">L&#39;harmonie</tspan></text>
+<path d="M101 180H35V185.5H101V180Z" fill="#8B5CF6"></path>
+<path d="M183 269H95C88.9249 269 84 273.925 84 280V395.5C84 401.575 88.9249 406.5 95 406.5H183C189.075 406.5 194 401.575 194 395.5V280C194 273.925 189.075 269 183 269Z" fill="white" stroke="#8B5CF6"></path>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="24" letter-spacing="0em"><tspan x="134.5" y="345.4">I</tspan></text>
+<path opacity="0.05" d="M320.5 269H232.5C226.425 269 221.5 273.925 221.5 280V395.5C221.5 401.575 226.425 406.5 232.5 406.5H320.5C326.575 406.5 331.5 401.575 331.5 395.5V280C331.5 273.925 326.575 269 320.5 269Z" fill="#8B5CF6" stroke="#8B5CF6" stroke-width="2"></path>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="24" letter-spacing="0em"><tspan x="264.5" y="345.4">IV</tspan></text>
+<path d="M458 269H370C363.925 269 359 273.925 359 280V395.5C359 401.575 363.925 406.5 370 406.5H458C464.075 406.5 469 401.575 469 395.5V280C469 273.925 464.075 269 458 269Z" fill="white" stroke="#8B5CF6"></path>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="24" letter-spacing="0em"><tspan x="406.5" y="345.4">V</tspan></text>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="538.25">Maîtriser les progressions de base pour </tspan><tspan x="35" y="571.25">élever une mélodie.</tspan></text>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="24" letter-spacing="0em"><tspan x="35" y="634.344">Reviens aux fondations. Concentre-toi sur le </tspan><tspan x="35" y="662.344">mouvement de la basse.</tspan></text>
+<text fill="#8B5CF6" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="20" letter-spacing="0em"><tspan x="35" y="791">La simplicité est l&#39;ultime sophistication.</tspan></text>
+<path d="M519 738.25H35V739.75H519V738.25Z" fill="#E2E8F0"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#8B5CF6" stroke-width="2"></rect>
+<defs>
+<radialGradient id="paint0_radial_8334_349" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(277 387) rotate(90) scale(165 165)">
+<stop stop-color="#8B5CF6" stop-opacity="0.15"></stop>
+<stop offset="1" stop-color="#8B5CF6" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8334_349">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

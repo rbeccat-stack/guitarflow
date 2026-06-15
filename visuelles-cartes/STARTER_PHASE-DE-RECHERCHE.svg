@@ -1,0 +1,33 @@
+<svg width="554" height="829" viewBox="0 0 554 829" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8334_246)">
+<path d="M528 2H26C12.7452 2 2 12.7452 2 26V803C2 816.255 12.7452 827 26 827H528C541.255 827 552 816.255 552 803V26C552 12.7452 541.255 2 528 2Z" fill="#FAFAFA"></path>
+<path d="M7.5 72H2V154.5H7.5V72Z" fill="#0D9488"></path>
+<text fill="#0D9488" fill-opacity="0.8" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="53.25">PROCESSUS • ANALYSE</tspan></text>
+<text fill="#0F172A" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="52" letter-spacing="0em"><tspan x="35" y="131.2">La phase de </tspan><tspan x="35" y="199.2">recherche</tspan></text>
+<path d="M101 232H35V237.5H101V232Z" fill="#0D9488"></path>
+<path d="M97 347C127 320.333 157 320.333 187 347C217 373.667 247 373.667 277 347C307 320.333 337 320.333 367 347C397 373.667 427 373.667 457 347" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 4"></path>
+<path d="M277 407C310.137 407 337 380.137 337 347C337 313.863 310.137 287 277 287C243.863 287 217 313.863 217 347C217 380.137 243.863 407 277 407Z" fill="white" stroke="#0F172A" stroke-width="3"></path>
+<path d="M227 347C243.667 327 260.333 327 277 347C293.667 367 310.333 367 327 347" stroke="url(#paint0_linear_8334_246)" stroke-width="5" stroke-linecap="round"></path>
+<path d="M353.2 421.957L321.995 390.753C320.475 389.233 318.292 388.95 317.121 390.121C315.949 391.293 316.232 393.475 317.753 394.996L348.957 426.2C350.478 427.721 352.66 428.004 353.832 426.832C355.003 425.66 354.72 423.478 353.2 421.957Z" fill="#0F172A"></path>
+<path d="M277 351C279.209 351 281 349.209 281 347C281 344.791 279.209 343 277 343C274.791 343 273 344.791 273 347C273 349.209 274.791 351 277 351Z" fill="#0D9488"></path>
+<text fill="#0D9488" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="25" letter-spacing="0em"><tspan x="35" y="538.25">Écouter pour mieux ressentir.</tspan></text>
+<text fill="#475569" style="white-space: pre" xml:space="preserve" font-family="Calisto MT" font-size="24" letter-spacing="0em"><tspan x="35" y="600.344">Ne touche pas ta guitare. Fais une playlist de 5 </tspan><tspan x="35" y="628.344">morceaux qui ont l&#39;ambiance exacte. Écoute et </tspan><tspan x="35" y="656.344">visualise ce que tu vas jouer.</tspan></text>
+<text fill="#0D9488" style="white-space: pre" xml:space="preserve" font-family="Calistoga" font-size="20" letter-spacing="0em"><tspan x="35" y="791">Imprègne-toi avant de produire.</tspan></text>
+<path d="M530 -41H24C11.8497 -41 2 -31.1503 2 -19V762C2 774.15 11.8497 784 24 784H530C542.15 784 552 774.15 552 762V-19C552 -31.1503 542.15 -41 530 -41Z" fill="url(#paint1_radial_8334_246)"></path>
+<path d="M519 738.25H35V739.75H519V738.25Z" fill="#E2E8F0"></path>
+</g>
+<rect x="1" y="1" width="552" height="827" rx="34" stroke="#0D9488" stroke-width="2"></rect>
+<defs>
+<linearGradient id="paint0_linear_8334_246" x1="227" y1="332" x2="327" y2="332" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2DD4BF"></stop>
+<stop offset="1" stop-color="#0D9488"></stop>
+</linearGradient>
+<radialGradient id="paint1_radial_8334_246" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(277 344) rotate(90) scale(165 165)">
+<stop stop-color="#0D9488" stop-opacity="0.15"></stop>
+<stop offset="1" stop-color="#0D9488" stop-opacity="0"></stop>
+</radialGradient>
+<clipPath id="clip0_8334_246">
+<rect x="2" y="2" width="550" height="825" rx="33" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>

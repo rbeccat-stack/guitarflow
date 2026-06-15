@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Le Journal — Guitar Flow</title>
+<meta name="description" content="Le journal de Guitar Flow : méthode, théorie appliquée et routines pour débloquer ton jeu à la guitare."/>
+<link rel="stylesheet" href="colors_and_type.css"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="blog.css"/>
+</head>
+<body data-palette="base">
+
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="logo">
+      Guitar Flow<span class="logo__sq" aria-hidden="true"></span>Cards
+    </a>
+    <div class="nav__links">
+      <a href="index.html#solution">Le deck</a>
+      <a href="index.html#comment">Comment jouer</a>
+      <a href="index.html#categories">Catégories</a>
+      <a href="Blog.html" class="nav-current">Blog</a>
+    </div>
+    <a href="index.html#cta" class="btn btn--primary">Rejoindre la liste</a>
+  </div>
+</nav>
+
+<header class="blog-hero">
+  <div class="container">
+    <span class="eyebrow blog-hero__eyebrow">// LE JOURNAL</span>
+    <h1>Le Journal.</h1>
+    <p class="blog-hero__sub">Méthode, théorie appliquée et petites routines pour transformer ce que tu sais déjà en musique. Lecture courte, mise en pratique immédiate.</p>
+  </div>
+</header>
+
+<main class="container post-list">
+
+  <!-- ============ ARTICLE EN AVANT ============ -->
+  <article class="post-feat">
+    <div class="post-feat__body">
+      <div class="post-meta post-feat__meta">
+        <span class="post-meta__cat">Méthode</span>
+        <span class="post-meta__dot" aria-hidden="true"></span>
+        <span>7 juin 2026</span>
+        <span class="post-meta__dot" aria-hidden="true"></span>
+        <span>5 min de lecture</span>
+      </div>
+      <h2 class="post-feat__title">
+        <a href="article-approprier-un-lick.html">Comment s'approprier un lick (et ne plus jamais l'oublier)</a>
+      </h2>
+      <p class="post-feat__excerpt">Apprendre une phrase par cœur, la passer au métronome, l'oublier la semaine d'après. Le vrai travail commence quand tu arrêtes de reproduire — et que tu modèles. Un système en 5 étapes.</p>
+      <a href="article-approprier-un-lick.html" class="read-more">
+        Lire l'article <span class="read-more__arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <a href="article-approprier-un-lick.html" class="post-feat__art post-feat__art--photo" aria-label="Lire l'article">
+      <img src="assets/illustrations/article-lick.jpg" alt="Guitariste avec carnet et tasse, vue de dessus" draggable="false"/>
+    </a>
+  </article>
+
+  <!-- Pour ajouter un article : copie _gabarit-article.html, puis duplique un bloc <a class="post"> ci-dessous. -->
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__left">
+      <a href="index.html" class="logo">Guitar Flow<span class="logo__sq" aria-hidden="true"></span></a>
+      <span class="footer__line">// Le journal</span>
+    </div>
+    <div class="footer__right">
+      <a href="mailto:salut@guitarflowcards.com">Contact</a>
+      <span>·</span>
+      <span>Fait à Lyon, France</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var nav = document.getElementById("nav");
+    var onScroll = function () { nav.classList.toggle("is-scrolled", window.scrollY > 12); };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  })();
+</script>
+</body>
+</html>
