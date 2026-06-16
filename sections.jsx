@@ -1,4 +1,4 @@
-/* global React, MiniCard, BigCard, HeroCards */
+﻿/* global React, MiniCard, BigCard, HeroCards */
 const { useState: useS, useEffect: useE, useRef: useR } = React;
 
 /* ============== EMAIL FIELD ============== */
@@ -75,8 +75,7 @@ function Hero({ density = "breathing", cardStyle = "illustrated" }) {
       <div className="container hero__inner">
         <div className="hero__copy">
           <h1 className="h-display">
-            <span className="muted">Tu joues la musique des autres depuis des années.</span><br />
-            Crée <span className="accent" style={{ color: "rgb(18, 17, 16)" }}>la tienne</span>.
+            Tu es à une carte de l'inspiration.
           </h1>
           <p className="lead hero__sub"><b>83 cartes.</b> Des centaines d'idées au bout des doigts.</p>
           <div className="hero__form-wrap">
@@ -182,7 +181,7 @@ function Showcase_contraintes() {
             <ShowcaseCardDeck cards={cards} />
           </div>
           <div className="solution-side">
-            <p className="lead">Chaque carte est une contrainte créative. <b>Tu pioches, tu lis, tu joues.</b> Le but n'est pas d'apprendre — c'est de te forcer à créer.</p>
+            <p className="lead">Chaque carte est une contrainte créative. Le but n'est pas d'apprendre mais passer à l'action et commencer simplement, sans prise de tête.</p>
             <div className="stats">
               <div className="stat">
                 <div className="stat__num">48</div>
@@ -223,7 +222,7 @@ function Showcase_CAGED() {
         </div>
         <div className="solution-grid solution-grid--mirror">
           <div className="solution-side">
-            <p className="lead">Chaque carte CAGED cartographie une position d'accord sur tout le manche. <b>Recto : les notes. Verso : les intervalles.</b> Tu vois enfin pourquoi tu joues ce que tu joues.</p>
+            <p className="lead">Chaque carte représente un type d'accord dans une des 5 positions du CAGED</p>
             <div className="stats">
               <div className="stat">
                 <div className="stat__num">35</div>
@@ -260,8 +259,8 @@ function HowTo() {
     vol: "48 cartes",
     sub: "5 catégories — Rythme, Harmonie, Technique, Structure, Gimmick.",
     uses: [
-    { name: "Page blanche", ctx: "nouvelle compo", desc: "Pioche des contraintes et force toi à les placer dans ton morceau." },
-    { name: "Le Challenger", ctx: "compo existante", desc: "Enrichi un de tes morceaux déjà existant avec un contrainte tirée au hasard." },
+    { name: "Page blanche", ctx: "nouvelle compo", desc: "Pioche des contraintes et force toi à les placer dans ta compo" },
+    { name: "Le Challenger", ctx: "compo existante", desc: "Enrichi un de tes morceaux déjà existant et laisse le hasard décider." },
     { name: "Hardcore mode", ctx: "impro", desc: "Place une des contraintes pendant ton impro." }] },
 
   {
@@ -271,7 +270,7 @@ function HowTo() {
     uses: [
     { name: "Transposition", ctx: "déplacer", desc: "Joue un plan, une rythmique ou une progression que tu connais dans une nouvelle position." },
     { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser strictement dans la position CAGED tirée au sort." },
-    { name: "Liaison", ctx: "explorer", desc: "Pioche plusieurs cartes, explore et découvre comment les connecter sur le manche." }] }];
+    { name: "Liaison", ctx: "explorer", desc: "Pioche plusieurs positions, explore et redécouvre ton manche." }] }];
 
 
   return (
@@ -304,8 +303,12 @@ function HowTo() {
           )}
         </div>
         <div className="usage-bonus">
-          <span className="usage-bonus__k">Et pour les plus vaillants</span>
-          <p className="usage-bonus__txt">Combine les deux catégories : une <b>Contrainte</b> pour la direction, une carte <b>CAGED</b> pour explorer le manche. Les deux ensemble forcent la connexion accords × gammes × positions — et c'est là que les vraies idées sortent.</p>
+          <span className="usage-bonus__k">BONUS</span>
+          <p className="usage-bonus__txt">Combine les deux catégories : une contrainte pour la direction, une position <b>CAGED</b> pour l'exploration. Seulement pour les plus vaillants.</p>
+        </div>
+        <div className="usage-bonus">
+          <span className="usage-bonus__k">BONUS II</span>
+          <p className="usage-bonus__txt">Le but ultime de ce jeu est son approriation. Créer tes propres manières de l'utiliser et dépasse tes habitudes de jeu !</p>
         </div>
       </div>
     </section>);
@@ -494,8 +497,7 @@ function Categories() {
     <section className="section" id="categories">
       <div className="container">
         <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
-          <h2 className="h-section" style={{ marginTop: 14 }}>2 types de cartes.</h2>
-          <p className="lead section-sub">Contrainte pour penser différemment. CAGED pour explorer le manche sous un nouvel angle.</p>
+          <h2 className="h-section" style={{ marginTop: 14 }}>Le deck complet</h2>
         </div>
         <div className="cats-grid">
           {cats.map((c, i) =>
@@ -581,7 +583,7 @@ function Recap() {
     <section className="section section--alt" id="resume">
       <div className="container">
         <div className="section__head" style={{ textAlign: "left", maxWidth: "none", marginBottom: 0 }}>
-          <h2 className="h-section">Un deck pensé pour une chose :<br />te débloquer.</h2>
+          <h2 className="h-section">Un deck pensé pour une chose : te débloquer</h2>
         </div>
         <div className="recap-args">
           {args.map((a) =>
@@ -646,3 +648,5 @@ window.SocialProof = SocialProof;
 window.Objection = Objection;
 window.FinalCTA = FinalCTA;
 window.Footer = Footer;
+
+
