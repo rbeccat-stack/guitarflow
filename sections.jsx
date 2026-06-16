@@ -75,9 +75,9 @@ function Hero({ density = "breathing", cardStyle = "illustrated" }) {
       <div className="container hero__inner">
         <div className="hero__copy">
           <h1 className="h-display">
-            Tu es à une carte de l'inspiration.
+            Tire une carte et casse ta routine.
           </h1>
-          <p className="lead hero__sub"><b>83 cartes.</b> Des centaines d'idées au bout des doigts.</p>
+          <p className="lead hero__sub">83 contraintes créatives pour arrêter de tourner en rond et commencer à composer.</p>
           <div className="hero__form-wrap">
             <EmailField variant="light" />
           </div>
@@ -648,5 +648,7 @@ window.SocialProof = SocialProof;
 window.Objection = Objection;
 window.FinalCTA = FinalCTA;
 window.Footer = Footer;
+
+
 
 
