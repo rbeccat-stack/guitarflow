@@ -260,7 +260,7 @@ function HowTo() {
     vol: "48 cartes",
     sub: "5 catégories — Rythme, Harmonie, Technique, Structure, Gimmick.",
     uses: [
-    { name: "Page blanche", ctx: "nouvelle compo", desc: "Point de départ arbitraire face à un manche vide. Empêche le noodling par défaut." },
+    { name: "Page blanche", ctx: "nouvelle compo", desc: "Pioche des contraintes et force toi à les placer dans ton morceau." },
     { name: "Le Challenger", ctx: "compo existante", desc: "Un filtre appliqué sur un riff qui tourne en rond pour le faire évoluer — variation, section B." },
     { name: "Le Défi", ctx: "impro", desc: "Une contrainte en temps réel qui te force à sortir de tes plans habituels et à pimenter ton jeu." }] },
 
