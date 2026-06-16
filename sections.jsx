@@ -174,7 +174,7 @@ function Showcase_contraintes() {
     <section className="section" id="solution">
       <div className="container">
         <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
-          <h2 className="h-section">Une contrainte. Un défi.</h2>
+          <h2 className="h-section">De la contrainte naît la créativité</h2>
         </div>
         <div className="solution-grid">
           <div className="solution-cardwrap">
@@ -218,7 +218,7 @@ function Showcase_CAGED() {
     <section className="section" id="solution-caged">
       <div className="container">
         <div className="section__head section__head--right" style={{ maxWidth: "none" }}>
-          <h2 className="h-section">Une carte. Tout le manche.</h2>
+          <h2 className="h-section">Une nouvelle vision du manche</h2>
         </div>
         <div className="solution-grid solution-grid--mirror">
           <div className="solution-side">
@@ -697,6 +697,7 @@ window.Objection = Objection;
 window.WhySection = WhySection;
 window.FinalCTA = FinalCTA;
 window.Footer = Footer;
+
 
 
 
