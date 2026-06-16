@@ -303,7 +303,7 @@ function HowTo() {
         </div>
         <div className="usage-bonus">
           <span className="usage-bonus__k">BONUS</span>
-          <p className="usage-bonus__txt">Combine les deux catégories : une contrainte pour la direction, une position <b>CAGED</b> pour l'exploration. Seulement pour les plus vaillants.</p>
+          <p className="usage-bonus__txt">Combine les deux catégories : une <b>contrainte</b> pour la direction, une <b>position</b> <b>CAGED</b> pour l'exploration. Seulement pour les plus vaillants.</p>
         </div>
         <div className="usage-bonus">
           <span className="usage-bonus__k">BONUS II</span>
@@ -697,6 +697,7 @@ window.Objection = Objection;
 window.WhySection = WhySection;
 window.FinalCTA = FinalCTA;
 window.Footer = Footer;
+
 
 
 
