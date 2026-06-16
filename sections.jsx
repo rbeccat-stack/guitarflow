@@ -222,7 +222,7 @@ function Showcase_CAGED() {
         </div>
         <div className="solution-grid solution-grid--mirror">
           <div className="solution-side">
-            <p className="lead">Chaque carte représente un type d'accord dans une des 5 positions du CAGED</p>
+            <p className="lead">Chaque carte représente un type d'accord dans une des 5 positions du CAGED. Tu peux t'en servir comme départ d'une compo, explorer un nouvel endroit du manche, tester des idées. Tout est possible.</p>
             <div className="stats">
               <div className="stat">
                 <div className="stat__num">35</div>
@@ -260,7 +260,7 @@ function HowTo() {
     sub: "5 catégories — Rythme, Harmonie, Technique, Structure, Gimmick.",
     uses: [
     { name: "Page blanche", ctx: "nouvelle compo", desc: "Pioche des contraintes et force toi à les placer dans ta compo" },
-    { name: "Le Challenger", ctx: "compo existante", desc: "Enrichi un de tes morceaux déjà existant et laisse le hasard décider." },
+    { name: "Transformation", ctx: "compo existante", desc: "Enrichi un de tes morceaux déjà existant et laisse le hasard des cartes décider." },
     { name: "Hardcore mode", ctx: "impro", desc: "Place une des contraintes pendant ton impro." }] },
 
   {
@@ -268,7 +268,7 @@ function HowTo() {
     vol: "35 cartes recto-verso",
     sub: "2 visions — intervalles et noms des notes",
     uses: [
-    { name: "Transposition", ctx: "déplacer", desc: "Joue un plan, une rythmique ou une progression dans une nouvelle position." },
+    { name: "Transposition", ctx: "déplacer", desc: "Joue un plan ou une progression d'accords dans une nouvelle position." },
     { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser strictement dans la position CAGED tirée au sort." },
     { name: "Liaison", ctx: "explorer", desc: "Pioche plusieurs positions, explore et redécouvre ton manche." }] }];
 
@@ -293,7 +293,6 @@ function HowTo() {
               <li className="use-case" key={j}>
                     <div className="use-case__line">
                       <span className="use-case__name">{u.name}</span>
-                      <span className="use-case__ctx">{u.ctx}</span>
                     </div>
                     <p className="use-case__desc">{u.desc}</p>
                   </li>
@@ -603,17 +602,17 @@ function Recap() {
 function WhySection() {
   const pillars = [
     {
-      icon: "⚡",
+      icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>,
       title: "Action > Réflexion",
       desc: "Ton oreille est plus intelligente que ton cerveau. Joue d'abord, analyse ensuite.",
     },
     {
-      icon: "🖥️",
+      icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><line x1="4.5" y1="7" x2="4.5" y2="7.01"/></svg>,
       title: "On passe assez de temps sur nos écrans.",
       desc: "La guitare, c'est tes mains, tes oreilles, et rien d'autre.",
     },
     {
-      icon: "🙂",
+      icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>,
       title: "Si tu ne t'amuses pas, c'est que tu n'es pas là.",
       desc: "Les meilleures sensations arrivent quand tu lâches prise. Vise l'instant présent.",
     },
@@ -698,6 +697,9 @@ window.Objection = Objection;
 window.WhySection = WhySection;
 window.FinalCTA = FinalCTA;
 window.Footer = Footer;
+
+
+
 
 
 
