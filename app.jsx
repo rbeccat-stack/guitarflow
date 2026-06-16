@@ -1,5 +1,5 @@
 /* global React, useTweaks, TweaksPanel, TweakSection, TweakRadio, TweakSelect */
-/* global Nav, Hero, Problem, Showcase_contraintes, Showcase_CAGED, HowTo, Categories, SocialProof, Objection, FinalCTA, Footer */
+/* global Nav, Hero, Problem, Showcase_contraintes, Showcase_CAGED, HowTo, Categories, SocialProof, Objection, WhySection, FinalCTA, Footer */
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "palette": "base",
@@ -26,6 +26,7 @@ function App() {
       <HowTo/>
       <Categories/>
       <Recap/>
+      <WhySection/>
       <FinalCTA bg={t.ctaBg}/>
       <Footer/>
 

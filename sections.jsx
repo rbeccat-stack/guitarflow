@@ -268,7 +268,7 @@ function HowTo() {
     vol: "35 cartes recto-verso",
     sub: "2 visions — intervalles et noms des notes",
     uses: [
-    { name: "Transposition", ctx: "déplacer", desc: "Joue un plan, une rythmique ou une progression que tu connais dans une nouvelle position." },
+    { name: "Transposition", ctx: "déplacer", desc: "Joue un plan, une rythmique ou une progression dans une nouvelle position." },
     { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser strictement dans la position CAGED tirée au sort." },
     { name: "Liaison", ctx: "explorer", desc: "Pioche plusieurs positions, explore et redécouvre ton manche." }] }];
 
@@ -599,13 +599,62 @@ function Recap() {
 
 }
 
+/* ============== POURQUOI GUITAR FLOW ============== */
+function WhySection() {
+  const pillars = [
+    {
+      icon: "⚡",
+      title: "Action > Réflexion",
+      desc: "Ton oreille est plus intelligente que ton cerveau. Joue d'abord, analyse ensuite.",
+    },
+    {
+      icon: "🖥️",
+      title: "On passe assez de temps sur nos écrans.",
+      desc: "La guitare, c'est tes mains, tes oreilles, et rien d'autre.",
+    },
+    {
+      icon: "🙂",
+      title: "Si tu ne t'amuses pas, c'est que tu n'es pas là.",
+      desc: "Les meilleures sensations arrivent quand tu lâches prise. Vise l'instant présent.",
+    },
+  ];
+
+  return (
+    <section className="section" id="why">
+      <div className="container">
+        <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
+          <h2 className="h-section" style={{ marginTop: 14 }}>Pourquoi Guitar Flow ?</h2>
+        </div>
+        <div className="why-body">
+          <p className="body body--lg why-para">J'ai d'abord créé Guitar Flow pour un usage personnel. Ça fait +10 ans que je joue, j'adore la guitare et la musique. C'est une version plus fun de la méditation. Parfois, je suis frustré de ne pas trouver quoi jouer et je tourne en rond. On passe tous par là : des tonnes de bouts de morceau et tout finit par se ressembler.</p>
+          <p className="body body--lg why-para">Naturellement, j'ai fini par vouloir contourner cette paralysie du choix. La solution : les avoir tous en même temps et n'en tirer qu'un à la fois. La créativité par la contrainte. Des notes sont devenues des schémas et des papiers, puis ce deck de cartes. Maintenant, ce sont des dizaines d'idées à portée de main, et plus encore de combinaisons disponibles.</p>
+        </div>
+        <div className="why-philosophy">
+          <h3 className="why-philosophy__title">Ma philosophie est simple :</h3>
+          <div className="why-pillars">
+            {pillars.map((p, i) =>
+              <article className="why-pillar" key={i}>
+                <div className="why-pillar__icon">{p.icon}</div>
+                <div className="why-pillar__content">
+                  <strong className="why-pillar__title">{p.title}</strong>
+                  <p className="why-pillar__desc">{p.desc}</p>
+                </div>
+              </article>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ============== CTA FINAL ============== */
 function FinalCTA({ bg = "dark" }) {
   return (
     <section className={"cta cta--" + bg} id="cta">
       <div className="container cta__inner">
         <h2 className="cta__title">Tire une carte et kiffe.</h2>
-        <p className="cta__sub">La panne d'inspiration n'est plus qu'un mythe désormais.</p>
+        <p className="cta__sub">Pas de méthode miracle. Pas de promesses démesurées. Juste un paquet de cartes pour faire de tes sessions guitare de vrais moments de création</p>
         <div className="cta__form">
           <EmailField variant={bg} />
         </div>
@@ -646,8 +695,10 @@ window.Categories = Categories;
 window.Recap = Recap;
 window.SocialProof = SocialProof;
 window.Objection = Objection;
+window.WhySection = WhySection;
 window.FinalCTA = FinalCTA;
 window.Footer = Footer;
+
 
 
 
