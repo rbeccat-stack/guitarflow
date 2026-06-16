@@ -77,7 +77,7 @@ function Hero({ density = "breathing", cardStyle = "illustrated" }) {
           <h1 className="h-display">
             Tire une carte et casse ta routine.
           </h1>
-          <p className="lead hero__sub">83 contraintes créatives pour arrêter de tourner en rond et commencer à composer.</p>
+          <p className="lead hero__sub">83 contraintes créatives pour arrêter de tourner en rond et te mettre à composer.</p>
           <div className="hero__form-wrap">
             <EmailField variant="light" />
           </div>
@@ -648,6 +648,7 @@ window.SocialProof = SocialProof;
 window.Objection = Objection;
 window.FinalCTA = FinalCTA;
 window.Footer = Footer;
+
 
 
 
