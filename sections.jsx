@@ -260,7 +260,7 @@ function HowTo() {
     vol: "48 cartes",
     sub: "5 catégories — Rythme, Harmonie, Technique, Structure, Gimmick.",
     uses: [
-    { name: "Le Starter", ctx: "nouvelle compo", desc: "Point de départ arbitraire face à un manche vide. Empêche le noodling par défaut." },
+    { name: "Page blanche", ctx: "nouvelle compo", desc: "Point de départ arbitraire face à un manche vide. Empêche le noodling par défaut." },
     { name: "Le Challenger", ctx: "compo existante", desc: "Un filtre appliqué sur un riff qui tourne en rond pour le faire évoluer — variation, section B." },
     { name: "Le Défi", ctx: "impro", desc: "Une contrainte en temps réel qui te force à sortir de tes plans habituels et à pimenter ton jeu." }] },
 
@@ -269,9 +269,9 @@ function HowTo() {
     vol: "35 cartes recto-verso",
     sub: "Cartographie du manche — noms des notes et intervalles.",
     uses: [
-    { name: "La Transposition", ctx: "déplacer", desc: "Joue un plan, une rythmique ou une progression que tu connais dans une nouvelle position pour sonner différemment." },
-    { name: "La Prison de manche", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser strictement dans une seule position tirée au sort." },
-    { name: "La Connexion", ctx: "explorer", desc: "Pioche plusieurs cartes, explore et découvre comment les connecter les positions entre elles. " }] }];
+    { name: "Transposition", ctx: "déplacer", desc: "Joue un plan, une rythmique ou une progression que tu connais dans une nouvelle position pour sonner différemment." },
+    { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser strictement dans une seule position tirée au sort." },
+    { name: "Liaison", ctx: "explorer", desc: "Pioche plusieurs cartes, explore et découvre comment les connecter les positions entre elles. " }] }];
 
 
   return (
