@@ -268,7 +268,7 @@ function HowTo() {
     vol: "35 cartes recto-verso",
     sub: "2 visions — intervalles et noms des notes",
     uses: [
-    { name: "Transposition", ctx: "déplacer", desc: "Joue un plan ou une progression d'accords dans une nouvelle position." },
+    { name: "Transposition", ctx: "déplacer", desc: "Joue un plan ou une progression dans une autre position." },
     { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser strictement dans la position CAGED tirée au sort." },
     { name: "Liaison", ctx: "explorer", desc: "Pioche plusieurs positions, explore et redécouvre ton manche." }] }];
 
@@ -697,6 +697,7 @@ window.Objection = Objection;
 window.WhySection = WhySection;
 window.FinalCTA = FinalCTA;
 window.Footer = Footer;
+
 
 
 
