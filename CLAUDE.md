@@ -29,7 +29,7 @@ Pas de build step. Le site est du HTML statique avec React compilé côté clien
 **Ordre de chargement des scripts dans `index.html` :**
 1. `tweaks-panel.jsx` — composant panneau de réglages flottant (palette, densité, style de carte)
 2. `cards.jsx` — composants `MiniCard`, `BigCard`, `HeroCards` pour les visuels de cartes
-3. `sections.jsx` — tous les composants de page : `Nav`, `Hero`, `Problem`, `Showcase_*`, `HowTo`, `Categories`, `Recap`, `FinalCTA`, `Footer`
+3. `sections.jsx` — tous les composants de page : `Nav`, `Hero`, `Problem`, `Showcase_*`, `HowTo`, `Categories`, `Recap`, `WhySection`, `FinalCTA`, `Footer`
 4. `app.jsx` — point d'entrée, monte `App` dans `#root`, orchestre les tweaks via `useTweaks()`
 
 **CSS :**
@@ -51,3 +51,7 @@ Pas de build step. Le site est du HTML statique avec React compilé côté clien
 - Le **herodeck** utilise des `position: absolute` avec des translations en px (`±150px` sur desktop). Sur mobile, les cartes latérales sont masquées (`display: none`) pour éviter le débordement.
 - Le **blog** est commenté dans la nav et le footer — ne pas le réactiver sans reconstruire les pages.
 - Les **tweaks** (`TweaksPanel`) sont un outil de design uniquement, pas destinés aux utilisateurs finaux.
+- Sur mobile, `.section__head` est forcé en `text-align: center !important` — utiliser `!important` pour surcharger si nécessaire.
+- Le port local peut varier si 8080 est occupé (ex: `http://127.0.0.1:56276`). Vérifier la sortie de `npx live-server`.
+- La **favicon** est `favicon.svg` — un carré orange arrondi (#E89B5A) reproduisant le picto du logo.
+- `WhySection` se place juste avant `FinalCTA` dans `app.jsx` et expose son composant via `window.WhySection`.
