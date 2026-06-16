@@ -261,17 +261,17 @@ function HowTo() {
     sub: "5 catégories — Rythme, Harmonie, Technique, Structure, Gimmick.",
     uses: [
     { name: "Page blanche", ctx: "nouvelle compo", desc: "Pioche des contraintes et force toi à les placer dans ton morceau." },
-    { name: "Le Challenger", ctx: "compo existante", desc: "Un filtre appliqué sur un riff qui tourne en rond pour le faire évoluer — variation, section B." },
-    { name: "Le Défi", ctx: "impro", desc: "Une contrainte en temps réel qui te force à sortir de tes plans habituels et à pimenter ton jeu." }] },
+    { name: "Le Challenger", ctx: "compo existante", desc: "Enrichi un de tes morceaux déjà existant avec un contrainte tirée au hasard." },
+    { name: "Hardcore mode", ctx: "impro", desc: "Place une des contraintes pendant ton impro." }] },
 
   {
     cat: "CAGED",
     vol: "35 cartes recto-verso",
-    sub: "Cartographie du manche — noms des notes et intervalles.",
+    sub: "2 visions — intervalles et noms des notes",
     uses: [
-    { name: "Transposition", ctx: "déplacer", desc: "Joue un plan, une rythmique ou une progression que tu connais dans une nouvelle position pour sonner différemment." },
-    { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser strictement dans une seule position tirée au sort." },
-    { name: "Liaison", ctx: "explorer", desc: "Pioche plusieurs cartes, explore et découvre comment les connecter les positions entre elles. " }] }];
+    { name: "Transposition", ctx: "déplacer", desc: "Joue un plan, une rythmique ou une progression que tu connais dans une nouvelle position." },
+    { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser strictement dans la position CAGED tirée au sort." },
+    { name: "Liaison", ctx: "explorer", desc: "Pioche plusieurs cartes, explore et découvre comment les connecter sur le manche." }] }];
 
 
   return (
