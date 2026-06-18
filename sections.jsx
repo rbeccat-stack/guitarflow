@@ -157,7 +157,7 @@ function ShowcaseCardDeck({ cards }) {
       <div className="sc-deck__dots" aria-hidden="true">
         {cards.map((_, i) => <i key={i} className={i === idx ? "is-on" : ""} onClick={(e) => {e.stopPropagation();setIdx(i);}}></i>)}
       </div>
-      <p className="sc-deck__hint">clique pour défiler</p>
+      <p className="sc-deck__hint"><span className="hint--desktop">clique pour défiler</span><span className="hint--mobile">tape pour défiler</span></p>
     </div>);
 }
 
@@ -259,8 +259,8 @@ function HowTo() {
     vol: "48 cartes",
     sub: "5 catégories — Rythme, Harmonie, Technique, Structure, Gimmick.",
     uses: [
-    { name: "Page blanche", ctx: "nouvelle compo", desc: "Pioche des contraintes et force toi à les placer dans ta compo" },
-    { name: "Transformation", ctx: "compo existante", desc: "Enrichi un de tes morceaux déjà existant et laisse le hasard des cartes décider." },
+    { name: "Page blanche", ctx: "nouvelle compo", desc: "Pioche des contraintes et force toi à les placer dans tes compos." },
+    { name: "Transformation", ctx: "compo existante", desc: "Enrichi un de tes morceaux déjà existant et laisse les cartes décider." },
     { name: "Hardcore mode", ctx: "impro", desc: "Place une des contraintes pendant ton impro." }] },
 
   {
@@ -269,23 +269,22 @@ function HowTo() {
     sub: "2 visions — intervalles et noms des notes",
     uses: [
     { name: "Transposition", ctx: "déplacer", desc: "Joue un plan ou une progression dans une autre position." },
-    { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser strictement dans la position CAGED tirée au sort." },
-    { name: "Liaison", ctx: "explorer", desc: "Pioche plusieurs positions, explore et redécouvre ton manche." }] }];
+    { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser strictement dans une position tirée au sort." },
+    { name: "Liaison", ctx: "explorer", desc: "Pioche plusieurs positions, connecte les et redécouvre ton manche." }] }];
 
 
   return (
     <section className="section section--alt" id="comment">
       <div className="container">
         <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
-          <h2 className="h-section" style={{ marginTop: 14 }}>Comment jouer ?</h2>
-          <p className="lead section-sub">Deux catégories, deux manières de jouer.</p>
+          <h2 className="h-section" style={{ marginTop: 14 }}>Plusieurs modes de jeu</h2>
+          <p className="lead section-sub"></p>
         </div>
         <div className="usage-grid">
           {groups.map((g, i) =>
           <article className="usage-panel" key={i}>
               <div className="usage-panel__head">
                 <h3 className="usage-panel__cat">{g.cat}</h3>
-                <span className="usage-panel__vol">{g.vol}</span>
               </div>
               <p className="usage-panel__sub">{g.sub}</p>
               <ol className="usage-list">
@@ -302,12 +301,12 @@ function HowTo() {
           )}
         </div>
         <div className="usage-bonus">
-          <span className="usage-bonus__k">BONUS</span>
-          <p className="usage-bonus__txt">Combine les deux catégories : une <b>contrainte</b> pour la direction, une <b>position</b> <b>CAGED</b> pour l'exploration. Seulement pour les plus vaillants.</p>
+          <span className="usage-bonus__k">Pour les soldats</span>
+          <p className="usage-bonus__txt">Combine les deux catégories : une <b>contrainte</b> pour la direction, une <b>position</b> <b>CAGED</b> pour l'exploration.</p>
         </div>
         <div className="usage-bonus">
-          <span className="usage-bonus__k">BONUS II</span>
-          <p className="usage-bonus__txt">Le but ultime de ce jeu est son approriation. Créer tes propres manières de l'utiliser et dépasse tes habitudes de jeu !</p>
+          <span className="usage-bonus__k">Pour les guerriers</span>
+          <p className="usage-bonus__txt">Tire un position, ajoute plusieurs contraintes, et place les dans une impro.</p>
         </div>
       </div>
     </section>);
@@ -360,7 +359,7 @@ function CatCard({ c }) {
             <span className="cat-stage__index">{String(idx + 1).padStart(2, '0')}<span className="cat-stage__total"> / {String(n).padStart(2, '0')}</span></span>
             <button className="cat-stage__arrow" onClick={(e) => {e.stopPropagation();advance();}}>→</button>
           </div>
-          <span className="cat-stage__cta">clique pour défiler</span>
+          <span className="cat-stage__cta"><span className="hint--desktop">clique pour défiler</span><span className="hint--mobile">tape pour défiler</span></span>
         </div>
       </div>
     </article>);
@@ -369,7 +368,7 @@ function CatCard({ c }) {
 
 function Categories() {
   const cats = [
-  { title: "Contrainte", desc: <>Règles strictes pour penser différemment — inspirées des Stratégies Obliques de Brian Eno.<br /><span className="cat-card__desc-hl">Structure, rythme, technique, harmonie, gimmick.</span></>, count: "48 cartes",
+  { title: "Contrainte", desc: <>Des règles strictes pour penser différemment et apporter de la fraîcheur à ton jeu.<br /><span className="cat-card__desc-hl">5 catégories : structure, rythme, technique, harmonie, gimmick.</span></>, count: "48 cartes",
     cards: [
     "visuelles-cartes/CONTRAINTE_CLUSTER.svg",
     "visuelles-cartes/CONTRAINTE_CONTRAINTE-LIBRE.svg",
@@ -419,7 +418,7 @@ function Categories() {
     "visuelles-cartes/TECHNIQUE_SLIDE.svg",
     "visuelles-cartes/TECHNIQUE_TREMOLO.svg",
     "visuelles-cartes/TECHNIQUE_VIBRATO.svg"] },
-  { title: "CAGED", desc: <>Cartographie le manche — positions majeures, mineures, septièmes et suspendues.<br /><span className="cat-card__desc-hl">Recto : noms des notes.<br />Verso : intervalles.</span></>, count: "35 cartes (recto - verso)",
+  { title: "CAGED", desc: <>Cartographie complète du manche — positions majeures, mineures, septièmes et suspendues.<br /><span className="cat-card__desc-hl">2 visions : recto pour les intervalles et verso pour le nom des notes.</span></>, count: "35 cartes (recto - verso)",
     cards: [
     "visuelles-cartes/CAGED-INTERVALLES_C.svg",
     "visuelles-cartes/CAGED-INTERVALLES_C7.svg",
@@ -679,7 +678,7 @@ function Footer() {
           <span>·</span> */}
           <a href="mailto:salut@guitarflowcards.com">Contact</a>
           <span>·</span>
-          <span>Fait à Lyon avec passion 🎸❤️</span>
+          <span>From Lyon with love 🎸❤️</span>
         </div>
       </div>
     </footer>);
