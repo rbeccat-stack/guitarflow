@@ -1020,7 +1020,7 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
 .why-philosophy__title { font-size: 16px; font-weight: 700; color: var(--ink-900); display: block; margin-bottom: 20px; }
 .why-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .why-pillar { display: flex; align-items: flex-start; gap: 16px; background: var(--paper); border: 1px solid var(--border-1); border-radius: 10px; padding: 20px 24px; }
-.why-pillar__icon { flex: none; width: 36px; height: 36px; border-radius: 8px; background: var(--ink-50); display: flex; align-items: center; justify-content: center; color: var(--fg-2); }
+.why-pillar__icon { flex: none; width: 36px; height: 36px; border-radius: 8px; background: var(--ink-50); display: flex; align-items: center; justify-content: center; color: var(--fg-2); border: none; padding: 0; cursor: default; }
 .why-pillar__content { display: flex; flex-direction: column; gap: 4px; }
 .why-pillar__title { font-size: 15px; font-weight: 700; color: var(--ink-900); }
 .why-pillar__desc { font-size: 14px; color: var(--fg-3); margin: 0; }
@@ -1175,4 +1175,12 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   .qa__content { padding: 14px 12px; }
   .qa__badge   { font-size: 13px; width: 40px; }
   .qa__row     { grid-template-columns: 40px 1fr; }
+
+  /* Philosophie : icônes seules, texte révélé au clic */
+  .why-pillars { grid-template-columns: 1fr; gap: 12px; }
+  .why-pillar { align-items: center; padding: 12px 16px; }
+  .why-pillar__icon { width: 44px; height: 44px; cursor: pointer; }
+  .why-pillar__content { display: none; }
+  .why-pillar.is-open { align-items: flex-start; }
+  .why-pillar.is-open .why-pillar__content { display: flex; }
 }

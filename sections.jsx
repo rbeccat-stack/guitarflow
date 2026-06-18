@@ -599,6 +599,7 @@ function Recap() {
 
 /* ============== POURQUOI GUITAR FLOW ============== */
 function WhySection() {
+  const [openIdx, setOpenIdx] = useS(null);
   const pillars = [
     {
       icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>,
@@ -631,8 +632,13 @@ function WhySection() {
           <h3 className="why-philosophy__title">Ma philosophie est simple :</h3>
           <div className="why-pillars">
             {pillars.map((p, i) =>
-              <article className="why-pillar" key={i}>
-                <div className="why-pillar__icon">{p.icon}</div>
+              <article className={"why-pillar" + (openIdx === i ? " is-open" : "")} key={i}>
+                <button
+                  type="button"
+                  className="why-pillar__icon"
+                  aria-expanded={openIdx === i}
+                  onClick={() => setOpenIdx(openIdx === i ? null : i)}
+                >{p.icon}</button>
                 <div className="why-pillar__content">
                   <strong className="why-pillar__title">{p.title}</strong>
                   <p className="why-pillar__desc">{p.desc}</p>
