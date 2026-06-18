@@ -626,7 +626,7 @@ function WhySection() {
         </div>
         <div className="why-body">
           <p className="body body--lg why-para">J'ai d'abord créé Guitar Flow pour un usage personnel. Ça fait +10 ans que je joue, j'adore la guitare et la musique. C'est une version plus fun de la méditation. Parfois, je suis frustré de ne pas trouver quoi jouer et je tourne en rond. On passe tous par là : des tonnes de bouts de morceau et tout finit par se ressembler.</p>
-          <p className="body body--lg why-para">Naturellement, j'ai fini par vouloir contourner cette paralysie du choix. La solution : les avoir tous en même temps et n'en tirer qu'un à la fois. La créativité par la contrainte. Des notes sont devenues des schémas et des papiers, puis ce deck de cartes. Maintenant, ce sont des dizaines d'idées à portée de main, et plus encore de combinaisons disponibles.</p>
+          <p className="body body--lg why-para">Naturellement, j'ai voulu contourner cette paralysie du choix. La solution : les avoir tous en même temps et n'en tirer qu'un à la fois. La créativité par la contrainte. Des notes sont devenues des schémas et des papiers, puis ce deck de cartes. Maintenant, ce sont des dizaines d'idées à portée de main, et plus encore de combinaisons disponibles.</p>
         </div>
         <div className="why-philosophy">
           <h3 className="why-philosophy__title">Ma philosophie est simple :</h3>
