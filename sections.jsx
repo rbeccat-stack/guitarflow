@@ -240,7 +240,7 @@ function HowTo() {
     sub: "2 visions — intervalles et noms des notes",
     uses: [
     { name: "Transposition", ctx: "déplacer", desc: "Joue un plan ou une progression dans une autre position." },
-    { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser strictement dans une position tirée au sort." },
+    { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser dans une position tirée au sort." },
     { name: "Liaison", ctx: "explorer", desc: "Pioche plusieurs positions, connecte les et redécouvre ton manche." }] }];
 
 
