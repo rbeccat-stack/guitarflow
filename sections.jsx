@@ -182,20 +182,6 @@ function Showcase_contraintes() {
           </div>
           <div className="solution-side">
             <p className="lead">Chaque carte est une contrainte créative. Le but n'est pas d'apprendre mais passer à l'action et commencer simplement, sans prise de tête.</p>
-            <div className="stats">
-              <div className="stat">
-                <div className="stat__num">48</div>
-                <div className="stat__lbl">Cartes</div>
-              </div>
-              <div className="stat">
-                <div className="stat__num">5</div>
-                <div className="stat__lbl">Catégories</div>
-              </div>
-              <div className="stat">
-                <div className="stat__num">∞</div>
-                <div className="stat__lbl">Combinaisons</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -223,21 +209,6 @@ function Showcase_CAGED() {
         <div className="solution-grid solution-grid--mirror">
           <div className="solution-side">
             <p className="lead">Chaque carte représente un type d'accord dans une des 5 positions du CAGED. Tu peux t'en servir comme départ d'une compo, explorer un nouvel endroit du manche, tester des idées. Tout est possible.</p>
-            <div className="stats">
-              <div className="stat">
-                <div className="stat__num">35</div>
-                <div className="stat__lbl">Cartes</div>
-              </div>
-              <div className="stat">
-                <div className="stat__num">5</div>
-                <div className="stat__lbl">Formes</div>
-              </div>
-              <div className="stat">
-                <div className="stat__num">∞</div>
-                <div className="stat__lbl">Combinaisons</div>
-              </div>
-
-            </div>
           </div>
           <div className="solution-cardwrap solution-cardwrap--right">
             <ShowcaseCardDeck cards={cards} />
@@ -329,6 +300,11 @@ function CatCard({ c }) {
         <span className="cat-card__count">{c.count}</span>
         <h3 className="cat-card__title">{c.title}</h3>
         <p className="cat-card__desc">{c.desc}</p>
+        {c.stats && (
+          <div className="stats cat-card__stats">
+            {c.stats.map((s, i) => <div className="stat" key={i}><div className="stat__num">{s.num}</div><div className="stat__lbl">{s.lbl}</div></div>)}
+          </div>
+        )}
       </div>
       <div
         className="cat-stage-wrap"
@@ -369,6 +345,7 @@ function CatCard({ c }) {
 function Categories() {
   const cats = [
   { title: "Contrainte", desc: <>Des règles strictes pour penser différemment et apporter de la fraîcheur à ton jeu.<br /><span className="cat-card__desc-hl">5 catégories : structure, rythme, technique, harmonie, gimmick.</span></>, count: "48 cartes",
+    stats: [{num:"48",lbl:"Cartes"},{num:"5",lbl:"Catégories"},{num:"∞",lbl:"Combinaisons"}],
     cards: [
     "visuelles-cartes/CONTRAINTE_CLUSTER.svg",
     "visuelles-cartes/CONTRAINTE_CONTRAINTE-LIBRE.svg",
@@ -419,6 +396,7 @@ function Categories() {
     "visuelles-cartes/TECHNIQUE_TREMOLO.svg",
     "visuelles-cartes/TECHNIQUE_VIBRATO.svg"] },
   { title: "CAGED", desc: <>Cartographie complète du manche — positions majeures, mineures, septièmes et suspendues.<br /><span className="cat-card__desc-hl">2 visions : recto pour les intervalles et verso pour le nom des notes.</span></>, count: "35 cartes (recto - verso)",
+    stats: [{num:"35",lbl:"Cartes"},{num:"5",lbl:"Formes"},{num:"∞",lbl:"Combinaisons"}],
     cards: [
     "visuelles-cartes/CAGED-INTERVALLES_C.svg",
     "visuelles-cartes/CAGED-INTERVALLES_C7.svg",

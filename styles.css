@@ -1014,6 +1014,7 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
 .cta--accent .field button.btn--primary:hover { background: var(--ink-700); }
 
 /* ---------- Why Section ---------- */
+.cat-card__stats { margin-top: 16px; }
 .why-body { margin: 0 0 56px; }
 .why-para { color: var(--fg-2); margin-bottom: 20px; text-align: left; }
 .why-para:last-child { margin-bottom: 0; }
