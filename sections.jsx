@@ -226,7 +226,7 @@ window.Showcase_CAGED = Showcase_CAGED;
 function HowTo() {
   const groups = [
   {
-    cat: "Contrainte",
+    cat: "Créatif",
     vol: "48 cartes",
     sub: "5 catégories — Rythme, Harmonie, Technique, Structure, Gimmick.",
     uses: [
