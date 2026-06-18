@@ -77,7 +77,7 @@ function Hero({ density = "breathing", cardStyle = "illustrated" }) {
           <h1 className="h-display">
             Tire une carte et casse ta routine.
           </h1>
-          <p className="lead hero__sub">83 contraintes créatives pour arrêter de tourner en rond et te mettre à composer.</p>
+          <p className="lead hero__sub">83 défis créatifs pour arrêter de tourner en rond et te mettre à composer.</p>
           <div className="hero__form-wrap">
             <EmailField variant="light" />
           </div>
@@ -344,7 +344,7 @@ function CatCard({ c }) {
 
 function Categories() {
   const cats = [
-  { title: "Contrainte", desc: <>Des règles strictes pour penser différemment et apporter de la fraîcheur à ton jeu.<br /><span className="cat-card__desc-hl">5 catégories : structure, rythme, technique, harmonie, gimmick.</span></>, count: "48 cartes",
+  { title: "Créatif", desc: <>Des règles strictes pour penser différemment et apporter de la fraîcheur à ton jeu.<br /><span className="cat-card__desc-hl">5 catégories : structure, rythme, technique, harmonie, gimmick.</span></>, count: "48 cartes",
     stats: [{num:"48",lbl:"Cartes"},{num:"5",lbl:"Catégories"},{num:"∞",lbl:"Combinaisons"}],
     cards: [
     "visuelles-cartes/CONTRAINTE_CLUSTER.svg",
