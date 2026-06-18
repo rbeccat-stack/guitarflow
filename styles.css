@@ -450,7 +450,7 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
 }
 
 /* ---------- Section frame ---------- */
-.section { padding: 112px 0; position: relative; }
+.section { padding: 56px 0; position: relative; }
 .section--alt { background: var(--ink-50); border-top: 1px solid var(--border-1); border-bottom: 1px solid var(--border-1); }
 .section--paper { background: var(--paper); border-top: 1px solid var(--border-1); border-bottom: 1px solid var(--border-1); }
 .section--tinted { background: color-mix(in oklab, var(--accent-50) 70%, var(--bg)); border-top: 1px solid var(--border-1); border-bottom: 1px solid var(--border-1); }

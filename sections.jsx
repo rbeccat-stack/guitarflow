@@ -636,7 +636,7 @@ function FinalCTA({ bg = "dark" }) {
     <section className={"cta cta--" + bg} id="cta">
       <div className="container cta__inner">
         <h2 className="cta__title">Tire une carte et kiffe.</h2>
-        <p className="cta__sub">Pas de méthode miracle. Pas de promesses démesurées. Juste un paquet de cartes pour faire de tes sessions guitare de vrais moments de création</p>
+        <p className="cta__sub">Pas de méthode miracle. Pas de promesses démesurées. Juste un paquet de cartes pour faire de tes sessions guitare de vrais moments de création.</p>
         <div className="cta__form">
           <EmailField variant={bg} />
         </div>
