@@ -628,7 +628,7 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 .usage-panel {
   background: var(--paper);
