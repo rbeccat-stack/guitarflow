@@ -1015,6 +1015,9 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
 
 /* ---------- Why Section ---------- */
 .cat-card__stats { margin-top: 16px; }
+.cat-card__stats .stat { padding: 14px 12px; }
+.cat-card__stats .stat__num { font-size: 24px; }
+.cat-card__stats .stat__lbl { font-size: 9px; }
 .why-body { margin: 0 0 56px; }
 .why-para { color: var(--fg-2); margin-bottom: 20px; text-align: left; }
 .why-para:last-child { margin-bottom: 0; }
