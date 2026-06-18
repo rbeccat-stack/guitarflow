@@ -75,9 +75,9 @@ function Hero({ density = "breathing", cardStyle = "illustrated" }) {
       <div className="container hero__inner">
         <div className="hero__copy">
           <h1 className="h-display">
-            Tire une carte et casse ta routine.
+            Tire une carte et mets ton jeu à l'épreuve.
           </h1>
-          <p className="lead hero__sub">83 défis créatifs pour arrêter de tourner en rond et te mettre à composer.</p>
+          <p className="lead hero__sub">83 défis créatifs pour développer ton jeu et kiffer un maximum.</p>
           <div className="hero__form-wrap">
             <EmailField variant="light" />
           </div>
