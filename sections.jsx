@@ -391,7 +391,7 @@ function CatCard({ c, color }) {
 
 function Categories() {
   const cats = [
-  { color: "var(--orange-500)", title: "Créatif", desc: <>Des règles strictes pour penser différemment et apporter de la fraîcheur à ton jeu.<br /><span className="cat-card__desc-hl">5 catégories : structure, rythme, technique, harmonie, gimmick.</span></>, count: "48 cartes",
+  { color: "var(--orange-500)", title: "Créatif", desc: <>Des règles strictes pour penser différemment et apporter de la fraîcheur à ton jeu.</>, count: "48 cartes",
     stats: [{num:"48",lbl:"Cartes"},{num:"5",lbl:"Catégories"},{num:"∞",lbl:"Combinaisons"}],
     cards: [
     "visuelles-cartes/CONTRAINTE_CLUSTER.svg",
@@ -442,7 +442,7 @@ function Categories() {
     "visuelles-cartes/TECHNIQUE_SLIDE.svg",
     "visuelles-cartes/TECHNIQUE_TREMOLO.svg",
     "visuelles-cartes/TECHNIQUE_VIBRATO.svg"] },
-  { color: "var(--blue-500)", title: "CAGED", desc: <>Cartographie complète du manche — positions majeures, mineures, septièmes et suspendues.<br /><span className="cat-card__desc-hl">2 visions : recto pour les intervalles et verso pour le nom des notes.</span></>, count: "35 cartes (recto - verso)",
+  { color: "var(--blue-500)", title: "CAGED", desc: <>Cartographie complète du manche — positions majeures, mineures, septièmes et suspendues.</>, count: "35 cartes (recto - verso)",
     stats: [{num:"35",lbl:"Cartes"},{num:"5",lbl:"Formes"},{num:"∞",lbl:"Combinaisons"}],
     cards: [
     "visuelles-cartes/CAGED-INTERVALLES_C.svg",
