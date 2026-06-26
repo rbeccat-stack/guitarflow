@@ -391,7 +391,7 @@ function CatCard({ c, color }) {
 
 function Categories() {
   const cats = [
-  { color: "var(--orange-500)", title: "Créatif", desc: <>Des règles strictes pour penser différemment et apporter de la fraîcheur à ton jeu.</>, count: "48 cartes",
+  { color: "var(--orange-500)", title: "Créatif", desc: <>48 possibilités de penser différemment et apporter de la fraîcheur à ton jeu.</>, count: "48 cartes",
     stats: [{num:"48",lbl:"Cartes"},{num:"5",lbl:"Catégories"},{num:"∞",lbl:"Combinaisons"}],
     cards: [
     "visuelles-cartes/CONTRAINTE_CLUSTER.svg",
