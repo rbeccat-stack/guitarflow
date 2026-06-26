@@ -84,24 +84,64 @@ function Hero({ density = "breathing", cardStyle = "illustrated" }) {
         </div>
 
         {(() => {
-          const heroCards = [
-            "visuelles-cartes/TECHNIQUE_GHOST-NOTES.svg",
-            "visuelles-cartes/RYTHME_SILENCE-TEMPS-FORT.svg",
-            "visuelles-cartes/CONTRAINTE_ZONE-AVEUGLE.svg",
-            "visuelles-cartes/HARMONIE_BLUE-NOTE.svg",
-            "visuelles-cartes/STRUCTURE_CLIMAX.svg",
-            "visuelles-cartes/CAGED-INTERVALLES_Gmaj7.svg",
-            "visuelles-cartes/CAGED-INTERVALLES_Dsus4.svg",
-            "visuelles-cartes/CAGED-NOTES_Amaj7.svg",
-            "visuelles-cartes/CAGED-NOTES_Csus2.svg",
+          // 24 CI : Am → Asus4 ; ordre mélangé
+          const cagedCI = [
+            "CAGED-INTERVALLES_E7","CAGED-INTERVALLES_Cmaj7","CAGED-INTERVALLES_Gm","CAGED-INTERVALLES_Amaj7",
+            "CAGED-INTERVALLES_D7","CAGED-INTERVALLES_Em","CAGED-INTERVALLES_Asus4","CAGED-INTERVALLES_Gmaj7",
+            "CAGED-INTERVALLES_C7","CAGED-INTERVALLES_Dsus4","CAGED-INTERVALLES_A","CAGED-INTERVALLES_G7",
+            "CAGED-INTERVALLES_Cm","CAGED-INTERVALLES_Esus2","CAGED-INTERVALLES_Dmaj7","CAGED-INTERVALLES_Am7",
+            "CAGED-INTERVALLES_G","CAGED-INTERVALLES_Csus2","CAGED-INTERVALLES_E","CAGED-INTERVALLES_D",
+            "CAGED-INTERVALLES_A7","CAGED-INTERVALLES_Emaj7","CAGED-INTERVALLES_C","CAGED-INTERVALLES_Dm",
           ];
+          // 24 CN : Am → Gm7 ; ordre mélangé différemment
+          const cagedCN = [
+            "CAGED-NOTES_Dm","CAGED-NOTES_G7","CAGED-NOTES_Amaj7","CAGED-NOTES_E7",
+            "CAGED-NOTES_Csus2","CAGED-NOTES_Dmaj7","CAGED-NOTES_Am7","CAGED-NOTES_Gm",
+            "CAGED-NOTES_C7","CAGED-NOTES_Esus2","CAGED-NOTES_A","CAGED-NOTES_Dsus4",
+            "CAGED-NOTES_Cm","CAGED-NOTES_Emaj7","CAGED-NOTES_D7","CAGED-NOTES_G",
+            "CAGED-NOTES_A7","CAGED-NOTES_Gmaj7","CAGED-NOTES_E","CAGED-NOTES_Cmaj7",
+            "CAGED-NOTES_D","CAGED-NOTES_Gm7","CAGED-NOTES_Em","CAGED-NOTES_C",
+          ];
+
+          // Non-CAGED : 48 cartes, greedy interleave par catégorie (jamais deux de suite)
+          const nonCagedGroups = [
+            { cat: "CO", cards: ["CONTRAINTE_CLUSTER","CONTRAINTE_CONTRAINTE-LIBRE","CONTRAINTE_HONORE-L-ERREUR","CONTRAINTE_HORIZONTAL","CONTRAINTE_L-OPPOSE","CONTRAINTE_MOINS-PLUS","CONTRAINTE_OCTAVE","CONTRAINTE_PREMIER-JET-FINAL","CONTRAINTE_SLOW-MOTION","CONTRAINTE_ZONE-AVEUGLE"] },
+            { cat: "SU", cards: ["STRUCTURE_ASYMETRIE","STRUCTURE_BOUCLE-EVOLUTIVE","STRUCTURE_CLIMAX","STRUCTURE_CRESCENDO","STRUCTURE_DIALOGUE","STRUCTURE_FAUSSE-FIN","STRUCTURE_FORME-ABA","STRUCTURE_LONGUE-INTRO","STRUCTURE_QUESTION-REPONSE","STRUCTURE_SUITE-ENCHAINEE"] },
+            { cat: "TE", cards: ["TECHNIQUE_BEND","TECHNIQUE_GHOST-NOTES","TECHNIQUE_HAMMER-ON","TECHNIQUE_HARMONIQUE-ARTIFICIELLE","TECHNIQUE_LEGATO","TECHNIQUE_PULL-OFF","TECHNIQUE_SLIDE","TECHNIQUE_TREMOLO","TECHNIQUE_VIBRATO"] },
+            { cat: "RY", cards: ["RYTHME_CROCHE-POINTEE","RYTHME_DECALAGE-DEMI-TEMPS","RYTHME_DOUBLE-CROCHE","RYTHME_ONE-NOTE-GROOVE","RYTHME_SILENCE-TEMPS-FORT","RYTHME_STACCATO","RYTHME_SYNCOPE-ET-DU-DEUX","RYTHME_TRIOLET"] },
+            { cat: "GI", cards: ["GIMMICK_ACCORD-CHROMATIQUE","GIMMICK_ACCORD-SUSPENDU","GIMMICK_ADD9","GIMMICK_HARMONIQUE-NATURELLES","GIMMICK_LINE-CLICHE","GIMMICK_OPEN-VOICINGS"] },
+            { cat: "HA", cards: ["HARMONIE_ACCORD-D-EMPRUNT","HARMONIE_AVOID-NOTES","HARMONIE_BLUE-NOTE","HARMONIE_CHROMATISME","HARMONIE_PENTATONIQUE-STRICTE"] },
+          ];
+          const ncQueues = nonCagedGroups.map(g => ({ cat: g.cat, cards: [...g.cards] }));
+          const nonCaged = [];
+          let lastNcCat = null;
+          while (ncQueues.some(q => q.cards.length > 0)) {
+            ncQueues.sort((a, b) => b.cards.length - a.cards.length);
+            const pick = ncQueues.find(q => q.cards.length > 0 && q.cat !== lastNcCat)
+                      || ncQueues.find(q => q.cards.length > 0);
+            nonCaged.push("visuelles-cartes/" + pick.cards.shift() + ".svg");
+            lastNcCat = pick.cat;
+          }
+
+          // Tressage final : CI → non-CAGED → CN → non-CAGED → CI → ...
+          const interleaved = [];
+          for (let i = 0; i < 24; i++) {
+            interleaved.push("visuelles-cartes/" + cagedCI[i] + ".svg");
+            interleaved.push(nonCaged[i * 2]);
+            interleaved.push("visuelles-cartes/" + cagedCN[i] + ".svg");
+            interleaved.push(nonCaged[i * 2 + 1]);
+          }
+
+          // ~80px/s ; slot = 160px + 12px gap = 172px
+          const duration = Math.round(interleaved.length * 172 / 80);
+
           return (
             <div className="herodeck" ref={deckRef} aria-hidden="true">
               <div className="herodeck__glow"></div>
-              <div className="herodeck__track">
-                {[...heroCards, ...heroCards].map((src, i) => (
+              <div className="herodeck__track" style={{ animationDuration: duration + "s" }}>
+                {[...interleaved, ...interleaved].map((src, i) => (
                   <div className="herodeck__slot" key={i}>
-                    <img src={src} alt="" className="herocard-img" />
+                    <img src={src} alt="" className="herocard-img" loading="lazy" />
                   </div>
                 ))}
               </div>
