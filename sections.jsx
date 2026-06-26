@@ -57,7 +57,7 @@ function Nav() {
           <a href="#categories">Catégories</a>
           {/* <a href="Blog.html" className="nav__blog">Blog</a> */}
         </div>
-        <a href="#cta" className="btn btn--primary" style={{ backgroundColor: "rgb(18, 17, 16)" }}>Rejoindre la liste</a>
+        <a href="#cta" className="btn btn--primary">Rejoindre la liste</a>
       </div>
     </nav>);
 
@@ -75,26 +75,39 @@ function Hero({ density = "breathing", cardStyle = "illustrated" }) {
       <div className="container hero__inner">
         <div className="hero__copy">
           <h1 className="h-display">
-            Tire une carte et mets ton jeu à l'épreuve.
+            Mets ton jeu à l'épreuve.
           </h1>
-          <p className="lead hero__sub">83 défis créatifs pour développer ton jeu et kiffer un maximum.</p>
+          <p className="lead hero__sub"><b>83 défis créatifs</b> pour développer ton jeu et kiffer un maximum.</p>
           <div className="hero__form-wrap">
             <EmailField variant="light" />
           </div>
         </div>
 
-        <div className="herodeck" ref={deckRef} aria-hidden="true">
-          <div className="herodeck__glow"></div>
-          <div className="herodeck__slot herodeck__slot--back">
-            <img src="visuelles-cartes/CONTRAINTE_HORIZONTAL.svg" alt="Carte CONTRAINTE — HORIZONTAL" className="herocard-img" />
-          </div>
-          <div className="herodeck__slot herodeck__slot--mid">
-            <img src="visuelles-cartes/RYTHME_SYNCOPE-ET-DU-DEUX.svg" alt="Carte RYTHME — Syncope et du deux" className="herocard-img" />
-          </div>
-          <div className="herodeck__slot herodeck__slot--front">
-            <img src="visuelles-cartes/CAGED-INTERVALLES_Em7.svg" alt="Carte CAGED — Em7" className="herocard-img" />
-          </div>
-        </div>
+        {(() => {
+          const heroCards = [
+            "visuelles-cartes/TECHNIQUE_GHOST-NOTES.svg",
+            "visuelles-cartes/RYTHME_SILENCE-TEMPS-FORT.svg",
+            "visuelles-cartes/CONTRAINTE_ZONE-AVEUGLE.svg",
+            "visuelles-cartes/HARMONIE_BLUE-NOTE.svg",
+            "visuelles-cartes/STRUCTURE_CLIMAX.svg",
+            "visuelles-cartes/CAGED-INTERVALLES_Gmaj7.svg",
+            "visuelles-cartes/CAGED-INTERVALLES_Dsus4.svg",
+            "visuelles-cartes/CAGED-NOTES_Amaj7.svg",
+            "visuelles-cartes/CAGED-NOTES_Csus2.svg",
+          ];
+          return (
+            <div className="herodeck" ref={deckRef} aria-hidden="true">
+              <div className="herodeck__glow"></div>
+              <div className="herodeck__track">
+                {[...heroCards, ...heroCards].map((src, i) => (
+                  <div className="herodeck__slot" key={i}>
+                    <img src={src} alt="" className="herocard-img" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
       </div>
     </section>);}
 
@@ -227,19 +240,21 @@ function HowTo() {
   const groups = [
   {
     cat: "Créatif",
+    color: "var(--orange-500)",
     vol: "48 cartes",
     sub: "5 catégories — Rythme, Harmonie, Technique, Structure, Gimmick.",
     uses: [
-    { name: "Page blanche", ctx: "nouvelle compo", desc: "Pioche des contraintes et force toi à les placer dans tes compos." },
+    { name: "Page blanche", ctx: "nouvelle compo", desc: "Pioche des contraintes et place les dans tes compos." },
     { name: "Transformation", ctx: "compo existante", desc: "Enrichi un de tes morceaux déjà existant et laisse les cartes décider." },
     { name: "Hardcore mode", ctx: "impro", desc: "Place une des contraintes pendant ton impro." }] },
 
   {
     cat: "CAGED",
+    color: "var(--blue-500)",
     vol: "35 cartes recto-verso",
     sub: "2 visions — intervalles et noms des notes",
     uses: [
-    { name: "Transposition", ctx: "déplacer", desc: "Joue un plan ou une progression dans une autre position." },
+    { name: "Transposition", ctx: "déplacer", desc: "Redécouvre un plan ou une progression dans une autre position." },
     { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser dans une position tirée au sort." },
     { name: "Liaison", ctx: "explorer", desc: "Pioche plusieurs positions, connecte les et redécouvre ton manche." }] }];
 
@@ -249,11 +264,10 @@ function HowTo() {
       <div className="container">
         <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
           <h2 className="h-section" style={{ marginTop: 14 }}>Plusieurs modes de jeu</h2>
-          <p className="lead section-sub"></p>
         </div>
         <div className="usage-grid">
           {groups.map((g, i) =>
-          <article className="usage-panel" key={i}>
+          <article className="usage-panel" key={i} style={{ borderTopColor: g.color }}>
               <div className="usage-panel__head">
                 <h3 className="usage-panel__cat">{g.cat}</h3>
               </div>
@@ -263,6 +277,7 @@ function HowTo() {
               <li className="use-case" key={j}>
                     <div className="use-case__line">
                       <span className="use-case__name">{u.name}</span>
+                      {u.ctx && <span className="use-case__ctx">{u.ctx}</span>}
                     </div>
                     <p className="use-case__desc">{u.desc}</p>
                   </li>
@@ -271,21 +286,13 @@ function HowTo() {
             </article>
           )}
         </div>
-        <div className="usage-bonus">
-          <span className="usage-bonus__k">Pour les soldats</span>
-          <p className="usage-bonus__txt">Combine les deux catégories : une <b>contrainte</b> pour la direction, une <b>position</b> <b>CAGED</b> pour l'exploration.</p>
-        </div>
-        <div className="usage-bonus">
-          <span className="usage-bonus__k">Pour les guerriers</span>
-          <p className="usage-bonus__txt">Tire un position, ajoute plusieurs contraintes, et place les dans une impro.</p>
-        </div>
       </div>
     </section>);
 
 }
 
 /* ============== CATÉGORIES (2x2) ============== */
-function CatCard({ c }) {
+function CatCard({ c, color }) {
   const [idx, setIdx] = useS(0);
   const n = c.cards.length;
   const advance = () => setIdx((p) => (p + 1) % n);
@@ -295,7 +302,7 @@ function CatCard({ c }) {
     if (e.key === "ArrowLeft") {e.preventDefault();setIdx((p) => (p - 1 + n) % n);}
   };
   return (
-    <article className="cat-card">
+    <article className="cat-card" style={{ borderTopColor: color }}>
       <div className="cat-card__body">
         <span className="cat-card__count">{c.count}</span>
         <h3 className="cat-card__title">{c.title}</h3>
@@ -344,7 +351,7 @@ function CatCard({ c }) {
 
 function Categories() {
   const cats = [
-  { title: "Créatif", desc: <>Des règles strictes pour penser différemment et apporter de la fraîcheur à ton jeu.<br /><span className="cat-card__desc-hl">5 catégories : structure, rythme, technique, harmonie, gimmick.</span></>, count: "48 cartes",
+  { color: "var(--orange-500)", title: "Créatif", desc: <>Des règles strictes pour penser différemment et apporter de la fraîcheur à ton jeu.<br /><span className="cat-card__desc-hl">5 catégories : structure, rythme, technique, harmonie, gimmick.</span></>, count: "48 cartes",
     stats: [{num:"48",lbl:"Cartes"},{num:"5",lbl:"Catégories"},{num:"∞",lbl:"Combinaisons"}],
     cards: [
     "visuelles-cartes/CONTRAINTE_CLUSTER.svg",
@@ -395,7 +402,7 @@ function Categories() {
     "visuelles-cartes/TECHNIQUE_SLIDE.svg",
     "visuelles-cartes/TECHNIQUE_TREMOLO.svg",
     "visuelles-cartes/TECHNIQUE_VIBRATO.svg"] },
-  { title: "CAGED", desc: <>Cartographie complète du manche — positions majeures, mineures, septièmes et suspendues.<br /><span className="cat-card__desc-hl">2 visions : recto pour les intervalles et verso pour le nom des notes.</span></>, count: "35 cartes (recto - verso)",
+  { color: "var(--blue-500)", title: "CAGED", desc: <>Cartographie complète du manche — positions majeures, mineures, septièmes et suspendues.<br /><span className="cat-card__desc-hl">2 visions : recto pour les intervalles et verso pour le nom des notes.</span></>, count: "35 cartes (recto - verso)",
     stats: [{num:"35",lbl:"Cartes"},{num:"5",lbl:"Formes"},{num:"∞",lbl:"Combinaisons"}],
     cards: [
     "visuelles-cartes/CAGED-INTERVALLES_C.svg",
@@ -477,7 +484,7 @@ function Categories() {
         </div>
         <div className="cats-grid">
           {cats.map((c, i) =>
-          <CatCard c={c} key={i} />
+          <CatCard c={c} color={c.color} key={i} />
           )}
         </div>
       </div>
@@ -551,9 +558,9 @@ function Objection() {
 /* ============== EN RÉSUMÉ ============== */
 function Recap() {
   const args = [
-  { n: "01", t: "Compo & impro", d: "Le deck fonctionne dans les deux sens — pioche en pleine session d'écriture ou en plein bœuf." },
-  { n: "02", t: "Le manche par cœur", d: "Le moyen le plus efficace de connaître ton manche et d'y créer des connexions." },
-  { n: "03", t: "Des variations à l'infini", d: "Pour tes plans, tes progressions d'accords, tes riffs — un maximum d'idées qui poppent." }];
+  { color: "var(--orange-500)", t: "Compo & impro", d: "Le deck fonctionne dans les deux sens — pioche en pleine session d'écriture ou en plein bœuf." },
+  { color: "var(--blue-500)", t: "Le manche par cœur", d: "Le moyen le plus efficace de connaître ton manche et d'y créer des connexions." },
+  { color: "var(--green-500)", t: "Des variations à l'infini", d: "Pour tes plans, tes progressions d'accords, tes riffs — un maximum d'idées qui poppent." }];
 
   return (
     <section className="section section--alt" id="resume">
@@ -563,8 +570,7 @@ function Recap() {
         </div>
         <div className="recap-args">
           {args.map((a) =>
-          <article className="recap-arg" key={a.n}>
-              <span className="recap-arg__num">{a.n}</span>
+          <article className="recap-arg" key={a.t} style={{ borderTopColor: a.color }}>
               <h3 className="recap-arg__title">{a.t}</h3>
               <p className="recap-arg__desc">{a.d}</p>
             </article>
