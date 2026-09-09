@@ -29,8 +29,10 @@ Pas de build step. Le site est du HTML statique avec React compilé côté clien
 **Ordre de chargement des scripts dans `index.html` :**
 1. `tweaks-panel.jsx` — composant panneau de réglages flottant (palette, densité, style de carte)
 2. `cards.jsx` — composants `MiniCard`, `BigCard`, `HeroCards` pour les visuels de cartes
-3. `sections.jsx` — tous les composants de page : `Nav`, `Hero`, `Problem`, `Showcase_*`, `HowTo`, `Categories`, `Recap`, `WhySection`, `FinalCTA`, `Footer`
+3. `sections.jsx` — tous les composants de page : `Nav`, `Hero`, `Problem`, `Showcase_*`, `HowTo`, `Categories`, `WhySection`, `FinalCTA`, `Footer`
 4. `app.jsx` — point d'entrée, monte `App` dans `#root`, orchestre les tweaks via `useTweaks()`
+
+**Visions du site :** le site a deux lectures, pilotées par le bouton `.vision-toggle` en haut à droite de la nav — `defis` (défis créatifs, accent orange) et `caged` (système CAGED, accent bleu). L'état vit dans `App`, est persisté en `localStorage` sous `gf:vision`, et est exposé au CSS via `document.body.dataset.vision`. Côté styles, `body[data-vision="caged"]` redéfinit `--accent-*` juste après les règles `body[data-palette]` — à spécificité égale, la vision l'emporte sur la palette des tweaks. Pour l'instant seul l'accent bascule ; la structure de page est identique dans les deux visions.
 
 **CSS :**
 - `colors_and_type.css` — design tokens (couleurs, typo, spacing, ombres)

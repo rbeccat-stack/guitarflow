@@ -8,8 +8,19 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "ctaBg": "dark"
 }/*EDITMODE-END*/;
 
+// Les deux visions du site : les défis créatifs, ou le système CAGED.
+// La structure ne change pas — seule la lecture qu'on en donne.
+const VISION_KEY = "gf:vision";
+
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [vision, setVision] = React.useState(() => {
+    try {
+      return localStorage.getItem(VISION_KEY) === "caged" ? "caged" : "defis";
+    } catch (e) {
+      return "defis";
+    }
+  });
 
   // Apply tweak vars to body
   React.useEffect(() => {
@@ -17,15 +28,25 @@ function App() {
     document.body.dataset.density = t.heroDensity;
   }, [t.palette, t.heroDensity]);
 
+  React.useEffect(() => {
+    document.body.dataset.vision = vision;
+    try {
+      localStorage.setItem(VISION_KEY, vision);
+    } catch (e) {
+      /* navigation privée : la vision ne survit pas au reload, tant pis */
+    }
+  }, [vision]);
+
+  const toggleVision = () => setVision((v) => (v === "caged" ? "defis" : "caged"));
+
   return (
     <>
-      <Nav/>
+      <Nav vision={vision} onToggleVision={toggleVision}/>
       <Hero density={t.heroDensity} cardStyle={t.cardStyle}/>
       <Showcase_contraintes/>
       <Showcase_CAGED/>
       <HowTo/>
       <Categories/>
-      <Recap/>
       <WhySection/>
       <FinalCTA bg={t.ctaBg}/>
       <Footer/>

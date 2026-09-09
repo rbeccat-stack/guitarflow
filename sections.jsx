@@ -37,8 +37,9 @@ function EmailField({ variant = "light", onSuccess }) {
 }
 
 /* ============== NAV ============== */
-function Nav() {
+function Nav({ vision = "defis", onToggleVision }) {
   const [scrolled, setScrolled] = useS(false);
+  const isCaged = vision === "caged";
   useE(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
@@ -49,7 +50,7 @@ function Nav() {
     <nav className={"nav" + (scrolled ? " is-scrolled" : "")}>
       <div className="container nav__inner">
         <a href="#top" className="logo">
-          Guitar Flow<span className="logo__sq" aria-hidden="true"></span>Cards
+          Guitar Flow<span className="logo__sq" aria-hidden="true"></span>
         </a>
         <div className="nav__links">
           <a href="#solution">Le deck</a>
@@ -58,6 +59,16 @@ function Nav() {
           {/* <a href="Blog.html" className="nav__blog">Blog</a> */}
         </div>
         <a href="#cta" className="btn btn--primary">Rejoindre la liste</a>
+        <button
+          type="button"
+          className="vision-toggle"
+          onClick={onToggleVision}
+          aria-pressed={isCaged}
+          title={isCaged ? "Passer à la vision Défis créatifs" : "Passer à la vision Système CAGED"}
+        >
+          <span className="vision-toggle__dot" aria-hidden="true"></span>
+          <span className="vision-toggle__label">{isCaged ? "CAGED" : "Défis"}</span>
+        </button>
       </div>
     </nav>);
 
@@ -595,32 +606,6 @@ function Objection() {
 
 }
 
-/* ============== EN RÉSUMÉ ============== */
-function Recap() {
-  const args = [
-  { color: "var(--orange-500)", t: "Compo & impro", d: "Le deck fonctionne dans les deux sens — pioche en pleine session d'écriture ou en plein bœuf." },
-  { color: "var(--blue-500)", t: "Le manche par cœur", d: "Le moyen le plus efficace de connaître ton manche et d'y créer des connexions." },
-  { color: "var(--green-500)", t: "Des variations à l'infini", d: "Pour tes plans, tes progressions d'accords, tes riffs — un maximum d'idées qui poppent." }];
-
-  return (
-    <section className="section section--alt" id="resume">
-      <div className="container">
-        <div className="section__head" style={{ textAlign: "left", maxWidth: "none", marginBottom: 0 }}>
-          <h2 className="h-section">Un deck pensé pour une chose : te débloquer</h2>
-        </div>
-        <div className="recap-args">
-          {args.map((a) =>
-          <article className="recap-arg" key={a.t} style={{ borderTopColor: a.color }}>
-              <h3 className="recap-arg__title">{a.t}</h3>
-              <p className="recap-arg__desc">{a.d}</p>
-            </article>
-          )}
-        </div>
-      </div>
-    </section>);
-
-}
-
 /* ============== POURQUOI GUITAR FLOW ============== */
 function WhySection() {
   const [openIdx, setOpenIdx] = useS(null);
@@ -701,7 +686,7 @@ function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__left">
-          <a href="#top" className="logo">Guitar Flow<span className="logo__sq" aria-hidden="true"></span>Cards</a>
+          <a href="#top" className="logo">Guitar Flow<span className="logo__sq" aria-hidden="true"></span></a>
         </div>
         <div className="footer__right">
           {/* <a href="Blog.html">Blog</a>
@@ -720,7 +705,6 @@ window.Hero = Hero;
 window.Problem = Problem;
 window.HowTo = HowTo;
 window.Categories = Categories;
-window.Recap = Recap;
 window.SocialProof = SocialProof;
 window.Objection = Objection;
 window.WhySection = WhySection;
