@@ -87,7 +87,7 @@ function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defi
       <div className="container hero__inner">
         <div className="hero__copy">
           <h1 className="h-display">
-            {isCaged ? "Visualise ton manche avec le système CAGED" : "Mets ton jeu à l'épreuve."}
+            {isCaged ? "Maîtrise ton manche" : "Mets ton jeu à l'épreuve."}
           </h1>
           {isCaged ?
             <p className="lead hero__sub"><b>35 positions d'accord</b> pour cartographier ton manche.</p> :
@@ -291,8 +291,8 @@ window.ShowcaseCardDeck = ShowcaseCardDeck;
 window.Showcase_contraintes = Showcase_contraintes;
 window.Showcase_CAGED = Showcase_CAGED;
 /* ============== COMMENT ÇA MARCHE ============== */
-function HowTo() {
-  const groups = [
+function HowTo({ vision = "defis" }) {
+  const allGroups = [
   {
     cat: "Créatif",
     color: "var(--orange-500)",
@@ -313,6 +313,8 @@ function HowTo() {
     { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser dans une position tirée au sort." },
     { name: "Liaison", ctx: "explorer", desc: "Pioche plusieurs positions, connecte les et redécouvre ton manche." }] }];
 
+  // Créatif en vision défis, CAGED en vision CAGED — jamais les deux
+  const groups = [allGroups[vision === "caged" ? 1 : 0]];
 
   return (
     <section className="section section--alt" id="comment">
@@ -320,7 +322,7 @@ function HowTo() {
         <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
           <h2 className="h-section" style={{ marginTop: 14 }}>Plusieurs modes de jeu</h2>
         </div>
-        <div className="usage-grid">
+        <div className="usage-grid usage-grid--single">
           {groups.map((g, i) =>
           <article className="usage-panel" key={i} style={{ borderTopColor: g.color }}>
               <div className="usage-panel__head">
@@ -404,8 +406,8 @@ function CatCard({ c, color }) {
 
 }
 
-function Categories() {
-  const cats = [
+function Categories({ vision = "defis" }) {
+  const allCats = [
   { color: "var(--orange-500)", title: "Créatif", desc: <>48 possibilités de penser différemment et apporter de la fraîcheur à ton jeu.</>, count: "48 cartes",
     stats: [{num:"48",lbl:"Cartes"},{num:"5",lbl:"Catégories"},{num:"∞",lbl:"Combinaisons"}],
     cards: [
@@ -531,13 +533,16 @@ function Categories() {
     "visuelles-cartes/CAGED-NOTES_Dsus2.svg",
     "visuelles-cartes/CAGED-NOTES_Dsus4.svg"] }];
 
+  // Même logique que HowTo : une seule catégorie affichée selon la vision
+  const cats = [allCats[vision === "caged" ? 1 : 0]];
+
   return (
     <section className="section" id="categories">
       <div className="container">
         <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
           <h2 className="h-section" style={{ marginTop: 14 }}>Le deck complet</h2>
         </div>
-        <div className="cats-grid">
+        <div className="cats-grid cats-grid--single">
           {cats.map((c, i) =>
           <CatCard c={c} color={c.color} key={i} />
           )}

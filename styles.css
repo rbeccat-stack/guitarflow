@@ -724,6 +724,9 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   gap: 24px;
   align-items: stretch;
 }
+/* Une seule vision affichée à la fois. La largeur est bornée : la pleine
+   largeur du container étirerait les lignes de texte sans rien gagner. */
+.usage-grid--single { grid-template-columns: minmax(0, 780px); }
 .usage-panel {
   background: var(--paper);
   border: 1px solid var(--border-1);
@@ -810,6 +813,7 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+.cats-grid--single { grid-template-columns: minmax(0, 780px); }
 @media (max-width: 860px) {
   .cats-grid { grid-template-columns: 1fr; }
 }

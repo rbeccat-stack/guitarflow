@@ -35,10 +35,11 @@ Pas de build step. Le site est du HTML statique avec React compilé côté clien
 **Visions du site :** le site a deux lectures, pilotées par le bouton `.vision-toggle` en haut à droite de la nav — `defis` (défis créatifs) et `caged` (système CAGED). L'état vit dans `App`, est persisté en `localStorage` sous `gf:vision`, et est exposé au CSS via `document.body.dataset.vision`. **L'accent orange ne change pas d'une vision à l'autre** — la bascule porte sur le contenu, pas sur la couleur.
 
 Ce qui change entre les deux visions :
-- `Hero` reçoit la prop `vision` et permute son `h1` et son sous-titre (48 défis créatifs / 35 positions d'accord)
+- `Hero` permute son `h1` et son sous-titre (« Mets ton jeu à l'épreuve. » / 48 défis créatifs — « Maîtrise ton manche » / 35 positions d'accord)
 - `app.jsx` monte `Showcase_contraintes` **ou** `Showcase_CAGED`, jamais les deux — les deux sections portent donc le même `id="solution"` (l'ancre du lien de nav « Le deck »)
+- `HowTo` et `Categories` n'affichent plus qu'un seul bloc sur les deux : Créatif en vision `defis`, CAGED en vision `caged`. Leurs grilles reçoivent alors `--single`, qui borne la largeur à 780px — la pleine largeur du container étirerait les lignes de texte sans agrandir le visuel de carte (`.cat-stage-wrap` est fixe à 168px).
 
-Le reste de la page (`HowTo`, `Categories`, `WhySection`, `FinalCTA`, `Footer`) est identique dans les deux visions.
+Le reste de la page (`WhySection`, `FinalCTA`, `Footer`) est identique dans les deux visions.
 
 **CSS :**
 - `colors_and_type.css` — design tokens (couleurs, typo, spacing, ombres)

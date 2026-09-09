@@ -44,8 +44,8 @@ function App() {
       <Nav vision={vision} onToggleVision={toggleVision}/>
       <Hero density={t.heroDensity} cardStyle={t.cardStyle} vision={vision}/>
       {vision === "caged" ? <Showcase_CAGED/> : <Showcase_contraintes/>}
-      <HowTo/>
-      <Categories/>
+      <HowTo vision={vision}/>
+      <Categories vision={vision}/>
       <WhySection/>
       <FinalCTA bg={t.ctaBg}/>
       <Footer/>
