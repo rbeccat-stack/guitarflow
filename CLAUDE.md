@@ -41,6 +41,8 @@ Ce qui change entre les deux visions :
 
 Le reste de la page (`WhySection`, `FinalCTA`, `Footer`) est identique dans les deux visions.
 
+Les deux visions partagent volontairement la **même mise en page** : titres de section alignés à gauche avec `margin-top: 14px`, et alternance des fonds `page → alt → page → alt → cta sombre`. `Showcase_CAGED` avait un layout miroir (titre à droite, cartes à droite) qui n'existait que pour alterner avec `Showcase_contraintes` juste au-dessus ; les deux ne coexistant plus, il a été retiré (avec son CSS : `--mirror`, `section__head--right`, `--cardwrap--right`, `eyebrow--mark-rev`). `WhySection` porte `section--alt` pour reprendre l'alternance que `Recap` assurait avant sa suppression.
+
 **CSS :**
 - `colors_and_type.css` — design tokens (couleurs, typo, spacing, ombres)
 - `styles.css` — tous les styles de composants + media queries responsive en fin de fichier

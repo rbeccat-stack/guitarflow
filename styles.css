@@ -651,26 +651,6 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   .sc-deck__card:not(.is-active) { transform: none; }
 }
 
-/* ---------- Solution mirror (CAGED) ---------- */
-.solution-grid.solution-grid--mirror {
-  grid-template-columns: 7fr 5fr;
-}
-.solution-cardwrap.solution-cardwrap--right {
-  justify-content: flex-end;
-}
-.section__head--right { text-align: right; }
-.eyebrow--mark-rev::before { content: none; }
-.eyebrow--mark-rev::after {
-  content: "";
-  width: 8px; height: 8px;
-  background: var(--accent-500);
-  flex: none;
-}
-@media (max-width: 860px) {
-  .section__head--right { text-align: left; }
-  .eyebrow--mark-rev::before { content: ""; }
-  .eyebrow--mark-rev::after { content: none; }
-}
 .solution-card-placeholder {
   width: 340px;
   aspect-ratio: 5 / 7;
@@ -1078,7 +1058,7 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
 .cat-card__stats .stat { padding: 14px 12px; }
 .cat-card__stats .stat__num { font-size: 24px; }
 .cat-card__stats .stat__lbl { font-size: 9px; }
-.why-body { margin: 0 0 56px; }
+.why-body { margin: 0 0 56px; max-width: 70ch; }
 .why-para { color: var(--fg-2); margin-bottom: 20px; text-align: left; }
 .why-para:last-child { margin-bottom: 0; }
 .why-philosophy__title { font-size: 16px; font-weight: 700; color: var(--ink-900); display: block; margin-bottom: 20px; }
@@ -1219,9 +1199,7 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   /* Grilles → 1 colonne */
   .problem-grid    { grid-template-columns: 1fr; gap: 16px; }
   .solution-grid   { grid-template-columns: 1fr; gap: 32px; }
-  .solution-grid.solution-grid--mirror { grid-template-columns: 1fr; }
-  .solution-cardwrap,
-  .solution-cardwrap.solution-cardwrap--right { justify-content: center; }
+  .solution-cardwrap { justify-content: center; }
   .gfbigcard-img   { width: 100%; max-width: 260px; }
   .gfbigcard       { width: 260px; }
   .stats           { grid-template-columns: repeat(3, 1fr); gap: 8px; }
@@ -1243,8 +1221,7 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   .footer__right { flex-direction: column; align-items: center; gap: 10px; }
 
   /* Centrage titres de section */
-  .section__head,
-  .section__head--right { text-align: center !important; }
+  .section__head { text-align: center !important; }
 
   /* QA */
   .qa__q { font-size: 15px; }

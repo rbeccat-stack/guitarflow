@@ -242,7 +242,7 @@ function Showcase_contraintes() {
     <section className="section" id="solution">
       <div className="container">
         <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
-          <h2 className="h-section">De la contrainte naît la créativité</h2>
+          <h2 className="h-section" style={{ marginTop: 14 }}>De la contrainte naît la créativité</h2>
         </div>
         <div className="solution-grid">
           <div className="solution-cardwrap">
@@ -271,15 +271,15 @@ function Showcase_CAGED() {
   return (
     <section className="section" id="solution">
       <div className="container">
-        <div className="section__head section__head--right" style={{ maxWidth: "none" }}>
-          <h2 className="h-section">Une nouvelle vision du manche</h2>
+        <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
+          <h2 className="h-section" style={{ marginTop: 14 }}>Une nouvelle vision du manche</h2>
         </div>
-        <div className="solution-grid solution-grid--mirror">
+        <div className="solution-grid">
+          <div className="solution-cardwrap">
+            <ShowcaseCardDeck cards={cards} />
+          </div>
           <div className="solution-side">
             <p className="lead">Chaque carte représente un type d'accord dans une des 5 positions du CAGED. Tu peux t'en servir comme départ d'une compo, explorer un nouvel endroit du manche, tester des idées. Tout est possible.</p>
-          </div>
-          <div className="solution-cardwrap solution-cardwrap--right">
-            <ShowcaseCardDeck cards={cards} />
           </div>
         </div>
       </div>
@@ -637,7 +637,7 @@ function WhySection() {
   ];
 
   return (
-    <section className="section" id="why">
+    <section className="section section--alt" id="why">
       <div className="container">
         <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
           <h2 className="h-section" style={{ marginTop: 14 }}>Pourquoi Guitar Flow ?</h2>
