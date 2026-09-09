@@ -75,7 +75,8 @@ function Nav({ vision = "defis", onToggleVision }) {
 }
 
 /* ============== HERO ============== */
-function Hero({ density = "breathing", cardStyle = "illustrated" }) {
+function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defis" }) {
+  const isCaged = vision === "caged";
   const deckRef = useR(null);
   useE(() => {
     const t = setTimeout(() => deckRef.current && deckRef.current.classList.add("is-fanned"), 220);
@@ -86,9 +87,12 @@ function Hero({ density = "breathing", cardStyle = "illustrated" }) {
       <div className="container hero__inner">
         <div className="hero__copy">
           <h1 className="h-display">
-            Mets ton jeu à l'épreuve.
+            {isCaged ? "Visualise ton manche avec le système CAGED" : "Mets ton jeu à l'épreuve."}
           </h1>
-          <p className="lead hero__sub"><b>83 défis créatifs</b> pour développer ton jeu et kiffer un maximum.</p>
+          {isCaged ?
+            <p className="lead hero__sub"><b>35 positions d'accord</b> pour cartographier ton manche.</p> :
+            <p className="lead hero__sub"><b>48 défis créatifs</b> pour développer ton jeu et kiffer un maximum.</p>
+          }
           <div className="hero__form-wrap">
             <EmailField variant="light" />
           </div>
@@ -265,7 +269,7 @@ function Showcase_CAGED() {
   "visuelles-cartes/CAGED-INTERVALLES_D7.svg"];
 
   return (
-    <section className="section" id="solution-caged">
+    <section className="section" id="solution">
       <div className="container">
         <div className="section__head section__head--right" style={{ maxWidth: "none" }}>
           <h2 className="h-section">Une nouvelle vision du manche</h2>

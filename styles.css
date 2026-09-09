@@ -21,14 +21,6 @@ body[data-palette="secondary"] {
   --accent-700: var(--green-700);
 }
 
-/* Vision — bascule Défis créatifs / Système CAGED.
-   Placé après les palettes : à spécificité égale, la vision l'emporte. */
-body[data-vision="caged"] {
-  --accent-50: var(--blue-50);
-  --accent-500: var(--blue-500);
-  --accent-700: var(--blue-700);
-}
-
 .container { max-width: 1200px; margin: 0 auto; padding: 0 64px; }
 
 /* ---------- Mono micro-labels ---------- */
@@ -170,7 +162,7 @@ body[data-vision="caged"] {
   color: var(--ink-900);
   text-decoration: none;
 }
-.logo__sq { width: 9px; height: 9px; border-radius: 1.5px; background: var(--accent-500); transition: background-color var(--dur) var(--ease); }
+.logo__sq { width: 9px; height: 9px; border-radius: 1.5px; background: var(--orange-500); }
 
 /* ---------- Nav ---------- */
 .nav {
@@ -221,9 +213,8 @@ body[data-vision="caged"] {
 .vision-toggle:focus-visible { outline: 2px solid var(--accent-500); outline-offset: 2px; }
 .vision-toggle__dot {
   width: 8px; height: 8px; border-radius: 50%;
-  background: var(--accent-500);
+  background: var(--orange-500);
   flex-shrink: 0;
-  transition: background-color var(--dur) var(--ease);
 }
 .vision-toggle__label { white-space: nowrap; }
 
