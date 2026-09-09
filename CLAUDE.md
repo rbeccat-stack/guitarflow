@@ -32,7 +32,7 @@ Pas de build step. Le site est du HTML statique avec React compilé côté clien
 3. `sections.jsx` — tous les composants de page : `Nav`, `Hero`, `Problem`, `Showcase_*`, `HowTo`, `Categories`, `WhySection`, `FinalCTA`, `Footer`
 4. `app.jsx` — point d'entrée, monte `App` dans `#root`, orchestre les tweaks via `useTweaks()`
 
-**Visions du site :** le site a deux lectures, pilotées par le bouton `.vision-toggle` en haut à droite de la nav — `defis` (défis créatifs) et `caged` (système CAGED). L'état vit dans `App`, est persisté en `localStorage` sous `gf:vision`, et est exposé au CSS via `document.body.dataset.vision`. **L'accent orange ne change pas d'une vision à l'autre** — la bascule porte sur le contenu, pas sur la couleur.
+**Visions du site :** le site a deux lectures, pilotées par le bouton `.vision-toggle` posé au-dessus de la headline du hero (avec `.vision-arrow`, une flèche croquis qui pointe dessus) — `defis` (défis créatifs) et `caged` (système CAGED). L'état vit dans `App`, est persisté en `localStorage` sous `gf:vision`, et est exposé au CSS via `document.body.dataset.vision`. **L'accent orange ne change pas d'une vision à l'autre** — la bascule porte sur le contenu, pas sur la couleur.
 
 Ce qui change entre les deux visions :
 - `Hero` permute son `h1` et son sous-titre (« Mets ton jeu à l'épreuve. » / 48 défis créatifs — « Maîtrise ton manche » / 35 positions d'accord)

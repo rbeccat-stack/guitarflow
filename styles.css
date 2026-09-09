@@ -190,33 +190,62 @@ body[data-palette="secondary"] {
 .nav__links a.nav-current:hover,
 .nav__links a.nav__blog:hover { color: var(--accent-500); }
 
-/* ---------- Toggle de vision (Défis créatifs / Système CAGED) ---------- */
+/* ---------- Toggle de vision (Défis créatifs / Système CAGED) ----------
+   Posé au-dessus de la headline du hero : c'est le premier geste qu'on
+   attend du visiteur, la flèche croquis pointe dessus. */
+.hero__vision {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  animation: hero-rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
 .vision-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 11px;
   flex-shrink: 0;
-  padding: 7px 12px 7px 10px;
-  border: 1px solid var(--border-2);
+  padding: 13px 20px;
+  border: 1.5px solid var(--ink-900);
   border-radius: 999px;
   background: var(--paper);
   font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--fg-2);
+  color: var(--ink-900);
   cursor: pointer;
-  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+  box-shadow: 0 2px 0 var(--ink-900);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), background-color var(--dur) var(--ease);
 }
-.vision-toggle:hover { border-color: var(--accent-500); color: var(--ink-900); }
-.vision-toggle:focus-visible { outline: 2px solid var(--accent-500); outline-offset: 2px; }
+.vision-toggle:hover {
+  background: var(--ink-50);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 0 var(--ink-900);
+}
+.vision-toggle:active { transform: translateY(1px); box-shadow: 0 1px 0 var(--ink-900); }
+.vision-toggle:focus-visible { outline: 2px solid var(--accent-500); outline-offset: 3px; }
 .vision-toggle__dot {
-  width: 8px; height: 8px; border-radius: 50%;
+  width: 9px; height: 9px; border-radius: 50%;
   background: var(--orange-500);
   flex-shrink: 0;
 }
 .vision-toggle__label { white-space: nowrap; }
+.vision-toggle__swap { flex-shrink: 0; color: var(--fg-3); }
+.vision-toggle:hover .vision-toggle__swap { color: var(--ink-900); }
+
+/* Flèche tracée à la main, pointe vers la bascule */
+.vision-arrow {
+  width: 100px; height: 52px;
+  flex-shrink: 0;
+  stroke: var(--orange-500);
+  stroke-width: 2.4;
+  fill: none;
+  margin-left: -8px;
+  transform: rotate(-3deg) translateY(-9px);
+  transform-origin: center;
+  pointer-events: none;
+}
 
 /* ---------- Hero ---------- */
 @keyframes hero-rise {
@@ -240,6 +269,7 @@ body[data-palette="secondary"] {
 @media (prefers-reduced-motion: reduce) {
   .hero__copy .h-display,
   .hero__copy .lead,
+  .hero__vision,
   .hero__form-wrap { animation: none; }
 }
 
@@ -1165,15 +1195,15 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   .lead       { font-size: 15px; max-width: 100%; }
 
   /* Nav */
-  .nav__inner { height: 52px; gap: 6px; }
+  .nav__inner { height: 52px; gap: 0; }
   .nav__links { display: none; }
-  .nav .btn { font-size: 12px; padding: 8px 10px; flex-shrink: 0; }
-  /* Sur mobile le toggle se réduit à sa pastille de couleur */
-  .vision-toggle { padding: 7px; gap: 0; }
-  .vision-toggle__label { display: none; }
+  .nav .btn { font-size: 12px; padding: 8px 12px; flex-shrink: 0; }
 
   /* Hero */
   .hero { padding: 28px 0 0; overflow: hidden; }
+  /* trop étroit pour la flèche : on garde la bascule seule */
+  .vision-toggle { padding: 11px 16px; gap: 9px; font-size: 12px; }
+  .vision-arrow { display: none; }
   .hero__inner { grid-template-columns: 1fr; gap: 28px; min-height: auto; }
   .hero__copy { gap: 16px; }
   .hero__sub  { font-size: 15px; max-width: 100%; }

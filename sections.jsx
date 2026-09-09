@@ -37,9 +37,8 @@ function EmailField({ variant = "light", onSuccess }) {
 }
 
 /* ============== NAV ============== */
-function Nav({ vision = "defis", onToggleVision }) {
+function Nav() {
   const [scrolled, setScrolled] = useS(false);
-  const isCaged = vision === "caged";
   useE(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
@@ -59,23 +58,13 @@ function Nav({ vision = "defis", onToggleVision }) {
           {/* <a href="Blog.html" className="nav__blog">Blog</a> */}
         </div>
         <a href="#cta" className="btn btn--primary">Rejoindre la liste</a>
-        <button
-          type="button"
-          className="vision-toggle"
-          onClick={onToggleVision}
-          aria-pressed={isCaged}
-          title={isCaged ? "Passer à la vision Défis créatifs" : "Passer à la vision Système CAGED"}
-        >
-          <span className="vision-toggle__dot" aria-hidden="true"></span>
-          <span className="vision-toggle__label">{isCaged ? "CAGED" : "Défis"}</span>
-        </button>
       </div>
     </nav>);
 
 }
 
 /* ============== HERO ============== */
-function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defis" }) {
+function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defis", onToggleVision }) {
   const isCaged = vision === "caged";
   const deckRef = useR(null);
   useE(() => {
@@ -86,6 +75,27 @@ function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defi
     <section className="hero" id="top">
       <div className="container hero__inner">
         <div className="hero__copy">
+          <div className="hero__vision">
+            <button
+              type="button"
+              className="vision-toggle"
+              onClick={onToggleVision}
+              aria-pressed={isCaged}
+              title={isCaged ? "Passer à la vision Défis créatifs" : "Passer à la vision Système CAGED"}
+            >
+              <span className="vision-toggle__dot" aria-hidden="true"></span>
+              <span className="vision-toggle__label">{isCaged ? "Système CAGED" : "Défis créatifs"}</span>
+              <svg className="vision-toggle__swap" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M3 8h14l-4-4M21 16H7l4 4"/>
+              </svg>
+            </button>
+            {/* flèche croquis : incite à cliquer sur la bascule */}
+            <svg className="vision-arrow" viewBox="0 0 104 54" fill="none" aria-hidden="true">
+              <path d="M99 9c-11-4-25-4-38-1-11 3-22 9-30 18-3 3-5 6-7 10" strokeLinecap="round"/>
+              <path d="M24 36c7-1 13-2 19-5" strokeLinecap="round"/>
+              <path d="M24 36c2 6 5 10 9 14" strokeLinecap="round"/>
+            </svg>
+          </div>
           <h1 className="h-display">
             {isCaged ? "Maîtrise ton manche" : "Mets ton jeu à l'épreuve."}
           </h1>
@@ -676,13 +686,13 @@ function FinalCTA({ bg = "dark" }) {
     <section className={"cta cta--" + bg} id="cta">
       <div className="container cta__inner">
         <h2 className="cta__title">Tire une carte et kiffe.</h2>
-        <p className="cta__sub">Pas de méthode miracle. Pas de promesses démesurées. Juste un paquet de cartes pour faire de tes sessions guitare de vrais moments de création.</p>
+        <p className="cta__sub">Pas de méthode miracle. Pas de promesses démesurées. Juste un paquet de cartes pour faire de tes sessions guitare de vrais moments de découvertes.</p>
         <div className="cta__form">
           <EmailField variant={bg} />
         </div>
         <div className="cta__price">
           <span className="cta__price-pill"><b>29,10€</b></span>
-          <span>C'EST LE PRIX D'UN BOUQUIN DE THÉORIE QUI FINIRA DANS TON PLACARD.</span>
+          <span>C'est moins cher qu'un livre de théorie qui finira dans ton placard.</span>
         </div>
       </div>
     </section>);

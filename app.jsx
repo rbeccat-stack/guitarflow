@@ -41,8 +41,8 @@ function App() {
 
   return (
     <>
-      <Nav vision={vision} onToggleVision={toggleVision}/>
-      <Hero density={t.heroDensity} cardStyle={t.cardStyle} vision={vision}/>
+      <Nav/>
+      <Hero density={t.heroDensity} cardStyle={t.cardStyle} vision={vision} onToggleVision={toggleVision}/>
       {vision === "caged" ? <Showcase_CAGED/> : <Showcase_contraintes/>}
       <HowTo vision={vision}/>
       <Categories vision={vision}/>
