@@ -37,12 +37,12 @@ function App() {
     }
   }, [vision]);
 
-  const toggleVision = () => setVision((v) => (v === "caged" ? "defis" : "caged"));
+  const setVisionTo = (v) => setVision(v === "caged" ? "caged" : "defis");
 
   return (
     <>
       <Nav/>
-      <Hero density={t.heroDensity} cardStyle={t.cardStyle} vision={vision} onToggleVision={toggleVision}/>
+      <Hero density={t.heroDensity} cardStyle={t.cardStyle} vision={vision} onSetVision={setVisionTo}/>
       {vision === "caged" ? <Showcase_CAGED/> : <Showcase_contraintes/>}
       <HowTo vision={vision}/>
       <Categories vision={vision}/>

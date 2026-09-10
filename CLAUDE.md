@@ -32,7 +32,7 @@ Pas de build step. Le site est du HTML statique avec React compilé côté clien
 3. `sections.jsx` — tous les composants de page : `Nav`, `Hero`, `Problem`, `Showcase_*`, `HowTo`, `Categories`, `WhySection`, `FinalCTA`, `Footer`
 4. `app.jsx` — point d'entrée, monte `App` dans `#root`, orchestre les tweaks via `useTweaks()`
 
-**Visions du site :** le site a deux lectures, pilotées par le bouton `.vision-toggle` posé au-dessus de la headline du hero (avec `.vision-arrow`, une flèche croquis qui pointe dessus) — `defis` (défis créatifs) et `caged` (système CAGED). L'état vit dans `App`, est persisté en `localStorage` sous `gf:vision`, et est exposé au CSS via `document.body.dataset.vision`. **L'accent orange ne change pas d'une vision à l'autre** — la bascule porte sur le contenu, pas sur la couleur.
+**Visions du site :** le site a deux lectures, pilotées par `.vision-switch`, un sélecteur à deux segments posé au-dessus de la headline du hero (avec `.vision-arrow`, une flèche croquis qui pointe dessus) — `defis` (défis créatifs) et `caged` (système CAGED). Les deux segments restent visibles côte à côte **volontairement** : un bouton n'affichant qu'un état laissait croire à deux produits distincts. La ligne `.hero__deckline` juste dessous (48 + 35 = 83 cartes) enfonce le clou. L'état vit dans `App`, est persisté en `localStorage` sous `gf:vision`, et est exposé au CSS via `document.body.dataset.vision`. **L'accent orange ne change pas d'une vision à l'autre** — la bascule porte sur le contenu, pas sur la couleur.
 
 Ce qui change entre les deux visions :
 - `Hero` permute son `h1` et son sous-titre (« Mets ton jeu à l'épreuve. » / 48 défis créatifs — « Maîtrise ton manche » / 35 positions d'accord)
@@ -63,6 +63,9 @@ Les deux visions partagent volontairement la **même mise en page** : titres de 
 - Le **blog** est commenté dans la nav et le footer — ne pas le réactiver sans reconstruire les pages.
 - Les **tweaks** (`TweaksPanel`) sont un outil de design uniquement, pas destinés aux utilisateurs finaux.
 - Sur mobile, `.section__head` est forcé en `text-align: center !important` — utiliser `!important` pour surcharger si nécessaire.
+- **Échelle de padding vertical** : `.section` suit 96px (desktop) → 80px (≤1024) → 56px (≤768) → 44px (≤480). Elle doit rester **décroissante** — elle a été inversée pendant un temps (desktop plus serré que la tablette).
+- **Grilles et `min-width: 0`** : `.hero__inner > *` porte `min-width: 0`. Sans lui, la colonne `1fr` adopte le min-content du champ email (~389px, la largeur intrinsèque de l'`<input>` plus le bouton) et déborde sous ~420px — silencieusement, car `.hero` a `overflow: hidden`. Même piège pour toute grille contenant un champ de formulaire.
+- Sous 480px, `.field` s'empile (input au-dessus, bouton pleine largeur) : sur une ligne le bouton sortait de l'écran.
 - Le port local peut varier si 8080 est occupé (ex: `http://127.0.0.1:56276`). Vérifier la sortie de `npx live-server`.
 - La **favicon** est `favicon.svg` — un carré orange arrondi (#E89B5A) reproduisant le picto du logo.
 - `WhySection` se place juste avant `FinalCTA` dans `app.jsx` et expose son composant via `window.WhySection`.

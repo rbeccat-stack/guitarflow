@@ -64,7 +64,7 @@ function Nav() {
 }
 
 /* ============== HERO ============== */
-function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defis", onToggleVision }) {
+function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defis", onSetVision }) {
   const isCaged = vision === "caged";
   const deckRef = useR(null);
   useE(() => {
@@ -76,25 +76,30 @@ function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defi
       <div className="container hero__inner">
         <div className="hero__copy">
           <div className="hero__vision">
-            <button
-              type="button"
-              className="vision-toggle"
-              onClick={onToggleVision}
-              aria-pressed={isCaged}
-              title={isCaged ? "Passer à la vision Défis créatifs" : "Passer à la vision Système CAGED"}
-            >
-              <span className="vision-toggle__dot" aria-hidden="true"></span>
-              <span className="vision-toggle__label">{isCaged ? "Système CAGED" : "Défis créatifs"}</span>
-              <svg className="vision-toggle__swap" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M3 8h14l-4-4M21 16H7l4 4"/>
+            <div className="hero__vision-row">
+              {/* les deux moitiés du deck restent visibles : c'est ce qui dit
+                  qu'il s'agit d'un seul produit, pas de deux */}
+              <div className="vision-switch" role="group" aria-label="Choisir la vision du deck">
+                <button
+                  type="button"
+                  className={"vision-switch__opt" + (isCaged ? "" : " is-active")}
+                  onClick={() => onSetVision("defis")}
+                  aria-pressed={!isCaged}
+                >Défis créatifs</button>
+                <button
+                  type="button"
+                  className={"vision-switch__opt" + (isCaged ? " is-active" : "")}
+                  onClick={() => onSetVision("caged")}
+                  aria-pressed={isCaged}
+                >Système CAGED</button>
+              </div>
+              <svg className="vision-arrow" viewBox="0 0 124 58" fill="none" aria-hidden="true">
+                <path d="M118 13C99 4 62 6 40 20c-9 6-16 9-28 11" strokeLinecap="round"/>
+                <path d="M12 31c6 1 12 3 17 7" strokeLinecap="round"/>
+                <path d="M12 31c5-3 9-7 12-12" strokeLinecap="round"/>
               </svg>
-            </button>
-            {/* flèche croquis : incite à cliquer sur la bascule */}
-            <svg className="vision-arrow" viewBox="0 0 104 54" fill="none" aria-hidden="true">
-              <path d="M99 9c-11-4-25-4-38-1-11 3-22 9-30 18-3 3-5 6-7 10" strokeLinecap="round"/>
-              <path d="M24 36c7-1 13-2 19-5" strokeLinecap="round"/>
-              <path d="M24 36c2 6 5 10 9 14" strokeLinecap="round"/>
-            </svg>
+            </div>
+            <p className="hero__deckline">Les deux jeux dans un seul deck de 83 cartes.</p>
           </div>
           <h1 className="h-display">
             {isCaged ? "Maîtrise ton manche" : "Mets ton jeu à l'épreuve."}

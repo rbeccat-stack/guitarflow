@@ -134,6 +134,7 @@ body[data-palette="secondary"] {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   text-decoration: none;
   transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease), color var(--dur) var(--ease), transform var(--dur-fast) var(--ease);
@@ -190,59 +191,72 @@ body[data-palette="secondary"] {
 .nav__links a.nav-current:hover,
 .nav__links a.nav__blog:hover { color: var(--accent-500); }
 
-/* ---------- Toggle de vision (Défis créatifs / Système CAGED) ----------
-   Posé au-dessus de la headline du hero : c'est le premier geste qu'on
-   attend du visiteur, la flèche croquis pointe dessus. */
+/* ---------- Sélecteur de vision ----------
+   Les deux moitiés du deck restent lisibles côte à côte : un bouton qui
+   n'affiche qu'un état laissait croire à deux produits distincts. */
 .hero__vision {
   display: flex;
-  align-items: center;
-  gap: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
   animation: hero-rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
-.vision-toggle {
+.hero__vision-row { display: flex; align-items: center; }
+
+.vision-switch {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
-  flex-shrink: 0;
-  padding: 13px 20px;
+  gap: 3px;
+  padding: 4px;
   border: 1.5px solid var(--ink-900);
   border-radius: 999px;
   background: var(--paper);
-  font-family: var(--font-mono);
-  font-size: 13px;
+}
+.vision-switch__opt {
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  border: 0;
+  background: transparent;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-family: var(--font-display);
+  font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-900);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--fg-3);
   cursor: pointer;
-  box-shadow: 0 2px 0 var(--ink-900);
-  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), background-color var(--dur) var(--ease);
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
 }
-.vision-toggle:hover {
-  background: var(--ink-50);
-  transform: translateY(-1px);
-  box-shadow: 0 3px 0 var(--ink-900);
+.vision-switch__opt:hover { color: var(--ink-900); background: var(--ink-50); }
+.vision-switch__opt:focus-visible { outline: 2px solid var(--accent-500); outline-offset: 2px; }
+.vision-switch__opt.is-active {
+  background: var(--ink-900);
+  color: var(--paper);
 }
-.vision-toggle:active { transform: translateY(1px); box-shadow: 0 1px 0 var(--ink-900); }
-.vision-toggle:focus-visible { outline: 2px solid var(--accent-500); outline-offset: 3px; }
-.vision-toggle__dot {
-  width: 9px; height: 9px; border-radius: 50%;
-  background: var(--orange-500);
-  flex-shrink: 0;
-}
-.vision-toggle__label { white-space: nowrap; }
-.vision-toggle__swap { flex-shrink: 0; color: var(--fg-3); }
-.vision-toggle:hover .vision-toggle__swap { color: var(--ink-900); }
+.vision-switch__opt.is-active:hover { background: var(--ink-800); color: var(--paper); }
 
-/* Flèche tracée à la main, pointe vers la bascule */
+.hero__deckline {
+  margin: 0;
+  padding-left: 20px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--fg-3);
+}
+
+/* Flèche au feutre, tête franche, pointée sur le sélecteur */
 .vision-arrow {
-  width: 100px; height: 52px;
+  width: 104px; height: 49px;
   flex-shrink: 0;
+  margin-left: -2px;
   stroke: var(--orange-500);
-  stroke-width: 2.4;
+  stroke-width: 2.6;
+  stroke-linejoin: round;
   fill: none;
-  margin-left: -8px;
-  transform: rotate(-3deg) translateY(-9px);
+  transform: rotate(-2deg);
   transform-origin: center;
   pointer-events: none;
 }
@@ -281,7 +295,8 @@ body[data-palette="secondary"] {
   align-items: center;
   min-height: 540px;
 }
-.hero__copy { display: flex; flex-direction: column; gap: 26px; }
+.hero__inner > * { min-width: 0; }
+.hero__copy { display: flex; flex-direction: column; gap: 26px; min-width: 0; }
 body[data-density="tight"] .hero__copy { gap: 18px; }
 body[data-density="tight"] .h-display { line-height: 1.0; font-size: clamp(40px, 5.0vw, 76px); }
 body[data-density="breathing"] .h-display { line-height: 1.08; }
@@ -526,6 +541,7 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
 /* ---------- Form ---------- */
 .field {
   display: flex; gap: 0;
+  min-width: 0;
   border: 1px solid var(--border-2);
   border-radius: var(--r-md);
   background: var(--paper);
@@ -535,10 +551,12 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
 }
 .field:focus-within {
   border-color: var(--ink-900);
+  box-shadow: 0 0 0 3px rgba(18, 17, 16, 0.12);
   box-shadow: 0 0 0 3px color-mix(in oklab, var(--ink-900) 12%, transparent);
 }
 .field input {
   flex: 1;
+  width: 100%;
   font-family: var(--font-body); font-size: 15px;
   padding: 11px 14px;
   border: none; background: transparent; color: var(--ink-900);
@@ -549,7 +567,10 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
 .field button { border-radius: calc(var(--r-md) - 3px); }
 
 .field--error { border-color: var(--red-500); }
-.field--error:focus-within { box-shadow: 0 0 0 3px color-mix(in oklab, var(--red-500) 18%, transparent); }
+.field--error:focus-within {
+  box-shadow: 0 0 0 3px rgba(220, 99, 96, 0.18);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--red-500) 18%, transparent);
+}
 .field-error {
   font-family: var(--font-mono); font-size: 11px;
   color: var(--red-700); text-transform: uppercase; letter-spacing: 0.1em;
@@ -574,7 +595,7 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
 }
 
 /* ---------- Section frame ---------- */
-.section { padding: 56px 0; position: relative; }
+.section { padding: 96px 0; position: relative; }
 .section--alt { background: var(--ink-50); border-top: 1px solid var(--border-1); border-bottom: 1px solid var(--border-1); }
 .section--paper { background: var(--paper); border-top: 1px solid var(--border-1); border-bottom: 1px solid var(--border-1); }
 .section--tinted { background: color-mix(in oklab, var(--accent-50) 70%, var(--bg)); border-top: 1px solid var(--border-1); border-bottom: 1px solid var(--border-1); }
@@ -1201,8 +1222,9 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
 
   /* Hero */
   .hero { padding: 28px 0 0; overflow: hidden; }
-  /* trop étroit pour la flèche : on garde la bascule seule */
-  .vision-toggle { padding: 11px 16px; gap: 9px; font-size: 12px; }
+  /* trop étroit pour la flèche : on garde le sélecteur seul */
+  .vision-switch__opt { padding: 9px 14px; font-size: 14px; }
+  .hero__deckline { padding-left: 16px; font-size: 14px; }
   .vision-arrow { display: none; }
   .hero__inner { grid-template-columns: 1fr; gap: 28px; min-height: auto; }
   .hero__copy { gap: 16px; }
@@ -1273,6 +1295,11 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
   .section { padding: 44px 0; }
+
+  /* le champ ne tient plus sur une ligne : on empile, bouton pleine largeur */
+  .field { flex-direction: column; gap: 6px; padding: 6px; }
+  .field input { padding: 12px 12px; }
+  .field button { width: 100%; }
 
   .h-display { font-size: clamp(24px, 8.5vw, 32px); }
   .h-section { font-size: clamp(20px, 7vw, 26px); }
