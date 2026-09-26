@@ -339,19 +339,29 @@ body[data-palette="secondary"] {
 }
 
 .hero { padding: 72px 0 112px; position: relative; overflow: hidden; }
+/* Trois cellules : texte, deck, formulaire. Sur desktop le formulaire reste
+   sous le texte (colonne gauche) et le deck occupe la colonne droite sur
+   toute la hauteur ; en une colonne (≤ 1024px) le deck passe entre le texte
+   et le formulaire. L'écart texte → formulaire suit le rythme interne du
+   texte (--copy-gap), pas l'écart entre colonnes. */
 .hero__inner {
+  --copy-gap: 26px;
   display: grid;
   grid-template-columns: 1.5fr 1fr; /* 60/40 */
-  gap: 64px;
-  align-items: center;
+  grid-template-areas: "copy deck" "form deck";
+  column-gap: 64px;
+  row-gap: var(--copy-gap);
+  align-content: center;
   min-height: 540px;
 }
 .hero__inner > * { min-width: 0; }
-.hero__copy { display: flex; flex-direction: column; gap: 26px; min-width: 0; }
-body[data-density="tight"] .hero__copy { gap: 18px; }
+.hero__copy { grid-area: copy; align-self: end; display: flex; flex-direction: column; gap: var(--copy-gap); min-width: 0; }
+.hero__inner > .herodeck { grid-area: deck; align-self: center; }
+.hero__inner > .hero__form-wrap { grid-area: form; align-self: start; }
+body[data-density="tight"] .hero__inner { --copy-gap: 18px; }
 body[data-density="tight"] .h-display { line-height: 1.0; font-size: clamp(34px, 21px + 3.6vw, 76px); }
 body[data-density="breathing"] .h-display { line-height: 1.08; }
-body[data-density="breathing"] .hero__copy { gap: 32px; }
+body[data-density="breathing"] .hero__inner { --copy-gap: 32px; }
 
 .hero__eyebrow {
   font-family: var(--font-mono);
@@ -1280,7 +1290,8 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   .hero { padding: 48px 0 64px; }
   .hero__inner {
     grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-areas: "copy" "deck" "form";
+    row-gap: 40px;
     min-height: auto;
   }
   .herodeck { padding: 24px 0; }
@@ -1321,17 +1332,17 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   .nav .btn { font-size: 12px; padding: 8px 12px; flex-shrink: 0; }
 
   /* Hero */
-  .hero { padding: 28px 0 0; overflow: hidden; }
+  .hero { padding: 28px 0 48px; overflow: hidden; }
   .hero__vision { --vs-pad: 14px; }
   .vision-switch__opt { padding-top: 9px; padding-bottom: 9px; font-size: 14px; }
   .hero__deckline { font-size: 14px; }
-  .hero__inner { grid-template-columns: 1fr; gap: 28px; min-height: auto; }
-  .hero__copy { gap: 18px; }
+  .hero__inner { row-gap: 28px; }
   .hero__sub  { max-width: 100%; }
   .hero__form-wrap { max-width: 100%; }
 
   /* Herodeck : visible, cartes réduites */
-  .herodeck { display: block; padding: 20px 0 32px; }
+  /* le deck est entre texte et formulaire : marge verticale symétrique */
+  .herodeck { display: block; padding: 20px 0; }
   .herocard-img { width: 120px; border-radius: 8px; }
   .herodeck__slot:nth-child(even) { transform: translateY(-12px); }
 
@@ -1399,8 +1410,8 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   .field input { padding: 12px 12px; }
   .field button { width: 100%; }
 
-  .hero { padding: 20px 0 0; }
-  .hero__inner { gap: 20px; }
+  .hero { padding: 20px 0 40px; }
+  .hero__inner { row-gap: 20px; }
   .herocard-img { width: 106px; }
 
   .cat-card { padding: 16px; gap: 14px; }
@@ -1435,12 +1446,13 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   .sc-deck__dot { width: 22px; }
 }
 
-/* ---- Mobile en paysage : le hero ne doit pas pousser le formulaire hors écran ---- */
+/* ---- Mobile en paysage : le deck passe avant le formulaire, on le compacte
+   pour que le champ email reste à portée de pouce ---- */
 @media (max-height: 480px) and (orientation: landscape) {
-  .hero { padding-top: 16px; }
-  .hero__inner { gap: 16px; }
-  .hero__copy { gap: 12px; }
-  .herodeck { padding: 12px 0 20px; }
+  .hero { padding-top: 16px; padding-bottom: 32px; }
+  .hero__inner { row-gap: 16px; }
+  .herodeck { padding: 12px 0; }
+  .herocard-img { width: 96px; }
 }
 
 /* ---- Safari < 15 / vieux Android : pas d'aspect-ratio ----

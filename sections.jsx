@@ -181,9 +181,6 @@ function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defi
             <p className="lead hero__sub"><b>35 positions d'accord</b> pour cartographier ton manche.</p> :
             <p className="lead hero__sub"><b>48 défis créatifs</b> pour développer ton jeu et kiffer un maximum.</p>
           }
-          <div className="hero__form-wrap">
-            <EmailField variant="light" location="hero" />
-          </div>
         </div>
 
         {(() => {
@@ -256,6 +253,12 @@ function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defi
             </div>
           );
         })()}
+
+        {/* Hors de .hero__copy : sur desktop il reste sous le texte (grille),
+            en une colonne il passe sous le deck qui défile */}
+        <div className="hero__form-wrap">
+          <EmailField variant="light" location="hero" />
+        </div>
       </div>
     </section>);}
 
