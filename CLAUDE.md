@@ -68,7 +68,7 @@ Les deux visions partagent volontairement la **même mise en page** : titres de 
 - Les **inline styles JSX** (`style={{ textAlign: "left" }}`) ont priorité sur les classes CSS. Pour surcharger via media query, utiliser `!important`.
 - Le **blog** est commenté dans la nav et le footer — ne pas le réactiver sans reconstruire les pages.
 - Les **tweaks** (`TweaksPanel`) sont un outil de design uniquement, pas destinés aux utilisateurs finaux.
-- `.section__head` est aligné à gauche sur **tous** les formats (le centrage mobile a été retiré : il créait un axe différent du corps de texte). Le CTA final reste centré.
+- `.section__head` est aligné à gauche sur **tous** les formats (le centrage mobile a été retiré : il créait un axe différent du corps de texte). Exceptions : le CTA final reste centré, et `WhySection` (classe `.why`) se compose sur l'axe central dès 900px — titre centré, texte en une colonne de 68ch centrée sur la page (lignes alignées à gauche). Sous 900px, elle revient à gauche comme le reste.
 - **`overflow-x` : sur `<html>` uniquement** (`clip`, repli `hidden`). Ne jamais le remettre sur `<body>` : le body devient alors un conteneur de scroll et la nav `position: sticky` ne colle plus.
 - **Typo fluide** : `.h-display`, `.h-section`, `.lead`, `.hero__sub`, `.cta__title` ont un seul `clamp()` continu de 320px à 1440px. Ne pas rajouter de `font-size` par breakpoint dessus — c'est ce qui bloquait la tablette à la taille mobile.
 - **Champs de formulaire à 16px minimum** : en dessous, iOS zoome la page au focus.

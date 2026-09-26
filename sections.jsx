@@ -748,7 +748,7 @@ function WhySection() {
   ];
 
   return (
-    <section className="section section--alt" id="why">
+    <section className="section section--alt why" id="why">
       <div className="container">
         <div className="section__head">
           <h2 className="h-section">Pourquoi Guitar Flow ?</h2>

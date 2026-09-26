@@ -1213,21 +1213,15 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
 .why-body { margin: 0 0 56px; max-width: 70ch; }
 .why-para { color: var(--fg-2); margin-bottom: 20px; text-align: left; }
 .why-para:last-child { margin-bottom: 0; }
-/* Dès qu'il y a la place, les deux paragraphes passent côte à côte : bridé à
-   70ch, le texte laissait ~350px de vide à droite sous des piliers pleine
-   largeur, et la section paraissait décentrée. Deux colonnes de ~52ch
-   gardent une bonne longueur de ligne. */
+/* Dès que le texte est plus étroit que le container, la section se compose
+   sur l'axe central : titre centré, colonne de lecture (68ch) centrée sur la
+   page — lignes alignées à gauche pour rester lisibles. En dessous de 900px,
+   le texte occupe toute la largeur : tout reste aligné à gauche, sur le même
+   axe que le reste de la page. */
 @media (min-width: 900px) {
-  .why-body {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 64px;
-    max-width: none;
-  }
-  .why-para { margin-bottom: 0; }
-}
-@media (min-width: 900px) and (max-width: 1024px) {
-  .why-body { column-gap: 40px; }
+  .why .section__head,
+  .why-philosophy__title { text-align: center; }
+  .why-body { max-width: 68ch; margin-left: auto; margin-right: auto; }
 }
 .why-philosophy__title { font-size: 16px; font-weight: 700; color: var(--ink-900); display: block; margin-bottom: 20px; }
 .why-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
