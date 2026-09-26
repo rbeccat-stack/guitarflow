@@ -398,7 +398,7 @@ function HowTo({ vision = "defis" }) {
     cat: "Créatif",
     color: "var(--orange-500)",
     vol: "48 cartes",
-    sub: "5 catégories — Rythme, Harmonie, Technique, Structure, Gimmick.",
+    sub: ["5 catégories", "Rythme, Harmonie, Technique, Structure, Gimmick."],
     uses: [
     { name: "Page blanche", ctx: "nouvelle compo", desc: "Pioche des contraintes et place les dans tes compos." },
     { name: "Transformation", ctx: "compo existante", desc: "Enrichi un de tes morceaux déjà existant et laisse les cartes décider." },
@@ -408,7 +408,7 @@ function HowTo({ vision = "defis" }) {
     cat: "CAGED",
     color: "var(--blue-500)",
     vol: "35 cartes recto-verso",
-    sub: "2 visions — intervalles et noms des notes",
+    sub: ["2 visions", "intervalles et noms des notes."],
     uses: [
     { name: "Transposition", ctx: "déplacer", desc: "Redécouvre un plan ou une progression dans une autre position." },
     { name: "Prison", ctx: "se limiter", desc: "Impose toi de composer ou d'improviser dans une position tirée au sort." },
@@ -429,7 +429,17 @@ function HowTo({ vision = "defis" }) {
               <div className="usage-panel__head">
                 <h3 className="usage-panel__cat">{g.cat}</h3>
               </div>
-              <p className="usage-panel__sub">{g.sub}</p>
+              <p className="usage-panel__sub">
+                {/* flèche dessinée, à la couleur de la bande du panneau ; elle reste
+                    collée à son libellé, jamais seule en fin de ligne */}
+                <span className="usage-panel__lead">
+                  {g.sub[0]}
+                  <svg className="usage-panel__arrow" viewBox="0 0 24 12" fill="none" aria-hidden="true">
+                    <path d="M1 6h21M17 1.5 22 6l-5 4.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+                {g.sub[1]}
+              </p>
               <ol className="usage-list">
                 {g.uses.map((u, j) =>
               <li className="use-case" key={j}>

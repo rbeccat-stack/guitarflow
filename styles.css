@@ -870,6 +870,15 @@ body[data-density="tight"] .hero__sub { font-size: 17px; }
   font-family: var(--font-body); font-size: 14px; line-height: 1.5;
   color: var(--fg-2); margin: 12px 0 0;
 }
+.usage-panel__lead { white-space: nowrap; }
+.usage-panel__arrow {
+  display: inline-block;
+  width: 22px; height: 11px;
+  margin: 0 9px;
+  /* centre la flèche sur la hauteur d'x (et non sur la ligne) */
+  vertical-align: -0.14em;
+  color: var(--cat, var(--accent-500));
+}
 .usage-list {
   list-style: none; margin: 24px 0 0; padding: 0;
   display: flex; flex-direction: column;
