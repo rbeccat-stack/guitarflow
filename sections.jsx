@@ -1,39 +1,112 @@
 ﻿/* global React, MiniCard, BigCard, HeroCards */
 const { useState: useS, useEffect: useE, useRef: useR } = React;
 
-/* ============== EMAIL FIELD ============== */
-function EmailField({ variant = "light", onSuccess }) {
-  const [email, setEmail] = useS("");
-  const [error, setError] = useS(false);
-  const [done, setDone] = useS(false);
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const submit = (e) => {
-    e.preventDefault();
-    if (!re.test(email.trim())) {setError(true);return;}
-    setError(false);setDone(true);onSuccess && onSuccess(email);
+/* ============== TRACKING (no-op si tracking.js absent) ============== */
+const track = (ev, p) => { if (typeof window.gfTrack === "function") window.gfTrack(ev, p); };
+
+/* ============== SWIPE ==============
+   Retourne les handlers pointer à poser sur un deck : un glissement horizontal
+   de 40px+ appelle onLeft/onRight, un tap (peu de mouvement) laisse le onClick
+   du parent faire son travail. Fonctionne souris, doigt et stylet. */
+function useSwipe(onLeft, onRight) {
+  const start = useR(null);
+  const moved = useR(false);
+  return {
+    onPointerDown: (e) => { start.current = { x: e.clientX, y: e.clientY }; moved.current = false; },
+    onPointerMove: (e) => {
+      if (!start.current) return;
+      if (Math.abs(e.clientX - start.current.x) > 10) moved.current = true;
+    },
+    onPointerUp: (e) => {
+      if (!start.current) return;
+      const dx = e.clientX - start.current.x, dy = e.clientY - start.current.y;
+      start.current = null;
+      if (Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy)) { dx < 0 ? onLeft() : onRight(); }
+    },
+    onPointerCancel: () => { start.current = null; },
+    // Après un glissement, on avale le click qui suit pour ne pas avancer deux fois.
+    onClickCapture: (e) => { if (moved.current) { e.stopPropagation(); moved.current = false; } },
   };
+}
+
+/* ============== EMAIL FIELD ============== */
+function EmailField({ variant = "light", location = "hero", onSuccess }) {
+  const [email, setEmail] = useS("");
+  const [hp, setHp] = useS("");           // honeypot : un humain ne le remplit jamais
+  const [error, setError] = useS("");
+  const [busy, setBusy] = useS(false);
+  const [done, setDone] = useS(false);
+  const inputRef = useR(null);
+  const errId = "field-err-" + location;
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const submit = async (e) => {
+    e.preventDefault();
+    const value = email.trim();
+    if (!re.test(value)) {
+      setError("Entre une adresse email valide, par exemple ton@email.com.");
+      track("lead_error", { location, reason: "invalid_email" });
+      inputRef.current && inputRef.current.focus();
+      return;
+    }
+    if (hp) { setDone(true); return; } // robot : on fait semblant, on n'envoie rien
+    setError("");
+    const endpoint = (window.GF_CONFIG && window.GF_CONFIG.formEndpoint) || "";
+    const attribution = typeof window.gfAttribution === "function" ? window.gfAttribution() : {};
+    if (endpoint) {
+      setBusy(true);
+      try {
+        const res = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify({ email: value, location, page: window.location.href, ...attribution }),
+        });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+      } catch (err) {
+        setBusy(false);
+        setError("L'inscription n'est pas passée. Réessaie dans un instant.");
+        track("lead_error", { location, reason: "network" });
+        return;
+      }
+      setBusy(false);
+    }
+    setDone(true);
+    track("lead_submit", { location, vision: attribution.vision });
+    onSuccess && onSuccess(value);
+  };
+
   if (done) {
     return (
-      <div className="success">
+      <div className="success" role="status">
         <span className="success__check">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
         </span>
         Tu es sur la liste. On te tient au courant.
       </div>);
-
   }
   return (
-    <form className={"field" + (error ? " field--error" : "")} onSubmit={submit}>
-      <input
-        type="email" inputMode="email" autoComplete="email" required
-        value={email}
-        onChange={(e) => {setEmail(e.target.value);if (error) setError(false);}}
-        placeholder="ton@email.com"
-        aria-label="adresse email" />
-      
-      <button type="submit" className="btn btn--primary btn--lg">Rejoindre la liste</button>
-    </form>);
-
+    <div className="field-wrap">
+      <form className={"field" + (error ? " field--error" : "")} onSubmit={submit} noValidate>
+        <input
+          ref={inputRef}
+          type="email" inputMode="email" autoComplete="email" required
+          value={email}
+          onChange={(e) => {setEmail(e.target.value);if (error) setError("");}}
+          placeholder="ton@email.com"
+          aria-label="Adresse email"
+          aria-invalid={error ? "true" : undefined}
+          aria-describedby={error ? errId : undefined}
+          disabled={busy} />
+        <input
+          type="text" name="website" tabIndex={-1} autoComplete="off"
+          value={hp} onChange={(e) => setHp(e.target.value)}
+          className="field__hp" aria-hidden="true" />
+        <button type="submit" className="btn btn--primary btn--lg" disabled={busy}>
+          {busy ? "Un instant…" : "Rejoindre la liste"}
+        </button>
+      </form>
+      {error && <p className="field-error" id={errId} role="alert">{error}</p>}
+    </div>);
 }
 
 /* ============== NAV ============== */
@@ -46,9 +119,9 @@ function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <nav className={"nav" + (scrolled ? " is-scrolled" : "")}>
+    <nav className={"nav" + (scrolled ? " is-scrolled" : "")} aria-label="Navigation principale">
       <div className="container nav__inner">
-        <a href="#top" className="logo">
+        <a href="#top" className="logo" aria-label="Guitar Flow, retour en haut">
           Guitar Flow<span className="logo__sq" aria-hidden="true"></span>
         </a>
         <div className="nav__links">
@@ -57,7 +130,7 @@ function Nav() {
           <a href="#categories">Catégories</a>
           {/* <a href="Blog.html" className="nav__blog">Blog</a> */}
         </div>
-        <a href="#cta" className="btn btn--primary">Rejoindre la liste</a>
+        <a href="#cta" className="btn btn--primary" onClick={() => track("cta_click", { location: "nav" })}>Rejoindre la liste</a>
       </div>
     </nav>);
 
@@ -83,13 +156,13 @@ function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defi
                 <button
                   type="button"
                   className={"vision-switch__opt" + (isCaged ? "" : " is-active")}
-                  onClick={() => onSetVision("defis")}
+                  onClick={() => { onSetVision("defis"); track("vision_switch", { vision: "defis" }); }}
                   aria-pressed={!isCaged}
                 >Défis créatifs</button>
                 <button
                   type="button"
                   className={"vision-switch__opt" + (isCaged ? " is-active" : "")}
-                  onClick={() => onSetVision("caged")}
+                  onClick={() => { onSetVision("caged"); track("vision_switch", { vision: "caged" }); }}
                   aria-pressed={isCaged}
                 >Système CAGED</button>
               </div>
@@ -109,7 +182,7 @@ function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defi
             <p className="lead hero__sub"><b>48 défis créatifs</b> pour développer ton jeu et kiffer un maximum.</p>
           }
           <div className="hero__form-wrap">
-            <EmailField variant="light" />
+            <EmailField variant="light" location="hero" />
           </div>
         </div>
 
@@ -154,8 +227,13 @@ function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defi
           }
 
           // Tressage final : CI → non-CAGED → CN → non-CAGED → CI → ...
+          // 12 tours = 48 cartes visibles (au lieu de 96) : la boucle dure
+          // ~100 s, personne ne la regarde plus longtemps, et on divise par
+          // deux les requêtes SVG au chargement — ce qui compte pour le LCP
+          // mesuré par Google Ads.
+          const HERO_ROUNDS = 12;
           const interleaved = [];
-          for (let i = 0; i < 24; i++) {
+          for (let i = 0; i < HERO_ROUNDS; i++) {
             interleaved.push("visuelles-cartes/" + cagedCI[i] + ".svg");
             interleaved.push(nonCaged[i * 2]);
             interleaved.push("visuelles-cartes/" + cagedCN[i] + ".svg");
@@ -171,7 +249,7 @@ function Hero({ density = "breathing", cardStyle = "illustrated", vision = "defi
               <div className="herodeck__track" style={{ animationDuration: duration + "s" }}>
                 {[...interleaved, ...interleaved].map((src, i) => (
                   <div className="herodeck__slot" key={i}>
-                    <img src={src} alt="" className="herocard-img" loading="lazy" />
+                    <img src={src} alt="" className="herocard-img" width="550" height="825" loading="lazy" decoding="async" />
                   </div>
                 ))}
               </div>
@@ -192,7 +270,7 @@ function Problem() {
     <section className="section section--alt" id="probleme">
       <div className="container">
         <div className="section__head">
-          <h2 className="h-section" style={{ marginTop: 14 }}>Tu connais tes accords.<br />Mais rien ne sort.</h2>
+          <h2 className="h-section">Tu connais tes accords.<br />Mais rien ne sort.</h2>
         </div>
         <div className="problem-grid">
           {items.map((v, i) =>
@@ -218,29 +296,37 @@ function Problem() {
 function ShowcaseCardDeck({ cards }) {
   const [idx, setIdx] = useS(0);
   const n = cards.length;
-  const advance = () => setIdx((p) => (p + 1) % n);
+  const next = () => { setIdx((p) => (p + 1) % n); track("deck_interact", { deck: "showcase" }); };
+  const prev = () => { setIdx((p) => (p - 1 + n) % n); track("deck_interact", { deck: "showcase" }); };
+  const swipe = useSwipe(next, prev);
   const onKey = (e) => {
-    if (e.key === "ArrowRight" || e.key === "Enter" || e.key === " ") {e.preventDefault();setIdx((p) => (p + 1) % n);}
-    if (e.key === "ArrowLeft") {e.preventDefault();setIdx((p) => (p - 1 + n) % n);}
+    if (e.key === "ArrowRight" || e.key === "Enter" || e.key === " ") {e.preventDefault();next();}
+    if (e.key === "ArrowLeft") {e.preventDefault();prev();}
   };
   return (
-    <div className="sc-deck" role="button" tabIndex={0} onClick={advance} onKeyDown={onKey}
-    aria-label="Faire défiler les exemples de cartes">
-      <div className="sc-deck__stack">
-        {cards.map((src, i) => {
-          const offset = i - idx;
-          const visible = offset === 0 || offset === 1 || offset === -1 || idx === 0 && i === n - 1 || idx === n - 1 && i === 0;
-          return (
-            <img key={i} src={src} alt="" draggable="false"
-            className={"sc-deck__card" + (i === idx ? " is-active" : "")}
-            style={i === idx ? {} : { pointerEvents: "none" }} />);
-
-        })}
+    <div className="sc-deck">
+      <div className="sc-deck__stack" role="button" tabIndex={0} onClick={next} onKeyDown={onKey} {...swipe}
+        aria-label={"Exemple de carte " + (idx + 1) + " sur " + n + ". Carte suivante"}>
+        {cards.map((src, i) =>
+          <img key={i} src={src} alt="" draggable="false"
+            className={"sc-deck__card" + (i === idx ? " is-active" : "")} />
+        )}
       </div>
-      <div className="sc-deck__dots" aria-hidden="true">
-        {cards.map((_, i) => <i key={i} className={i === idx ? "is-on" : ""} onClick={(e) => {e.stopPropagation();setIdx(i);}}></i>)}
+      <div className="sc-deck__nav">
+        <button type="button" className="deck-arrow" onClick={prev} aria-label="Carte précédente">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div className="sc-deck__dots" role="tablist" aria-label="Choisir une carte">
+          {cards.map((_, i) =>
+            <button type="button" key={i} role="tab" aria-selected={i === idx} aria-label={"Carte " + (i + 1)}
+              className={"sc-deck__dot" + (i === idx ? " is-on" : "")} onClick={() => setIdx(i)}><i></i></button>
+          )}
+        </div>
+        <button type="button" className="deck-arrow" onClick={next} aria-label="Carte suivante">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
       </div>
-      <p className="sc-deck__hint"><span className="hint--desktop">clique pour défiler</span><span className="hint--mobile">tape pour défiler</span></p>
+      <p className="sc-deck__hint" aria-hidden="true"><span className="hint--desktop">Clique ou glisse pour défiler</span><span className="hint--mobile">Glisse pour défiler</span></p>
     </div>);
 }
 
@@ -256,8 +342,8 @@ function Showcase_contraintes() {
   return (
     <section className="section" id="solution">
       <div className="container">
-        <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
-          <h2 className="h-section" style={{ marginTop: 14 }}>De la contrainte naît la créativité</h2>
+        <div className="section__head">
+          <h2 className="h-section">De la contrainte naît la créativité</h2>
         </div>
         <div className="solution-grid">
           <div className="solution-cardwrap">
@@ -286,8 +372,8 @@ function Showcase_CAGED() {
   return (
     <section className="section" id="solution">
       <div className="container">
-        <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
-          <h2 className="h-section" style={{ marginTop: 14 }}>Une nouvelle vision du manche</h2>
+        <div className="section__head">
+          <h2 className="h-section">Une nouvelle vision du manche</h2>
         </div>
         <div className="solution-grid">
           <div className="solution-cardwrap">
@@ -334,12 +420,12 @@ function HowTo({ vision = "defis" }) {
   return (
     <section className="section section--alt" id="comment">
       <div className="container">
-        <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
-          <h2 className="h-section" style={{ marginTop: 14 }}>Plusieurs modes de jeu</h2>
+        <div className="section__head">
+          <h2 className="h-section">Plusieurs modes de jeu</h2>
         </div>
         <div className="usage-grid usage-grid--single">
           {groups.map((g, i) =>
-          <article className="usage-panel" key={i} style={{ borderTopColor: g.color }}>
+          <article className="usage-panel" key={i} style={{ "--cat": g.color }}>
               <div className="usage-panel__head">
                 <h3 className="usage-panel__cat">{g.cat}</h3>
               </div>
@@ -367,32 +453,39 @@ function HowTo({ vision = "defis" }) {
 function CatCard({ c, color }) {
   const [idx, setIdx] = useS(0);
   const n = c.cards.length;
-  const advance = () => setIdx((p) => (p + 1) % n);
+  const next = () => { setIdx((p) => (p + 1) % n); track("deck_interact", { deck: "categories" }); };
+  const prev = () => { setIdx((p) => (p - 1 + n) % n); track("deck_interact", { deck: "categories" }); };
+  const swipe = useSwipe(next, prev);
   const onKey = (e) => {
-    if (e.key === "Enter" || e.key === " ") {e.preventDefault();advance();}
-    if (e.key === "ArrowRight") {e.preventDefault();setIdx((p) => (p + 1) % n);}
-    if (e.key === "ArrowLeft") {e.preventDefault();setIdx((p) => (p - 1 + n) % n);}
+    if (e.key === "Enter" || e.key === " " || e.key === "ArrowRight") {e.preventDefault();next();}
+    if (e.key === "ArrowLeft") {e.preventDefault();prev();}
   };
   return (
-    <article className="cat-card" style={{ borderTopColor: color }}>
+    <article className="cat-card" style={{ "--cat": color }}>
       <div className="cat-card__body">
-        <span className="cat-card__count">{c.count}</span>
         <h3 className="cat-card__title">{c.title}</h3>
         <p className="cat-card__desc">{c.desc}</p>
+        {/* une bande de repères, pas des cartes dans la carte */}
         {c.stats && (
-          <div className="stats cat-card__stats">
-            {c.stats.map((s, i) => <div className="stat" key={i}><div className="stat__num">{s.num}</div><div className="stat__lbl">{s.lbl}</div></div>)}
-          </div>
+          <dl className="cat-card__stats">
+            {c.stats.map((s, i) =>
+              <div className="cat-stat" key={i}>
+                <dt className="cat-stat__lbl">{s.lbl}</dt>
+                <dd className="cat-stat__num">{s.num}</dd>
+              </div>
+            )}
+          </dl>
         )}
       </div>
-      <div
-        className="cat-stage-wrap"
-        role="button"
-        tabIndex={0}
-        aria-label={"Faire défiler les exemples de cartes " + c.title}
-        onClick={advance}
-        onKeyDown={onKey}>
-        <div className="cat-stage">
+      <div className="cat-stage-wrap">
+        <div
+          className="cat-stage"
+          role="button"
+          tabIndex={0}
+          aria-label={"Exemples de cartes " + c.title + ", " + (idx + 1) + " sur " + n + ". Carte suivante"}
+          onClick={next}
+          onKeyDown={onKey}
+          {...swipe}>
           <div className="cat-stage__hint" aria-hidden="true">
             <div className="cat-stage__deck"><span></span><span></span><span></span></div>
             <span className="cat-stage__hint-label">Survole pour piocher</span>
@@ -409,12 +502,16 @@ function CatCard({ c, color }) {
           </div>
         </div>
         <div className="cat-stage__counter">
-          <div className="cat-stage__nav" aria-hidden="true">
-            <button className="cat-stage__arrow" onClick={(e) => {e.stopPropagation();setIdx((p) => (p - 1 + n) % n);}}>←</button>
-            <span className="cat-stage__index">{String(idx + 1).padStart(2, '0')}<span className="cat-stage__total"> / {String(n).padStart(2, '0')}</span></span>
-            <button className="cat-stage__arrow" onClick={(e) => {e.stopPropagation();advance();}}>→</button>
+          <div className="cat-stage__nav">
+            <button type="button" className="deck-arrow" onClick={prev} aria-label="Carte précédente">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <span className="cat-stage__index" aria-live="polite">{String(idx + 1).padStart(2, '0')}<span className="cat-stage__total"> / {String(n).padStart(2, '0')}</span></span>
+            <button type="button" className="deck-arrow" onClick={next} aria-label="Carte suivante">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
           </div>
-          <span className="cat-stage__cta"><span className="hint--desktop">clique pour défiler</span><span className="hint--mobile">tape pour défiler</span></span>
+          <span className="cat-stage__cta" aria-hidden="true"><span className="hint--desktop">Clique ou glisse</span><span className="hint--mobile">Glisse pour changer</span></span>
         </div>
       </div>
     </article>);
@@ -423,7 +520,7 @@ function CatCard({ c, color }) {
 
 function Categories({ vision = "defis" }) {
   const allCats = [
-  { color: "var(--orange-500)", title: "Créatif", desc: <>48 possibilités de penser différemment et apporter de la fraîcheur à ton jeu.</>, count: "48 cartes",
+  { color: "var(--orange-500)", title: "Créatif", desc: <>48 possibilités de penser différemment et apporter de la fraîcheur à ton jeu.</>,
     stats: [{num:"48",lbl:"Cartes"},{num:"5",lbl:"Catégories"},{num:"∞",lbl:"Combinaisons"}],
     cards: [
     "visuelles-cartes/CONTRAINTE_CLUSTER.svg",
@@ -474,8 +571,8 @@ function Categories({ vision = "defis" }) {
     "visuelles-cartes/TECHNIQUE_SLIDE.svg",
     "visuelles-cartes/TECHNIQUE_TREMOLO.svg",
     "visuelles-cartes/TECHNIQUE_VIBRATO.svg"] },
-  { color: "var(--blue-500)", title: "CAGED", desc: <>Cartographie complète du manche — positions majeures, mineures, septièmes et suspendues.</>, count: "35 cartes (recto - verso)",
-    stats: [{num:"35",lbl:"Cartes"},{num:"5",lbl:"Formes"},{num:"∞",lbl:"Combinaisons"}],
+  { color: "var(--blue-500)", title: "CAGED", desc: <>Cartographie complète du manche — positions majeures, mineures, septièmes et suspendues.</>,
+    stats: [{num:"35",lbl:"Cartes recto-verso"},{num:"5",lbl:"Formes"},{num:"∞",lbl:"Combinaisons"}],
     cards: [
     "visuelles-cartes/CAGED-INTERVALLES_C.svg",
     "visuelles-cartes/CAGED-INTERVALLES_C7.svg",
@@ -554,8 +651,8 @@ function Categories({ vision = "defis" }) {
   return (
     <section className="section" id="categories">
       <div className="container">
-        <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
-          <h2 className="h-section" style={{ marginTop: 14 }}>Le deck complet</h2>
+        <div className="section__head">
+          <h2 className="h-section">Le deck complet</h2>
         </div>
         <div className="cats-grid cats-grid--single">
           {cats.map((c, i) =>
@@ -577,8 +674,8 @@ function SocialProof() {
   return (
     <section className="section section--alt" id="preuve">
       <div className="container">
-        <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
-          <h2 className="h-section" style={{ marginTop: 14 }}>Ils tournaient en rond.<br />Ils ont décroché.</h2>
+        <div className="section__head">
+          <h2 className="h-section">Ils tournaient en rond.<br />Ils ont décroché.</h2>
         </div>
         <div className="testimonials">
           {t.map((v, i) =>
@@ -607,7 +704,7 @@ function Objection() {
       <div className="container">
         <div className="objection-grid">
           <div>
-            <h2 className="h-section" style={{ marginTop: 14 }}>On adresse l'objection qui tue tout.</h2>
+            <h2 className="h-section">On adresse l'objection qui tue tout.</h2>
             <p className="body body--lg" style={{ marginTop: 18, maxWidth: "40ch" }}>La question que tout le monde se pose avant de payer 25 €. Pas de langue de bois.</p>
           </div>
           <div className="qa">
@@ -632,7 +729,6 @@ function Objection() {
 
 /* ============== POURQUOI GUITAR FLOW ============== */
 function WhySection() {
-  const [openIdx, setOpenIdx] = useS(null);
   const pillars = [
     {
       icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>,
@@ -654,8 +750,8 @@ function WhySection() {
   return (
     <section className="section section--alt" id="why">
       <div className="container">
-        <div className="section__head" style={{ textAlign: "left", maxWidth: "none" }}>
-          <h2 className="h-section" style={{ marginTop: 14 }}>Pourquoi Guitar Flow ?</h2>
+        <div className="section__head">
+          <h2 className="h-section">Pourquoi Guitar Flow ?</h2>
         </div>
         <div className="why-body">
           <p className="body body--lg why-para">J'ai d'abord créé Guitar Flow pour un usage personnel. Ça fait +10 ans que je joue, j'adore la guitare et la musique. C'est une version plus fun de la méditation. Parfois, je suis frustré de ne pas trouver quoi jouer et je tourne en rond. On passe tous par là : des tonnes de bouts de morceau et tout finit par se ressembler.</p>
@@ -665,13 +761,8 @@ function WhySection() {
           <h3 className="why-philosophy__title">Ma philosophie est simple :</h3>
           <div className="why-pillars">
             {pillars.map((p, i) =>
-              <article className={"why-pillar" + (openIdx === i ? " is-open" : "")} key={i}>
-                <button
-                  type="button"
-                  className="why-pillar__icon"
-                  aria-expanded={openIdx === i}
-                  onClick={() => setOpenIdx(openIdx === i ? null : i)}
-                >{p.icon}</button>
+              <article className="why-pillar" key={i}>
+                <span className="why-pillar__icon" aria-hidden="true">{p.icon}</span>
                 <div className="why-pillar__content">
                   <strong className="why-pillar__title">{p.title}</strong>
                   <p className="why-pillar__desc">{p.desc}</p>
@@ -693,12 +784,12 @@ function FinalCTA({ bg = "dark" }) {
         <h2 className="cta__title">Tire une carte et kiffe.</h2>
         <p className="cta__sub">Pas de méthode miracle. Pas de promesses démesurées. Juste un paquet de cartes pour faire de tes sessions guitare de vrais moments de découvertes.</p>
         <div className="cta__form">
-          <EmailField variant={bg} />
+          <EmailField variant={bg} location="cta" />
         </div>
-        <div className="cta__price">
-          <span className="cta__price-pill"><b>29,10€</b></span>
-          <span>C'est moins cher qu'un livre de théorie qui finira dans ton placard.</span>
-        </div>
+        <p className="cta__price">
+          <span className="cta__price-pill">29,10 €</span>
+          <span className="cta__price-note">Moins cher qu'un livre de théorie qui finira dans ton placard.</span>
+        </p>
       </div>
     </section>);
 
@@ -713,10 +804,8 @@ function Footer() {
           <a href="#top" className="logo">Guitar Flow<span className="logo__sq" aria-hidden="true"></span></a>
         </div>
         <div className="footer__right">
-          {/* <a href="Blog.html">Blog</a>
-          <span>·</span> */}
+          {/* <a href="Blog.html">Blog</a> */}
           <a href="mailto:salut@guitarflowcards.com">Contact</a>
-          <span>·</span>
           <span>From Lyon with love 🎸❤️</span>
         </div>
       </div>

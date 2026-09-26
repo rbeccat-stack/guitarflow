@@ -1,0 +1,32 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "clipped-overflow-container",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-26T16:26:26.559Z",
+        "reason": "agent: overflow-x clip on <html> is the documented sticky-nav fix (CLAUDE.md); it only clips the horizontal axis and the skip link moves vertically"
+      },
+      {
+        "rule": "overused-font",
+        "value": "space grotesk",
+        "createdAt": "2026-09-26T16:29:10.532Z",
+        "reason": "agent: Space Grotesk is the pinned brand face in colors_and_type.css tokens, predates this session; polish does not change the type system"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-26T16:29:10.702Z",
+        "reason": "agent: herodeck scrolling strip is a documented hero element (CLAUDE.md Herodeck), predates this session, respects prefers-reduced-motion"
+      }
+    ]
+  }
+}

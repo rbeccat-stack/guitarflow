@@ -2,20 +2,67 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Guitar Flow</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>Guitar Flow — 83 cartes pour débloquer tes sessions guitare</title>
+<meta name="description" content="Un deck de cartes physiques pour guitaristes : 48 défis créatifs et 35 positions CAGED. Tire une carte, joue. Fini les sessions qui tournent en rond."/>
+<meta name="theme-color" content="#FAFAF7"/>
+<!-- Un seul thème, clair : empêche le « mode sombre forcé » de Chrome Android
+     et de Samsung Internet de repeindre la page -->
+<meta name="color-scheme" content="light only"/>
+<link rel="canonical" href="https://guitarflowcards.com/"/>
+
+<!-- Partage réseaux sociaux. og:image : assets/og-image.png, 1200×630. -->
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Guitar Flow"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:title" content="Guitar Flow — Tire une carte et kiffe."/>
+<meta property="og:description" content="48 défis créatifs + 35 positions CAGED dans un seul deck. Pas une méthode : un déclencheur de 30 secondes pour tes sessions guitare."/>
+<meta property="og:url" content="https://guitarflowcards.com/"/>
+<meta property="og:image" content="https://guitarflowcards.com/assets/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Trois cartes Guitar Flow en éventail et le titre « Tire une carte et kiffe. »"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<!-- iOS ignore le SVG pour l'écran d'accueil : sans ce PNG, il prend une capture de la page -->
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://unpkg.com" crossorigin/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"/>
 <link rel="stylesheet" href="colors_and_type.css"/>
 <link rel="stylesheet" href="styles.css"/>
+
+<!-- ------------------------------------------------------------------
+     TRACKING — configuration du site (avant tout script de mesure)
+     - formEndpoint : URL qui reçoit les inscriptions (Make webhook, Formspree,
+       Brevo…). Tant qu'il est vide, le formulaire simule le succès sans rien
+       envoyer.
+     - gtmId : identifiant Google Tag Manager (GTM-XXXXXXX). Quand il est
+       renseigné, tracking.js injecte le conteneur ; GA4, Google Ads et le
+       pixel Meta se configurent ensuite dans GTM, pas ici.
+     ------------------------------------------------------------------ -->
+<script>
+  window.GF_CONFIG = {
+    formEndpoint: "",
+    gtmId: ""
+  };
+</script>
+<script src="tracking.js"></script>
 </head>
 <body data-palette="base" data-density="breathing">
+<a href="#solution" class="skip-link">Aller au contenu</a>
 <div id="root"></div>
+<noscript>
+  <p style="max-width:40ch;margin:96px auto;padding:0 20px;font:18px/1.5 'Space Grotesk',system-ui,sans-serif;color:#2E2D28">
+    Guitar Flow a besoin de JavaScript pour afficher ses cartes. Active-le, ou écris-nous à
+    <a href="mailto:salut@guitarflowcards.com">salut@guitarflowcards.com</a>.
+  </p>
+</noscript>
 
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
 <script type="text/babel" src="tweaks-panel.jsx"></script>
