@@ -705,7 +705,7 @@ function Objection() {
         <div className="objection-grid">
           <div>
             <h2 className="h-section">On adresse l'objection qui tue tout.</h2>
-            <p className="body body--lg" style={{ marginTop: 18, maxWidth: "40ch" }}>La question que tout le monde se pose avant de payer 25 €. Pas de langue de bois.</p>
+            <p className="body body--lg" style={{ marginTop: 18, maxWidth: "40ch" }}>La question que tout le monde se pose avant de payer 19,10 €. Pas de langue de bois.</p>
           </div>
           <div className="qa">
             <div className="qa__row qa__row--q">
@@ -787,7 +787,7 @@ function FinalCTA({ bg = "dark" }) {
           <EmailField variant={bg} location="cta" />
         </div>
         <p className="cta__price">
-          <span className="cta__price-pill">29,10 €</span>
+          <span className="cta__price-pill">19,10 €</span>
           <span className="cta__price-note">Moins cher qu'un livre de théorie qui finira dans ton placard.</span>
         </p>
       </div>
