@@ -818,7 +818,7 @@ function Footer() {
         </div>
         <div className="footer__right">
           {/* <a href="Blog.html">Blog</a> */}
-          <a href="mailto:salut@guitarflowcards.com">Contact</a>
+          <a href="mailto:remibekka@gmail.com">Contact</a>
           <span>From Lyon with love 🎸❤️</span>
         </div>
       </div>
