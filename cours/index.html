@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>Cours de guitare avec Rémi — Guitar Flow</title>
+<meta name="description" content="Cours de guitare à Lyon avec Rémi. Laisse ton contact, je te recontacte sous 24 h."/>
+<!-- Page de capture ouverte par la puce NFC / le QR code : pas de référencement -->
+<meta name="robots" content="noindex"/>
+<meta name="theme-color" content="#FAFAF7"/>
+<meta name="color-scheme" content="light only"/>
+<meta property="og:title" content="Cours de guitare avec Rémi"/>
+<meta property="og:description" content="On s'est croisés ? Laisse ton contact, je te recontacte sous 24 h."/>
+<meta property="og:image" content="https://www.guitarflow.fr/assets/og-image.png"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"/>
+<script>
+  /* ------------------------------------------------------------------
+     CONFIG — à ajuster sans toucher au reste
+     - endpoint : webhook Make « GF — Capture élèves /cours » (→ Google Sheet + mail)
+     - remiPhone : si renseigné (format +33…), un bouton « Enregistrer le
+       contact de Rémi » apparaît après l'envoi (vCard).
+     ------------------------------------------------------------------ */
+  window.GF_COURS = {
+    endpoint: "https://hook.eu2.make.com/ast0xy647a2vsw4cuujoxwj1n9mwuw9r",
+    remiPhone: "",
+    remiEmail: "remibekka@gmail.com"
+  };
+</script>
+<style>
+  :root{
+    --bg:#FAFAF7; --paper:#fff; --ink:#121110; --ink-2:#4A4842; --ink-3:#8E8A80;
+    --line:#DCD9D0; --line-soft:#ECEAE3; --accent:#E89B5A; --accent-ink:#95562A; --accent-bg:#FAEDDC;
+    --radius:14px; --gutter:20px;
+    --font:"Space Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    min-height:100svh;background:var(--bg);color:var(--ink);font:400 17px/1.45 var(--font);
+    display:flex;flex-direction:column;align-items:center;
+    padding:max(18px,env(safe-area-inset-top)) max(var(--gutter),env(safe-area-inset-right)) max(20px,env(safe-area-inset-bottom)) max(var(--gutter),env(safe-area-inset-left));
+  }
+  main{width:100%;max-width:420px;flex:1;display:flex;flex-direction:column}
+
+  .brand{display:flex;align-items:center;gap:8px;font-weight:500;font-size:14px;color:var(--ink-2);letter-spacing:.01em}
+  .brand i{width:18px;height:18px;border-radius:5px;background:var(--accent);display:block}
+
+  /* Les six cordes : vibrent une fois à l'ouverture, puis à chaque choix de niveau et à l'envoi */
+  .strings{display:block;width:100%;height:58px;margin:18px 0 6px;overflow:visible}
+  .strings line{stroke:var(--ink);stroke-linecap:round;transform-box:fill-box;transform-origin:center}
+  .strings line.on{stroke:var(--accent)}
+  .strum{animation:strum .9s cubic-bezier(.2,.6,.3,1) both}
+  @keyframes strum{
+    0%{transform:translateY(0)} 10%{transform:translateY(-2.4px)} 22%{transform:translateY(2px)}
+    36%{transform:translateY(-1.3px)} 52%{transform:translateY(.8px)} 70%{transform:translateY(-.35px)} 100%{transform:translateY(0)}
+  }
+
+  h1{font-weight:700;font-size:clamp(28px,8.4vw,36px);line-height:1.05;letter-spacing:-.025em;margin-top:6px}
+  h1 em{font-style:normal;color:var(--accent-ink)}
+  .sub{color:var(--ink-2);margin-top:10px;font-size:16px}
+
+  form{margin-top:22px;display:flex;flex-direction:column;gap:14px}
+  label,.legend{font-size:13px;font-weight:500;color:var(--ink-2);display:block;margin-bottom:6px;letter-spacing:.01em}
+  input[type=text],input[type=tel],input[type=email]{
+    width:100%;height:52px;padding:0 14px;border:1px solid var(--line);border-radius:var(--radius);
+    background:var(--paper);font:500 17px var(--font);color:var(--ink);outline:none;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
+  input::placeholder{color:var(--ink-3);font-weight:400}
+
+  .contact-head{display:flex;justify-content:space-between;align-items:baseline}
+  .toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:2px;background:var(--paper);margin-bottom:6px}
+  .toggle button{border:0;background:none;font:500 13px var(--font);color:var(--ink-3);padding:5px 11px;border-radius:999px;cursor:pointer}
+  .toggle button[aria-pressed=true]{background:var(--ink);color:#fff}
+
+  .levels{display:grid;grid-template-columns:1fr;gap:8px}
+  .level{
+    display:flex;align-items:center;gap:12px;min-height:50px;padding:10px 14px;text-align:left;
+    border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);
+    font:500 16px var(--font);color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s;
+  }
+  .level small{display:block;font-weight:400;font-size:13px;color:var(--ink-3)}
+  .level .dot{flex:none;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--line);position:relative}
+  .level[aria-checked=true]{border-color:var(--accent);background:var(--accent-bg)}
+  .level[aria-checked=true] .dot{border-color:var(--accent-ink)}
+  .level[aria-checked=true] .dot::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--accent-ink)}
+
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+  .submit{
+    margin-top:4px;height:56px;border:0;border-radius:var(--radius);background:var(--ink);color:#fff;
+    font:700 17px var(--font);letter-spacing:.01em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;
+    transition:transform .1s, opacity .2s;
+  }
+  .submit:active{transform:scale(.985)}
+  .submit[disabled]{opacity:.6}
+  .submit .arrow{color:var(--accent);font-size:20px;line-height:1}
+  .err{color:#8B2E2C;font-size:14px;min-height:0}
+  .err:empty{display:none}
+
+  .legal{margin-top:auto;padding-top:22px;font-size:12px;color:var(--ink-3);line-height:1.4}
+  .legal a{color:inherit}
+
+  /* Écran de confirmation */
+  .done{display:none;flex-direction:column;align-items:flex-start;margin-top:8px}
+  .sent .done{display:flex}
+  .sent form,.sent .intro{display:none}
+  .done h2{font-weight:700;font-size:clamp(28px,8.4vw,36px);line-height:1.05;letter-spacing:-.025em}
+  .done p{color:var(--ink-2);margin-top:10px}
+  .done .actions{display:flex;flex-direction:column;gap:10px;width:100%;margin-top:22px}
+  .btn-ghost{
+    display:flex;align-items:center;justify-content:center;height:52px;border:1px solid var(--line);border-radius:var(--radius);
+    background:var(--paper);color:var(--ink);font:500 16px var(--font);text-decoration:none;
+  }
+  .reveal{animation:reveal .5s cubic-bezier(.2,.7,.3,1) both}
+  @keyframes reveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  @media (min-width:768px){ body{padding-top:48px} }
+  @media (prefers-reduced-motion:reduce){ .strum,.reveal{animation:none} }
+</style>
+</head>
+<body>
+<main id="app">
+  <div class="brand"><i aria-hidden="true"></i>Guitar Flow · Rémi</div>
+
+  <svg class="strings" id="strings" viewBox="0 0 400 58" preserveAspectRatio="none" aria-hidden="true">
+    <!-- Mi grave (épaisse) en haut → mi aigu (fine) en bas -->
+    <line x1="0" x2="400" y1="4"  y2="4"  stroke-width="2.6"/>
+    <line x1="0" x2="400" y1="14" y2="14" stroke-width="2.1"/>
+    <line x1="0" x2="400" y1="24" y2="24" stroke-width="1.7"/>
+    <line x1="0" x2="400" y1="34" y2="34" stroke-width="1.3"/>
+    <line x1="0" x2="400" y1="44" y2="44" stroke-width="1"/>
+    <line x1="0" x2="400" y1="54" y2="54" stroke-width=".75"/>
+  </svg>
+
+  <div class="intro">
+    <h1>On s'est croisés.<br/><em>On joue ensemble&nbsp;?</em></h1>
+    <p class="sub">Cours de guitare à Lyon ou en visio. Laisse-moi ton contact, je te réponds sous 24&nbsp;h.</p>
+  </div>
+
+  <form id="form" novalidate>
+    <div>
+      <label for="first">Ton prénom</label>
+      <input id="first" name="first" type="text" autocomplete="given-name" autocapitalize="words" enterkeyhint="next" placeholder="Camille" required maxlength="60"/>
+    </div>
+
+    <div>
+      <div class="contact-head">
+        <label for="contact" id="contact-label">Ton numéro</label>
+        <div class="toggle" role="group" aria-label="Type de contact">
+          <button type="button" data-type="tel" aria-pressed="true">Tél</button>
+          <button type="button" data-type="email" aria-pressed="false">Email</button>
+        </div>
+      </div>
+      <input id="contact" name="contact" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="done" placeholder="06 12 34 56 78" required maxlength="120"/>
+    </div>
+
+    <div role="radiogroup" aria-labelledby="lvl-legend">
+      <span class="legend" id="lvl-legend">Ton niveau</span>
+      <div class="levels">
+        <button type="button" class="level" role="radio" aria-checked="false" data-level="debutant" data-string="0"><span class="dot"></span><span>Je débute<small>Jamais joué, ou presque</small></span></button>
+        <button type="button" class="level" role="radio" aria-checked="false" data-level="intermediaire" data-string="2"><span class="dot"></span><span>Je me débrouille<small>Quelques accords, des morceaux</small></span></button>
+        <button type="button" class="level" role="radio" aria-checked="false" data-level="confirme" data-string="5"><span class="dot"></span><span>Je veux passer un cap<small>Je joue depuis un moment</small></span></button>
+      </div>
+    </div>
+
+    <!-- Piège à robots : invisible pour un humain -->
+    <div class="hp" aria-hidden="true"><label>Site web<input type="text" name="website" tabindex="-1" autocomplete="off"/></label></div>
+
+    <p class="err" id="err" role="alert"></p>
+    <button class="submit" id="submit" type="submit">C'est parti <span class="arrow" aria-hidden="true">→</span></button>
+  </form>
+
+  <section class="done" id="done" aria-live="polite">
+    <h2 id="done-title">Bien reçu&nbsp;🤘</h2>
+    <p id="done-text">Je te recontacte d'ici demain. À très vite, guitare en main.</p>
+    <div class="actions">
+      <a class="btn-ghost" id="vcard" href="#" style="display:none">Enregistrer le contact de Rémi</a>
+      <a class="btn-ghost" href="https://www.guitarflow.fr/?utm_source=cours&utm_medium=capture">Découvrir les cartes Guitar Flow</a>
+    </div>
+  </section>
+
+  <p class="legal">Ton contact sert uniquement à te recontacter pour des cours. Jamais revendu, supprimé sur simple demande à <a href="mailto:remibekka@gmail.com">remibekka@gmail.com</a>.</p>
+</main>
+
+<script>
+(function () {
+  var cfg = window.GF_COURS || {};
+  var app = document.getElementById("app");
+  var form = document.getElementById("form");
+  var first = document.getElementById("first");
+  var contact = document.getElementById("contact");
+  var contactLabel = document.getElementById("contact-label");
+  var err = document.getElementById("err");
+  var submit = document.getElementById("submit");
+  var lines = document.querySelectorAll("#strings line");
+  var levels = document.querySelectorAll(".level");
+  var toggles = document.querySelectorAll(".toggle button");
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var params = new URLSearchParams(location.search);
+  var source = (params.get("s") || params.get("utm_source") || "direct").slice(0, 40);
+  var contactType = "tel";
+  var level = "";
+
+  /* ---------- Cordes ---------- */
+  function pluck(i, delay) {
+    var l = lines[i];
+    if (!l || reduce) return;
+    setTimeout(function () {
+      l.classList.remove("strum"); void l.getBBox(); l.classList.add("strum");
+    }, delay || 0);
+  }
+  function strumAll(up) {
+    for (var i = 0; i < lines.length; i++) pluck(up ? lines.length - 1 - i : i, i * 45);
+  }
+  function buzz(p) { try { navigator.vibrate && navigator.vibrate(p); } catch (e) {} }
+  setTimeout(function () { strumAll(false); }, 250);
+
+  /* ---------- Tél / Email ---------- */
+  function setType(t) {
+    contactType = t;
+    toggles.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.type === t)); });
+    if (t === "email") {
+      contact.type = "email"; contact.inputMode = "email"; contact.autocomplete = "email";
+      contact.placeholder = "camille@mail.com"; contactLabel.textContent = "Ton email";
+    } else {
+      contact.type = "tel"; contact.inputMode = "tel"; contact.autocomplete = "tel";
+      contact.placeholder = "06 12 34 56 78"; contactLabel.textContent = "Ton numéro";
+    }
+    contact.value = ""; contact.focus();
+  }
+  toggles.forEach(function (b) { b.addEventListener("click", function () { setType(b.dataset.type); }); });
+
+  /* ---------- Niveau ---------- */
+  levels.forEach(function (b) {
+    b.addEventListener("click", function () {
+      level = b.dataset.level;
+      levels.forEach(function (x) { x.setAttribute("aria-checked", String(x === b)); });
+      lines.forEach(function (l) { l.classList.remove("on"); });
+      var s = +b.dataset.string; lines[s].classList.add("on"); pluck(s); buzz(12);
+      err.textContent = "";
+    });
+  });
+
+  /* ---------- Validation ---------- */
+  function cleanPhone(v) { return v.replace(/[^\d+]/g, ""); }
+  function validate() {
+    if (first.value.trim().length < 2) return [first, "Ton prénom, pour que je sache qui tu es."];
+    var c = contact.value.trim();
+    if (contactType === "tel") {
+      var d = cleanPhone(c).replace(/^\+33/, "0").replace(/^0033/, "0");
+      if (d.replace(/\D/g, "").length < 9) return [contact, "Ce numéro a l'air incomplet."];
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(c)) {
+      return [contact, "Cet email a l'air incomplet."];
+    }
+    if (!level) return [levels[0], "Choisis ton niveau, ça m'aide à préparer le premier cours."];
+    return null;
+  }
+
+  /* ---------- Envoi ----------
+     Formulaire encodé en x-www-form-urlencoded + mode no-cors : requête « simple »,
+     sans pré-vol CORS. La réponse est opaque, mais la promesse ne rejette qu'en cas
+     de vrai échec réseau — donc pas de faux « erreur » si le webhook a bien reçu. */
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    err.textContent = "";
+    if (form.website.value) return; // robot
+    var bad = validate();
+    if (bad) { err.textContent = bad[1]; bad[0].focus(); buzz([20, 40, 20]); return; }
+
+    var name = first.value.trim();
+    var body = new URLSearchParams({
+      first: name,
+      contact: contactType === "tel" ? cleanPhone(contact.value.trim()) : contact.value.trim(),
+      contact_type: contactType,
+      level: level,
+      source: source,
+      page: location.pathname,
+      ts: new Date().toISOString()
+    });
+
+    submit.disabled = true; submit.firstChild.nodeValue = "Envoi… ";
+    var send = cfg.endpoint
+      ? fetch(cfg.endpoint, { method: "POST", mode: "no-cors", body: body, keepalive: true })
+      : Promise.resolve();
+
+    send.then(function () {
+      document.getElementById("done-title").innerHTML = "Bien reçu, " + escapeHtml(name) + "&nbsp;🤘";
+      app.classList.add("sent");
+      document.getElementById("done").classList.add("reveal");
+      strumAll(true); buzz([15, 30, 15, 30, 40]);
+      window.scrollTo(0, 0);
+    }).catch(function () {
+      submit.disabled = false; submit.firstChild.nodeValue = "Réessayer ";
+      err.innerHTML = "Pas de réseau, on dirait. Réessaie, ou <a href=\"sms:" + (cfg.remiPhone || "") +
+        "?&body=" + encodeURIComponent("Salut Rémi, c'est " + name + " ! Pour les cours de guitare : " + contact.value) +
+        "\">envoie-moi un SMS</a>.";
+    });
+  });
+
+  function escapeHtml(s) { return s.replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+
+  /* ---------- vCard (si numéro renseigné) ---------- */
+  if (cfg.remiPhone) {
+    var v = ["BEGIN:VCARD", "VERSION:3.0", "N:;Rémi;;;", "FN:Rémi — Cours de guitare", "ORG:Guitar Flow",
+      "TEL;TYPE=CELL:" + cfg.remiPhone, cfg.remiEmail ? "EMAIL:" + cfg.remiEmail : "", "URL:https://www.guitarflow.fr", "END:VCARD"]
+      .filter(Boolean).join("\r\n");
+    var a = document.getElementById("vcard");
+    a.href = "data:text/vcard;charset=utf-8," + encodeURIComponent(v);
+    a.download = "Remi-Guitare.vcf";
+    a.style.display = "flex";
+  }
+})();
+</script>
+</body>
+</html>

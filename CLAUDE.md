@@ -88,3 +88,11 @@ Les deux visions partagent volontairement la **même mise en page** : titres de 
 - **Partage et icônes** : `assets/og-image.png` (1200×630, généré depuis les vraies cartes) et `apple-touch-icon.png` (180×180). `<meta name="color-scheme" content="light only">` bloque le mode sombre forcé de Chrome Android / Samsung Internet.
 - La **favicon** est `favicon.svg` — un carré orange arrondi (#E89B5A) reproduisant le picto du logo.
 - `WhySection` se place juste avant `FinalCTA` dans `app.jsx` et expose son composant via `window.WhySection`.
+
+## Page de capture élèves (`/cours`)
+
+`cours/index.html` est une page **autonome** (HTML + CSS + JS vanilla, sans React ni Babel) pour qu'elle s'affiche instantanément quand on scanne la puce NFC collée derrière le téléphone de Rémi, ou le QR code de secours. Elle n'est liée nulle part sur le site et porte `noindex`.
+- URL encodée : `https://www.guitarflow.fr/cours/?s=nfc` sur la puce, `?s=qr` sur le QR. Le paramètre `s` part dans la colonne « Source ».
+- Envoi : POST `x-www-form-urlencoded` en `mode: "no-cors"` vers le webhook Make `GF-CAPTURE-ELEVES-COURS` (scénario « GF — Capture élèves /cours », qui ajoute une ligne au Google Sheet « Guitar Flow — Contacts élèves (page /cours) » et envoie un mail à Rémi). Pas de JSON : il déclencherait un pré-vol CORS.
+- Champs envoyés : `first`, `contact`, `contact_type` (`tel`|`email`), `level` (`debutant`|`intermediaire`|`confirme`), `source`, `page`, `ts`.
+- `window.GF_COURS.remiPhone` : si renseigné, un bouton vCard « Enregistrer le contact de Rémi » apparaît après l'envoi.
