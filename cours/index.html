@@ -20,15 +20,28 @@
 <script>
   /* ------------------------------------------------------------------
      CONFIG — à ajuster sans toucher au reste
-     - endpoint : webhook Make « GF — Capture élèves /cours » (→ Google Sheet + mail)
+     - hubspot : portail + ID du formulaire HubSpot « Capture élèves /cours ».
+       Quand formGuid est renseigné, l'envoi part vers l'API Forms v3 de HubSpot
+       (contact créé/mis à jour + notification HubSpot). Sinon : repli sur Make.
+     - endpoint : ancien webhook Make (→ Google Sheet + mail), utilisé seulement
+       tant que hubspot.formGuid est vide.
      - remiPhone : si renseigné (format +33…), un bouton « Enregistrer le
        contact de Rémi » apparaît après l'envoi (vCard).
      ------------------------------------------------------------------ */
   window.GF_COURS = {
+    hubspot: { portalId: "149861633", formGuid: "", region: "" }, // region : "na1" ou "eu1" (vide = pas de code de suivi)
     endpoint: "https://hook.eu2.make.com/ast0xy647a2vsw4cuujoxwj1n9mwuw9r",
     remiPhone: "",
     remiEmail: "remibekka@gmail.com"
   };
+  /* Code de suivi HubSpot (pose le cookie hubspotutk, relié au contact à l'envoi) */
+  (function (h) {
+    if (!h || !h.region) return;
+    var sc = document.createElement("script");
+    sc.id = "hs-script-loader"; sc.async = true; sc.defer = true;
+    sc.src = "https://js" + (h.region === "eu1" ? "-eu1" : "") + ".hs-scripts.com/" + h.portalId + ".js";
+    document.head.appendChild(sc);
+  })(window.GF_COURS.hubspot);
 </script>
 <style>
   :root{
@@ -264,9 +277,9 @@
   }
 
   /* ---------- Envoi ----------
-     Formulaire encodé en x-www-form-urlencoded + mode no-cors : requête « simple »,
-     sans pré-vol CORS. La réponse est opaque, mais la promesse ne rejette qu'en cas
-     de vrai échec réseau — donc pas de faux « erreur » si le webhook a bien reçu. */
+     HubSpot si hubspot.formGuid est renseigné (réponse lisible : une erreur 4xx
+     s'affiche), sinon webhook Make en no-cors (réponse opaque, ne rejette qu'en
+     cas de vrai échec réseau). */
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     err.textContent = "";
@@ -275,20 +288,41 @@
     if (bad) { err.textContent = bad[1]; bad[0].focus(); buzz([20, 40, 20]); return; }
 
     var name = first.value.trim();
-    var body = new URLSearchParams({
-      first: name,
-      contact: contactType === "tel" ? cleanPhone(contact.value.trim()) : contact.value.trim(),
-      contact_type: contactType,
-      level: level,
-      source: source,
-      page: location.pathname,
-      ts: new Date().toISOString()
-    });
+    var value = contactType === "tel" ? cleanPhone(contact.value.trim()) : contact.value.trim();
+    var hs = cfg.hubspot || {};
+    var send;
 
     submit.disabled = true; submit.firstChild.nodeValue = "Envoi… ";
-    var send = cfg.endpoint
-      ? fetch(cfg.endpoint, { method: "POST", mode: "no-cors", body: body, keepalive: true })
-      : Promise.resolve();
+
+    if (hs.formGuid) {
+      /* HubSpot Forms API v3 (publique, sans clé) : JSON + CORS autorisé.
+         Noms internes des propriétés : firstname, phone|email, niveau_guitare, source_capture. */
+      var host = hs.region === "eu1" ? "https://api-eu1.hsforms.com" : "https://api.hsforms.com";
+      var hutk = (document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/) || [])[1];
+      var payload = {
+        fields: [
+          { objectTypeId: "0-1", name: "firstname", value: name },
+          { objectTypeId: "0-1", name: contactType === "tel" ? "phone" : "email", value: value },
+          { objectTypeId: "0-1", name: "niveau_guitare", value: level },
+          { objectTypeId: "0-1", name: "source_capture", value: source }
+        ],
+        context: { pageUri: location.href, pageName: document.title }
+      };
+      if (hutk) payload.context.hutk = hutk;
+      send = fetch(host + "/submissions/v3/integration/submit/" + hs.portalId + "/" + hs.formGuid, {
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), keepalive: true
+      }).then(function (r) {
+        if (!r.ok) return r.text().then(function (t) { console.warn("HubSpot", r.status, t); throw new Error("hs " + r.status); });
+      });
+    } else if (cfg.endpoint) {
+      /* Repli Make : x-www-form-urlencoded + no-cors (requête « simple », pas de pré-vol CORS). */
+      send = fetch(cfg.endpoint, { method: "POST", mode: "no-cors", keepalive: true, body: new URLSearchParams({
+        first: name, contact: value, contact_type: contactType, level: level, source: source,
+        page: location.pathname, ts: new Date().toISOString()
+      }) });
+    } else {
+      send = Promise.resolve();
+    }
 
     send.then(function () {
       document.getElementById("done-title").innerHTML = "Bien reçu, " + escapeHtml(name) + "&nbsp;🤘";
@@ -298,7 +332,7 @@
       window.scrollTo(0, 0);
     }).catch(function () {
       submit.disabled = false; submit.firstChild.nodeValue = "Réessayer ";
-      err.innerHTML = "Pas de réseau, on dirait. Réessaie, ou <a href=\"sms:" + (cfg.remiPhone || "") +
+      err.innerHTML = "Ça n'est pas passé. Réessaie, ou <a href=\"sms:" + (cfg.remiPhone || "") +
         "?&body=" + encodeURIComponent("Salut Rémi, c'est " + name + " ! Pour les cours de guitare : " + contact.value) +
         "\">envoie-moi un SMS</a>.";
     });

@@ -98,6 +98,16 @@
     document.head.appendChild(s);
   }
 
+  /* ---------- HubSpot (code de suivi) ----------
+     Activé si GF_CONFIG.hubspotId et hubspotRegion sont renseignés. Le bandeau
+     cookies se règle dans HubSpot (Paramètres > Confidentialité et consentement). */
+  if (cfg.hubspotId && /^\d+$/.test(cfg.hubspotId) && (cfg.hubspotRegion === "na1" || cfg.hubspotRegion === "eu1")) {
+    var hs = document.createElement("script");
+    hs.id = "hs-script-loader"; hs.async = true; hs.defer = true;
+    hs.src = "https://js" + (cfg.hubspotRegion === "eu1" ? "-eu1" : "") + ".hs-scripts.com/" + cfg.hubspotId + ".js";
+    document.head.appendChild(hs);
+  }
+
   // Premier événement : la vision affichée et la source. GTM peut s'en servir
   // pour découper les rapports "défis" vs "CAGED".
   window.gfTrack("gf_ready", { vision: window.gfAttribution().vision });
