@@ -819,6 +819,8 @@ function Footer() {
         <div className="footer__right">
           {/* <a href="Blog.html">Blog</a> */}
           <a href="mailto:remibekka@gmail.com">Contact</a>
+          <a href="/mentions-legales/">Mentions légales</a>
+          <a href="/confidentialite/">Confidentialité</a>
           <span>From Lyon with love 🎸❤️</span>
         </div>
       </div>
