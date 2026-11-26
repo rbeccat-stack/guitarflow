@@ -21,16 +21,13 @@
   /* ------------------------------------------------------------------
      CONFIG — à ajuster sans toucher au reste
      - hubspot : portail + ID du formulaire HubSpot « Capture élèves /cours ».
-       Quand formGuid est renseigné, l'envoi part vers l'API Forms v3 de HubSpot
-       (contact créé/mis à jour + notification HubSpot). Sinon : repli sur Make.
-     - endpoint : ancien webhook Make (→ Google Sheet + mail), utilisé seulement
-       tant que hubspot.formGuid est vide.
+       L'envoi part vers l'API Forms v3 de HubSpot (contact créé/mis à jour +
+       notification HubSpot). Vide = la page simule l'envoi sans rien transmettre.
      - remiPhone : si renseigné (format +33…), un bouton « Enregistrer le
        contact de Rémi » apparaît après l'envoi (vCard).
      ------------------------------------------------------------------ */
   window.GF_COURS = {
     hubspot: { portalId: "149861633", formGuid: "c6454c4c-e84a-4c74-85dd-84e11d0ca9f1", region: "eu1" }, // region : "na1" ou "eu1" (vide = pas de code de suivi)
-    endpoint: "https://hook.eu2.make.com/ast0xy647a2vsw4cuujoxwj1n9mwuw9r",
     remiPhone: "",
     remiEmail: "remibekka@gmail.com"
   };
@@ -198,8 +195,6 @@
   var lines = document.querySelectorAll("#strings line");
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  var params = new URLSearchParams(location.search);
-  var source = (params.get("s") || params.get("utm_source") || "direct").slice(0, 40);
 
   /* ---------- Cordes ----------
      Elles vibrent à l'ouverture ; chaque champ a « sa » corde, qui s'allume et
@@ -233,10 +228,9 @@
   }
 
   /* ---------- Envoi ----------
-     HubSpot si hubspot.formGuid est renseigné (réponse lisible : une erreur 4xx
-     s'affiche). La source (?s=nfc|qr) n'est pas un champ : HubSpot la garde dans
-     l'URL de la page de conversion (context.pageUri). Sinon : webhook Make en
-     no-cors (réponse opaque, ne rejette qu'en cas de vrai échec réseau). */
+     API Forms v3 de HubSpot (réponse lisible : une erreur 4xx s'affiche).
+     La source (?s=nfc|qr) n'est pas un champ : HubSpot la garde dans l'URL de
+     la page de conversion (context.pageUri). */
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     err.textContent = "";
@@ -267,11 +261,6 @@
       }).then(function (r) {
         if (!r.ok) return r.text().then(function (t) { console.warn("HubSpot", r.status, t); throw new Error("hs " + r.status); });
       });
-    } else if (cfg.endpoint) {
-      send = fetch(cfg.endpoint, { method: "POST", mode: "no-cors", keepalive: true, body: new URLSearchParams({
-        first: fn + " " + ln, contact: tel, contact_type: "tel", level: "", source: source,
-        page: location.pathname, ts: new Date().toISOString()
-      }) });
     } else {
       send = Promise.resolve();
     }

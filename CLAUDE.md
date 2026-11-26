@@ -92,8 +92,9 @@ Les deux visions partagent volontairement la **même mise en page** : titres de 
 ## Page de capture élèves (`/cours`)
 
 `cours/index.html` est une page **autonome** (HTML + CSS + JS vanilla, sans React ni Babel) pour qu'elle s'affiche instantanément quand on scanne la puce NFC collée derrière le téléphone de Rémi, ou le QR code de secours. Elle n'est liée nulle part sur le site et porte `noindex`.
-- URL encodée : `https://www.guitarflow.fr/cours/?s=nfc` sur la puce, `?s=qr` sur le QR. Le paramètre `s` part dans la colonne « Source ».
-- Envoi : POST JSON vers l'**API Forms v3 publique de HubSpot** (`api-eu1.hsforms.com/submissions/v3/integration/submit/149861633/<formGuid>`, portail en région EU1), avec le cookie `hubspotutk` si présent. Config dans `window.GF_COURS.hubspot`. Si `formGuid` est vidé, la page retombe sur l'ancien webhook Make (`endpoint`, urlencoded + no-cors).
+- URL encodée : `https://www.guitarflow.fr/cours/?s=nfc` sur la puce, `?s=qr` sur le QR. Le paramètre `s` reste lisible dans HubSpot via l'URL de la page de conversion.
+- Envoi : POST JSON vers l'**API Forms v3 publique de HubSpot** (`api-eu1.hsforms.com/submissions/v3/integration/submit/149861633/<formGuid>`, portail en région EU1), avec le cookie `hubspotutk` si présent. Config dans `window.GF_COURS.hubspot`.
 - Code de suivi HubSpot : injecté sur `/cours` (via `GF_COURS.hubspot.region`) et sur le site (`GF_CONFIG.hubspotId` / `hubspotRegion` dans `index.html`, lu par `tracking.js`). Le bandeau cookies se règle côté HubSpot.
-- Champs (depuis le 2026-11-26) : prénom, nom, téléphone uniquement (limite 3 champs HubSpot gratuit). HubSpot : firstname, lastname, phone (normalisé en +33). La source ?s= reste visible dans HubSpot via context.pageUri. Repli Make : first = "prénom nom", level vide.
+- Piège : le formulaire HubSpot ne doit pas avoir de captcha (sinon toute soumission API est refusée) ni de propriété email requise.
+- Champs (depuis le 2026-11-26) : prénom, nom, téléphone uniquement (limite 3 champs HubSpot gratuit). HubSpot : firstname, lastname, phone (normalisé en +33). La source ?s= reste visible dans HubSpot via context.pageUri.
 - `window.GF_COURS.remiPhone` : si renseigné, un bouton vCard « Enregistrer le contact de Rémi » apparaît après l'envoi.
