@@ -93,6 +93,7 @@ Les deux visions partagent volontairement la **même mise en page** : titres de 
 
 `cours/index.html` est une page **autonome** (HTML + CSS + JS vanilla, sans React ni Babel) pour qu'elle s'affiche instantanément quand on scanne la puce NFC collée derrière le téléphone de Rémi, ou le QR code de secours. Elle n'est liée nulle part sur le site et porte `noindex`.
 - URL encodée : `https://www.guitarflow.fr/cours/?s=nfc` sur la puce, `?s=qr` sur le QR. Le paramètre `s` part dans la colonne « Source ».
-- Envoi : POST `x-www-form-urlencoded` en `mode: "no-cors"` vers le webhook Make `GF-CAPTURE-ELEVES-COURS` (scénario « GF — Capture élèves /cours », qui ajoute une ligne au Google Sheet « Guitar Flow — Contacts élèves (page /cours) » et envoie un mail à Rémi). Pas de JSON : il déclencherait un pré-vol CORS.
+- Envoi : POST JSON vers l'**API Forms v3 publique de HubSpot** (`api-eu1.hsforms.com/submissions/v3/integration/submit/149861633/<formGuid>`, portail en région EU1), avec le cookie `hubspotutk` si présent. Config dans `window.GF_COURS.hubspot`. Si `formGuid` est vidé, la page retombe sur l'ancien webhook Make (`endpoint`, urlencoded + no-cors).
+- Code de suivi HubSpot : injecté sur `/cours` (via `GF_COURS.hubspot.region`) et sur le site (`GF_CONFIG.hubspotId` / `hubspotRegion` dans `index.html`, lu par `tracking.js`). Le bandeau cookies se règle côté HubSpot.
 - Champs (depuis le 2026-11-26) : prénom, nom, téléphone uniquement (limite 3 champs HubSpot gratuit). HubSpot : firstname, lastname, phone (normalisé en +33). La source ?s= reste visible dans HubSpot via context.pageUri. Repli Make : first = "prénom nom", level vide.
 - `window.GF_COURS.remiPhone` : si renseigné, un bouton vCard « Enregistrer le contact de Rémi » apparaît après l'envoi.
