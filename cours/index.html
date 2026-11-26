@@ -77,7 +77,7 @@
   .sub{color:var(--ink-2);margin-top:10px;font-size:16px}
 
   form{margin-top:22px;display:flex;flex-direction:column;gap:14px}
-  label,.legend{font-size:13px;font-weight:500;color:var(--ink-2);display:block;margin-bottom:6px;letter-spacing:.01em}
+  label{font-size:13px;font-weight:500;color:var(--ink-2);display:block;margin-bottom:6px;letter-spacing:.01em}
   input[type=text],input[type=tel],input[type=email]{
     width:100%;height:52px;padding:0 14px;border:1px solid var(--line);border-radius:var(--radius);
     background:var(--paper);font:500 17px var(--font);color:var(--ink);outline:none;
@@ -86,22 +86,8 @@
   input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
   input::placeholder{color:var(--ink-3);font-weight:400}
 
-  .contact-head{display:flex;justify-content:space-between;align-items:baseline}
-  .toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:2px;background:var(--paper);margin-bottom:6px}
-  .toggle button{border:0;background:none;font:500 13px var(--font);color:var(--ink-3);padding:5px 11px;border-radius:999px;cursor:pointer}
-  .toggle button[aria-pressed=true]{background:var(--ink);color:#fff}
-
-  .levels{display:grid;grid-template-columns:1fr;gap:8px}
-  .level{
-    display:flex;align-items:center;gap:12px;min-height:50px;padding:10px 14px;text-align:left;
-    border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);
-    font:500 16px var(--font);color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s;
-  }
-  .level small{display:block;font-weight:400;font-size:13px;color:var(--ink-3)}
-  .level .dot{flex:none;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--line);position:relative}
-  .level[aria-checked=true]{border-color:var(--accent);background:var(--accent-bg)}
-  .level[aria-checked=true] .dot{border-color:var(--accent-ink)}
-  .level[aria-checked=true] .dot::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--accent-ink)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .row > *{min-width:0}
 
   .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 
@@ -153,33 +139,24 @@
 
   <div class="intro">
     <h1>On s'est croisés.<br/><em>On joue ensemble&nbsp;?</em></h1>
-    <p class="sub">Cours de guitare à Lyon ou en visio. Laisse-moi ton contact, je te réponds sous 24&nbsp;h.</p>
+    <p class="sub">Cours de guitare à Lyon ou en visio. Laisse-moi ton numéro, je te rappelle sous 24&nbsp;h.</p>
   </div>
 
   <form id="form" novalidate>
-    <div>
-      <label for="first">Ton prénom</label>
-      <input id="first" name="first" type="text" autocomplete="given-name" autocapitalize="words" enterkeyhint="next" placeholder="Camille" required maxlength="60"/>
+    <div class="row">
+      <div>
+        <label for="first">Prénom</label>
+        <input id="first" name="first" type="text" autocomplete="given-name" autocapitalize="words" enterkeyhint="next" placeholder="Camille" required maxlength="60" data-string="0"/>
+      </div>
+      <div>
+        <label for="last">Nom</label>
+        <input id="last" name="last" type="text" autocomplete="family-name" autocapitalize="words" enterkeyhint="next" placeholder="Martin" required maxlength="60" data-string="2"/>
+      </div>
     </div>
 
     <div>
-      <div class="contact-head">
-        <label for="contact" id="contact-label">Ton numéro</label>
-        <div class="toggle" role="group" aria-label="Type de contact">
-          <button type="button" data-type="tel" aria-pressed="true">Tél</button>
-          <button type="button" data-type="email" aria-pressed="false">Email</button>
-        </div>
-      </div>
-      <input id="contact" name="contact" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="done" placeholder="06 12 34 56 78" required maxlength="120"/>
-    </div>
-
-    <div role="radiogroup" aria-labelledby="lvl-legend">
-      <span class="legend" id="lvl-legend">Ton niveau</span>
-      <div class="levels">
-        <button type="button" class="level" role="radio" aria-checked="false" data-level="debutant" data-string="0"><span class="dot"></span><span>Je débute<small>Jamais joué, ou presque</small></span></button>
-        <button type="button" class="level" role="radio" aria-checked="false" data-level="intermediaire" data-string="2"><span class="dot"></span><span>Je me débrouille<small>Quelques accords, des morceaux</small></span></button>
-        <button type="button" class="level" role="radio" aria-checked="false" data-level="confirme" data-string="5"><span class="dot"></span><span>Je veux passer un cap<small>Je joue depuis un moment</small></span></button>
-      </div>
+      <label for="phone">Téléphone</label>
+      <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="send" placeholder="06 12 34 56 78" required maxlength="30" data-string="4"/>
     </div>
 
     <!-- Piège à robots : invisible pour un humain -->
@@ -191,7 +168,7 @@
 
   <section class="done" id="done" aria-live="polite">
     <h2 id="done-title">Bien reçu&nbsp;🤘</h2>
-    <p id="done-text">Je te recontacte d'ici demain. À très vite, guitare en main.</p>
+    <p id="done-text">Je t'appelle d'ici demain. À très vite, guitare en main.</p>
     <div class="actions">
       <a class="btn-ghost" id="vcard" href="#" style="display:none">Enregistrer le contact de Rémi</a>
       <a class="btn-ghost" href="https://www.guitarflow.fr/?utm_source=cours&utm_medium=capture">Découvrir les cartes Guitar Flow</a>
@@ -207,79 +184,52 @@
   var app = document.getElementById("app");
   var form = document.getElementById("form");
   var first = document.getElementById("first");
-  var contact = document.getElementById("contact");
-  var contactLabel = document.getElementById("contact-label");
+  var last = document.getElementById("last");
+  var phone = document.getElementById("phone");
   var err = document.getElementById("err");
   var submit = document.getElementById("submit");
   var lines = document.querySelectorAll("#strings line");
-  var levels = document.querySelectorAll(".level");
-  var toggles = document.querySelectorAll(".toggle button");
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   var params = new URLSearchParams(location.search);
   var source = (params.get("s") || params.get("utm_source") || "direct").slice(0, 40);
-  var contactType = "tel";
-  var level = "";
 
-  /* ---------- Cordes ---------- */
+  /* ---------- Cordes ----------
+     Elles vibrent à l'ouverture ; chaque champ a « sa » corde, qui s'allume et
+     vibre quand on y entre ; toutes grattent à l'envoi. */
   function pluck(i, delay) {
     var l = lines[i];
     if (!l || reduce) return;
-    setTimeout(function () {
-      l.classList.remove("strum"); void l.getBBox(); l.classList.add("strum");
-    }, delay || 0);
+    setTimeout(function () { l.classList.remove("strum"); void l.getBBox(); l.classList.add("strum"); }, delay || 0);
   }
-  function strumAll(up) {
-    for (var i = 0; i < lines.length; i++) pluck(up ? lines.length - 1 - i : i, i * 45);
-  }
+  function strumAll(up) { for (var i = 0; i < lines.length; i++) pluck(up ? lines.length - 1 - i : i, i * 45); }
   function buzz(p) { try { navigator.vibrate && navigator.vibrate(p); } catch (e) {} }
   setTimeout(function () { strumAll(false); }, 250);
 
-  /* ---------- Tél / Email ---------- */
-  function setType(t) {
-    contactType = t;
-    toggles.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.type === t)); });
-    if (t === "email") {
-      contact.type = "email"; contact.inputMode = "email"; contact.autocomplete = "email";
-      contact.placeholder = "camille@mail.com"; contactLabel.textContent = "Ton email";
-    } else {
-      contact.type = "tel"; contact.inputMode = "tel"; contact.autocomplete = "tel";
-      contact.placeholder = "06 12 34 56 78"; contactLabel.textContent = "Ton numéro";
-    }
-    contact.value = ""; contact.focus();
-  }
-  toggles.forEach(function (b) { b.addEventListener("click", function () { setType(b.dataset.type); }); });
-
-  /* ---------- Niveau ---------- */
-  levels.forEach(function (b) {
-    b.addEventListener("click", function () {
-      level = b.dataset.level;
-      levels.forEach(function (x) { x.setAttribute("aria-checked", String(x === b)); });
+  [first, last, phone].forEach(function (f) {
+    f.addEventListener("focus", function () {
+      var s = +f.dataset.string;
       lines.forEach(function (l) { l.classList.remove("on"); });
-      var s = +b.dataset.string; lines[s].classList.add("on"); pluck(s); buzz(12);
-      err.textContent = "";
+      lines[s].classList.add("on"); pluck(s);
     });
+    f.addEventListener("input", function () { err.textContent = ""; });
   });
 
   /* ---------- Validation ---------- */
   function cleanPhone(v) { return v.replace(/[^\d+]/g, ""); }
   function validate() {
     if (first.value.trim().length < 2) return [first, "Ton prénom, pour que je sache qui tu es."];
-    var c = contact.value.trim();
-    if (contactType === "tel") {
-      var d = cleanPhone(c).replace(/^\+33/, "0").replace(/^0033/, "0");
-      if (d.replace(/\D/g, "").length < 9) return [contact, "Ce numéro a l'air incomplet."];
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(c)) {
-      return [contact, "Cet email a l'air incomplet."];
-    }
-    if (!level) return [levels[0], "Choisis ton niveau, ça m'aide à préparer le premier cours."];
+    if (last.value.trim().length < 1) return [last, "Ton nom aussi, pour te retrouver facilement."];
+    var d = cleanPhone(phone.value).replace(/^\+33/, "0").replace(/^0033/, "0");
+    if (d.replace(/\D/g, "").length < 9) return [phone, "Ce numéro a l'air incomplet."];
     return null;
   }
 
   /* ---------- Envoi ----------
      HubSpot si hubspot.formGuid est renseigné (réponse lisible : une erreur 4xx
-     s'affiche), sinon webhook Make en no-cors (réponse opaque, ne rejette qu'en
-     cas de vrai échec réseau). */
+     s'affiche). La source (?s=nfc|qr) n'est pas un champ : HubSpot la garde dans
+     l'URL de la page de conversion (context.pageUri). Sinon : webhook Make en
+     no-cors (réponse opaque, ne rejette qu'en cas de vrai échec réseau). */
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     err.textContent = "";
@@ -287,24 +237,20 @@
     var bad = validate();
     if (bad) { err.textContent = bad[1]; bad[0].focus(); buzz([20, 40, 20]); return; }
 
-    var name = first.value.trim();
-    var value = contactType === "tel" ? cleanPhone(contact.value.trim()) : contact.value.trim();
+    var fn = first.value.trim(), ln = last.value.trim(), tel = cleanPhone(phone.value.trim());
+    if (/^0\d{9}$/.test(tel)) tel = "+33" + tel.slice(1); // format international : appel en 1 clic depuis HubSpot
     var hs = cfg.hubspot || {};
     var send;
-
     submit.disabled = true; submit.firstChild.nodeValue = "Envoi… ";
 
     if (hs.formGuid) {
-      /* HubSpot Forms API v3 (publique, sans clé) : JSON + CORS autorisé.
-         Noms internes des propriétés : firstname, phone|email, niveau_guitare, source_capture. */
       var host = hs.region === "eu1" ? "https://api-eu1.hsforms.com" : "https://api.hsforms.com";
       var hutk = (document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/) || [])[1];
       var payload = {
         fields: [
-          { objectTypeId: "0-1", name: "firstname", value: name },
-          { objectTypeId: "0-1", name: contactType === "tel" ? "phone" : "email", value: value },
-          { objectTypeId: "0-1", name: "niveau_guitare", value: level },
-          { objectTypeId: "0-1", name: "source_capture", value: source }
+          { objectTypeId: "0-1", name: "firstname", value: fn },
+          { objectTypeId: "0-1", name: "lastname", value: ln },
+          { objectTypeId: "0-1", name: "phone", value: tel }
         ],
         context: { pageUri: location.href, pageName: document.title }
       };
@@ -315,9 +261,8 @@
         if (!r.ok) return r.text().then(function (t) { console.warn("HubSpot", r.status, t); throw new Error("hs " + r.status); });
       });
     } else if (cfg.endpoint) {
-      /* Repli Make : x-www-form-urlencoded + no-cors (requête « simple », pas de pré-vol CORS). */
       send = fetch(cfg.endpoint, { method: "POST", mode: "no-cors", keepalive: true, body: new URLSearchParams({
-        first: name, contact: value, contact_type: contactType, level: level, source: source,
+        first: fn + " " + ln, contact: tel, contact_type: "tel", level: "", source: source,
         page: location.pathname, ts: new Date().toISOString()
       }) });
     } else {
@@ -325,7 +270,7 @@
     }
 
     send.then(function () {
-      document.getElementById("done-title").innerHTML = "Bien reçu, " + escapeHtml(name) + "&nbsp;🤘";
+      document.getElementById("done-title").innerHTML = "Bien reçu, " + escapeHtml(fn) + "&nbsp;🤘";
       app.classList.add("sent");
       document.getElementById("done").classList.add("reveal");
       strumAll(true); buzz([15, 30, 15, 30, 40]);
@@ -333,7 +278,7 @@
     }).catch(function () {
       submit.disabled = false; submit.firstChild.nodeValue = "Réessayer ";
       err.innerHTML = "Ça n'est pas passé. Réessaie, ou <a href=\"sms:" + (cfg.remiPhone || "") +
-        "?&body=" + encodeURIComponent("Salut Rémi, c'est " + name + " ! Pour les cours de guitare : " + contact.value) +
+        "?&body=" + encodeURIComponent("Salut Rémi, c'est " + fn + " " + ln + " ! Pour les cours de guitare : " + phone.value) +
         "\">envoie-moi un SMS</a>.";
     });
   });
