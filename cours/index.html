@@ -75,13 +75,15 @@
 
   form{margin-top:22px;display:flex;flex-direction:column;gap:14px}
   label{font-size:13px;font-weight:500;color:var(--ink-2);display:block;margin-bottom:6px;letter-spacing:.01em}
-  input[type=text],input[type=tel],input[type=email]{
+  input[type=text],input[type=tel],input[type=email],textarea{
     width:100%;height:52px;padding:0 14px;border:1px solid var(--line);border-radius:var(--radius);
     background:var(--paper);font:500 17px var(--font);color:var(--ink);outline:none;
     transition:border-color .15s, box-shadow .15s;
   }
-  input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
-  input::placeholder{color:var(--ink-3);font-weight:400}
+  textarea{height:auto;min-height:72px;padding:12px 14px;line-height:1.4;resize:vertical;font-weight:400}
+  label .opt{color:var(--ink-3);font-weight:400}
+  input:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
+  input::placeholder,textarea::placeholder{color:var(--ink-3);font-weight:400}
 
   .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .row > *{min-width:0}
@@ -156,7 +158,12 @@
 
     <div>
       <label for="phone">Téléphone</label>
-      <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="send" placeholder="06 12 34 56 78" required maxlength="30" data-string="4"/>
+      <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="06 12 34 56 78" required maxlength="30" data-string="4"/>
+    </div>
+
+    <div>
+      <label for="envie">Ton envie <span class="opt">(facultatif)</span></label>
+      <textarea id="envie" name="envie" rows="2" maxlength="500" placeholder="Technique, harmonie, rythme, CAGED, un morceau précis…" data-string="5"></textarea>
     </div>
 
     <!-- Piège à robots : invisible pour un humain -->
@@ -190,6 +197,7 @@
   var first = document.getElementById("first");
   var last = document.getElementById("last");
   var phone = document.getElementById("phone");
+  var envie = document.getElementById("envie");
   var err = document.getElementById("err");
   var submit = document.getElementById("submit");
   var lines = document.querySelectorAll("#strings line");
@@ -208,7 +216,7 @@
   function buzz(p) { try { navigator.vibrate && navigator.vibrate(p); } catch (e) {} }
   setTimeout(function () { strumAll(false); }, 250);
 
-  [first, last, phone].forEach(function (f) {
+  [first, last, phone, envie].forEach(function (f) {
     f.addEventListener("focus", function () {
       var s = +f.dataset.string;
       lines.forEach(function (l) { l.classList.remove("on"); });
@@ -255,6 +263,8 @@
         ],
         context: { pageUri: location.href, pageName: document.title }
       };
+      var ev = envie.value.trim();
+      if (ev) payload.fields.push({ objectTypeId: "0-1", name: "envie", value: ev });
       if (hutk) payload.context.hutk = hutk;
       send = fetch(host + "/submissions/v3/integration/submit/" + hs.portalId + "/" + hs.formGuid, {
         method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), keepalive: true
