@@ -249,9 +249,22 @@
     var fn = first.value.trim(), ln = last.value.trim(), tel = cleanPhone(phone.value.trim());
     if (/^0\d{9}$/.test(tel)) tel = "+33" + tel.slice(1); // format international : appel en 1 clic depuis HubSpot
     var hs = cfg.hubspot || {};
-    var send;
     submit.disabled = true; submit.firstChild.nodeValue = "Envoi… ";
 
+    var ev = envie.value.trim();
+    var src = ""; try { src = (new URLSearchParams(location.search).get("s") || "").slice(0, 20); } catch (x) {}
+
+    // 1) Fiche contact : /api/cours (fonction Vercel → API CRM HubSpot).
+    //    Le formulaire public ne crée pas de contact sans email.
+    var crm = fetch("/api/cours", {
+      method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true,
+      body: JSON.stringify({ firstname: fn, lastname: ln, phone: tel, envie: ev, source: src, website: form.website.value })
+    }).then(function (r) {
+      if (!r.ok) return r.text().then(function (t) { console.warn("CRM", r.status, t); throw new Error("crm " + r.status); });
+    });
+
+    // 2) Soumission du formulaire HubSpot : notification, suivi (hutk), historique.
+    var sub = null;
     if (hs.formGuid) {
       var host = hs.region === "eu1" ? "https://api-eu1.hsforms.com" : "https://api.hsforms.com";
       var hutk = (document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/) || [])[1];
@@ -264,17 +277,20 @@
         ],
         context: { pageUri: location.href, pageName: document.title }
       };
-      var ev = envie.value.trim();
       if (ev) payload.fields.push({ objectTypeId: "0-1", name: "envie", value: ev });
       if (hutk) payload.context.hutk = hutk;
-      send = fetch(host + "/submissions/v3/integration/submit/" + hs.portalId + "/" + hs.formGuid, {
+      sub = fetch(host + "/submissions/v3/integration/submit/" + hs.portalId + "/" + hs.formGuid, {
         method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), keepalive: true
       }).then(function (r) {
         if (!r.ok) return r.text().then(function (t) { console.warn("HubSpot", r.status, t); throw new Error("hs " + r.status); });
       });
-    } else {
-      send = Promise.resolve();
     }
+
+    // Succès dès que l'un des deux a enregistré le contact quelque part.
+    var send = new Promise(function (ok, ko) {
+      var tries = [crm].concat(sub ? [sub] : []), fails = 0;
+      tries.forEach(function (p) { p.then(ok, function () { if (++fails === tries.length) ko(); }); });
+    });
 
     send.then(function () {
       document.getElementById("done-title").innerHTML = "Bien reçu, " + escapeHtml(fn) + "&nbsp;🤘";
