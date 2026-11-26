@@ -96,5 +96,5 @@ Les deux visions partagent volontairement la **même mise en page** : titres de 
 - Envoi : POST JSON vers l'**API Forms v3 publique de HubSpot** (`api-eu1.hsforms.com/submissions/v3/integration/submit/149861633/<formGuid>`, portail en région EU1), avec le cookie `hubspotutk` si présent. Config dans `window.GF_COURS.hubspot`.
 - Code de suivi HubSpot : injecté sur `/cours` (via `GF_COURS.hubspot.region`) et sur le site (`GF_CONFIG.hubspotId` / `hubspotRegion` dans `index.html`, lu par `tracking.js`). Le bandeau cookies se règle côté HubSpot.
 - Piège : le formulaire HubSpot ne doit pas avoir de captcha (sinon toute soumission API est refusée) ni de propriété email requise.
-- Champs : prénom, nom, téléphone (requis) + « Ton envie » facultatif. HubSpot : firstname, lastname, phone (normalisé en +33), envie (envoyé seulement si rempli). La source ?s= reste visible dans HubSpot via context.pageUri.
+- Champs : prénom, nom, téléphone (requis) + « Ton envie » facultatif. HubSpot : firstname, lastname, phone + mobilephone (même valeur, normalisée en +33 : le champ « Portable » du formulaire est mobilephone), envie (envoyé seulement si rempli). La source ?s= reste visible dans HubSpot via context.pageUri.
 - `window.GF_COURS.remiPhone` : si renseigné, un bouton vCard « Enregistrer le contact de Rémi » apparaît après l'envoi.
